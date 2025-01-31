@@ -63,9 +63,6 @@ dependencies {
     }
 
     modApi("com.terraformersmc:modmenu:${project.modmenu_version}")
-    include(modImplementation("com.github.DrTheodor:mc-multidim:${project.multidim_version}")) {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
     include(modImplementation("com.github.DrTheodor:mc-scheduler:${project.scheduler_version}")) {
         exclude(group: "net.fabricmc.fabric-api")
     }
