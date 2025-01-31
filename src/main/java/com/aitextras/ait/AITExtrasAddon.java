@@ -1,8 +1,8 @@
-package com.aitexampleaddon.ait;
+package com.aitextras.ait;
 
 import loqor.ait.api.AITModInitializer;
 
-public class ExampleAITAddon implements AITModInitializer {
+public class AITExtrasAddon implements AITModInitializer {
 
     @Override
     public void onInitializeAIT() {

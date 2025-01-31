@@ -1,29 +1,26 @@
 {
   "schemaVersion": 1,
-  "id": "ait-example-addon",
+  "id": "ait-extras",
   "version": "${version}",
-  "name": "Example AIT Addon",
+  "name": "AIT Extras",
   "description": "",
-  "authors": [],
-  "contact": {
-    "repo": "https://github.com/pavatus/ait-example-addon"
-  },
+  "authors": ["Addi3"],
   "license": "MIT",
-  "icon": "assets/ait-example-addon/icon.png",
+  "icon": "assets/ait-extras/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
-      "com.aitexampleaddon.client.ExampleAddonModClient"
+      "com.aitextras.client.AITExtrasClient"
     ],
     "main": [
-      "com.aitexampleaddon.ExampleAddonMod"
+      "com.aitextras.AITExtras"
     ],
     "ait-main": [
-      "com.aitexampleaddon.ait.ExampleAITAddon"
+      "com.aitextras.ait.AITExtrasAddon"
     ]
   },
   "mixins": [
-    "ait-example-addon.mixins.json"
+    "ait-extras.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

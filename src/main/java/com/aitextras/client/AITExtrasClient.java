@@ -1,8 +1,8 @@
-package com.aitexampleaddon.client;
+package com.aitextras.client;
 
 import net.fabricmc.api.ClientModInitializer;
 
-public class ExampleAddonModClient implements ClientModInitializer {
+public class AITExtrasClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
