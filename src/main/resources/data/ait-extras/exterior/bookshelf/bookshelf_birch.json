@@ -1,0 +1,16 @@
+{
+  "id": "ait-extras:bookshelf_birch",
+  "category":"ait:exterior/bookshelf",
+  "parent": "ait:exterior/bookshelf/default",
+  "texture": "ait-extras:textures/blockentities/exteriors/bookshelf/bookshelf_birch.png",
+  "emission": "ait-extras:textures/blockentities/exteriors/bookshelf/bookshelf_birch_emission.png",
+  "overrides":
+  {"snowy": "",
+    "chorus": "",
+    "cherry": "",
+    "sculk": "",
+    "sandy": "",
+    "muddy": "",
+    "red_sandy": ""
+  }
+}

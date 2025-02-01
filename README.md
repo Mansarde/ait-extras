@@ -34,7 +34,7 @@ Any questions or want to make a suggestion join the [AiT Addons discord server!
 ---
 ### Thank You's:
 
-- 
+- [Project TinyLink](https://www.youtube.com/@projecttinylink7986) (permission to use their exterior design)
 
 ## Links
 - [Modrinth](https://modrinth.com/project/ait-extras)
