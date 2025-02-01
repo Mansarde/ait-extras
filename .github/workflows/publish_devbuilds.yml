@@ -19,9 +19,14 @@ jobs:
 
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
+
 
     steps:
+    - name: Grant execute permission to Gradle wrapper
+      run: chmod +x gradlew
+      shell: bash
+
     - uses: actions/checkout@v4
     - name: Set up JDK 17
       uses: actions/setup-java@v4
@@ -45,7 +50,7 @@ jobs:
     - name: Publish artifacts
       uses: DrTheodor/discord-webhook-upload-action@v1.2
       with:
-        url: ${{ secrets.DEV_BUILDS }}
+        url: ${{ secrets.EXTRAS_DEV_BUILDS }}
         file: 'build/libs/*'
         username: george addington
         avatar: 'https://i.imgur.com/PLXp29k.png'
