@@ -14,5 +14,7 @@
     "chorus": "ait:textures/blockentities/exteriors/booth/biome/booth_chorus.png",
     "cherry": "ait:textures/blockentities/exteriors/booth/biome/booth_cherry.png"
 
-  }
+  },
+  "loyalty": "pilot"
 }
+
