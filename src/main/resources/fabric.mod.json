@@ -3,7 +3,7 @@
   "id": "ait-extras",
   "version": "${version}",
   "name": "AIT Extras",
-  "description": "",
+  "description": "Where all the stuff ait doesn't want will go, along with some other stuff",
   "authors": ["Addi3"],
   "license": "MIT",
   "icon": "assets/ait-extras/icon.png",
