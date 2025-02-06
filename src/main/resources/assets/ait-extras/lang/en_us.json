@@ -6,6 +6,8 @@
   "desktop.ait-extras.industrial": "Industrial",
   "desktop.ait-extras.tron": "Tron",
   "desktop.ait-extras.war_games": "War Games",
+  "desktop.ait-extras.academic": "Academic",
+  "desktop.ait-extras.modern_victorian": "Modern Victorian",
   "exterior.ait-extras.bookshelf_birch": "Birch",
   "exterior.ait-extras.bookshelf_cherry": "Cherry",
   "exterior.ait-extras.bookshelf_dark_oak": "Dark Oak",
@@ -24,5 +26,6 @@
   "exterior.ait-extras.tokamak_eotd": "Tokamak EOTD",
   "exterior.ait-extras.toyota_alternative": "Toyota(alt)",
   "exterior.ait-extras.toyota_memorial": "Mermorial",
-  "exterior.ait-extras.yar": "73 Yards"
+  "exterior.ait-extras.yard": "73 Yards",
+  "sonic.ait-extras.cane": "Cane"
 }
