@@ -9,6 +9,9 @@
   "icon": "assets/ait-extras/icon.png",
   "environment": "*",
   "entrypoints": {
+    "fabric-datagen": [
+      "com.aitextras.datagen.AITExtrasDataGenerator"
+    ],
     "client": [
       "com.aitextras.client.AITExtrasClient"
     ],

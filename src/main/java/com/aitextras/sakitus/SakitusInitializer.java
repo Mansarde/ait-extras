@@ -1,7 +1,7 @@
 package com.aitextras.sakitus;
 
 import dev.pavatus.lib.api.SakitusModInitializer;
-import dev.pavatus.register.api.RegistryEvents;
+import dev.pavatus.lib.register.api.RegistryEvents;
 import loqor.ait.core.engine.registry.SubSystemRegistry;
 import loqor.ait.core.item.blueprint.BlueprintRegistry;
 import loqor.ait.core.likes.ItemOpinionRegistry;
