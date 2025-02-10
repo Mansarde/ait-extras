@@ -87,6 +87,14 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
                         //classic box
                     provider.addTranslation("exterior.ait-extras.tango", "Tango");
+                    provider.addTranslation("exterior.ait-extras.classic_cricketer", "Cricketer");
+                    provider.addTranslation("exterior.ait-extras.classic_cricketer2", "Cricketer (alt)");
+                    provider.addTranslation("exterior.ait-extras.classic_happiness", "Happiness");
+                    provider.addTranslation("exterior.ait-extras.classic_pilot", "Pilot");
+                    provider.addTranslation("exterior.ait-extras.classic_percedent", "Percedent");
+                    provider.addTranslation("exterior.ait-extras.classic_snowman", "Snowman");
+                    provider.addTranslation("exterior.ait-extras.classic_victorian", "Victorian");
+                    provider.addTranslation("exterior.ait-extras.classic_wanderlust", "Wanderlust");
 
                         //booth
                     provider.addTranslation("exterior.ait-extras.tinylink", "Tiny Link");
@@ -102,8 +110,6 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
             //provider.translateBlocks(AITExtrasBlocks.class);
 
             //provider.translateItems(AITExtrasItems.class);
-
-
 
 
             return provider;
