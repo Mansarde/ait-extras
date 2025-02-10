@@ -13,14 +13,12 @@ on:
     branches:
       - 'feat/**'
       - 'main'
-
 jobs:
   build:
 
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-
+      contents: read
 
     steps:
       - uses: actions/checkout@v4
@@ -44,8 +42,8 @@ jobs:
 
       - name: Build
         run: ./gradlew build
-      #env:
-      #  BETA: 1 # exclude assets if it's a beta dev build
+        #env:
+        #  BETA: 1 # exclude assets if it's a beta dev build
 
       - name: Publish artifacts
         uses: DrTheodor/discord-webhook-upload-action@v1.2
@@ -56,5 +54,5 @@ jobs:
           avatar: 'https://i.imgur.com/PLXp29k.png'
           commit: '> :sparkles: [%MESSAGE%](<%LINK%>) by [%AUTHOR%](<%AUTHOR_LINK%>)'
           message: |
-            <:new1:1253371736510959636><:new2:1253371805734015006> New `Adventures in Time: Extras` dev build `#${{ github.run_number }}`:
+            <:new1:1253371736510959636><:new2:1253371805734015006> New `${{ github.repository }}` dev build `#${{ github.run_number }}`:
             %COMMITS%
