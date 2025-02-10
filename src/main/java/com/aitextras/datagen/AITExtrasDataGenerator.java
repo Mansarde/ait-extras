@@ -78,17 +78,17 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("exterior.ait-extras.black_mesa", "Mesa");
                     provider.addTranslation("exterior.ait-extras.copper", "Copper");
                     provider.addTranslation("exterior.ait-extras.eleven_toyota", "Copper Toyota");
-                    provider.addTranslation("exterior.ait-extras.eleven_toyota_alternate", "Copper Toyota (alt)");
-                    provider.addTranslation("exterior.ait-extras.coral_alternate", "Coral (alt)");
+                    provider.addTranslation("exterior.ait-extras.eleven_toyota_alternate", "Copper Toyota (ALT)");
+                    provider.addTranslation("exterior.ait-extras.coral_alternate", "Coral (ALT)");
                     provider.addTranslation("exterior.ait-extras.tokamak_eotd", "Tokamak (EOTD)");
-                    provider.addTranslation("exterior.ait-extras.toyota_alternate", "Toyota (alt)");
+                    provider.addTranslation("exterior.ait-extras.toyota_alternate", "Toyota (ALT)");
                     provider.addTranslation("exterior.ait-extras.toyota_memorial", "Memorial");
                     provider.addTranslation("exterior.ait-extras.yard", "73 Yards");
 
                         //classic box
                     provider.addTranslation("exterior.ait-extras.tango", "Tango");
                     provider.addTranslation("exterior.ait-extras.classic_cricketer", "Cricketer");
-                    provider.addTranslation("exterior.ait-extras.classic_cricketer2", "Cricketer (alt)");
+                    provider.addTranslation("exterior.ait-extras.classic_cricketer2", "Cricketer (ALT)");
                     provider.addTranslation("exterior.ait-extras.classic_happiness", "Happiness");
                     provider.addTranslation("exterior.ait-extras.classic_pilot", "Pilot");
                     provider.addTranslation("exterior.ait-extras.classic_percedent", "Percedent");
