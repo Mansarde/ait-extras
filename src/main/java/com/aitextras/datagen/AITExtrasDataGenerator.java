@@ -77,11 +77,11 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("exterior.ait-extras.aperture_science", "Aperture");
                     provider.addTranslation("exterior.ait-extras.black_mesa", "Mesa");
                     provider.addTranslation("exterior.ait-extras.copper", "Copper");
-                    provider.addTranslation("exterior.ait-extras.copper_toyota", "Copper Toyota");
-                    provider.addTranslation("exterior.ait-extras.copper_toyota_alternative", "Copper Toyota (alt)");
-                    provider.addTranslation("exterior.ait-extras.coral_alternative", "Coral (alt)");
+                    provider.addTranslation("exterior.ait-extras.eleven_toyota", "Copper Toyota");
+                    provider.addTranslation("exterior.ait-extras.eleven_toyota_alternate", "Copper Toyota (alt)");
+                    provider.addTranslation("exterior.ait-extras.coral_alternate", "Coral (alt)");
                     provider.addTranslation("exterior.ait-extras.tokamak_eotd", "Tokamak (EOTD)");
-                    provider.addTranslation("exterior.ait-extras.toyota_alternative", "Toyota (alt)");
+                    provider.addTranslation("exterior.ait-extras.toyota_alternate", "Toyota (alt)");
                     provider.addTranslation("exterior.ait-extras.toyota_memorial", "Memorial");
                     provider.addTranslation("exterior.ait-extras.yard", "73 Yards");
 
@@ -89,14 +89,14 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("exterior.ait-extras.tango", "Tango");
 
                         //booth
-                    provider.addTranslation("exterior.ait-extras.tiny_link", "Tiny Link");
+                    provider.addTranslation("exterior.ait-extras.tinylink", "Tiny Link");
 
 
                     //sonics
                     provider.addTranslation("sonic.ait-extras.cane", "Cane");
-                    provider.addTranslation("sonic.ait-extras.fob_pink", "FOB (Pink)");
-                    provider.addTranslation("sonic.ait-extras.fob_red", "FOB (Red)");
-                    provider.addTranslation("sonic.ait-extras.fob_yellow", "FOB (Yellow)");
+                    provider.addTranslation("sonic.ait-extras.fob_pink", "Fob (Pink)");
+                    provider.addTranslation("sonic.ait-extras.fob_red", "Fob (Red)");
+                    provider.addTranslation("sonic.ait-extras.fob_yellow", "Fob (Yellow)");
 
 
             //provider.translateBlocks(AITExtrasBlocks.class);
