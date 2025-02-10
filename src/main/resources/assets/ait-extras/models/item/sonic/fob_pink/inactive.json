@@ -1,0 +1,6 @@
+{
+	"parent": "ait:item/sonic/fob",
+	"textures": {
+		"0": "ait-extras:item/sonic_tools/fob_pink/fob_inactive"
+	}
+}
