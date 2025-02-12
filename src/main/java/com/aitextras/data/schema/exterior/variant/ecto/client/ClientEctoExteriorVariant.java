@@ -1,9 +1,9 @@
 package com.aitextras.data.schema.exterior.variant.ecto.client;
 
 import com.aitextras.AITExtras;
-import loqor.ait.client.models.exteriors.ExteriorModel;
-import loqor.ait.data.datapack.exterior.BiomeOverrides;
-import loqor.ait.data.schema.exterior.ClientExteriorVariantSchema;
+import dev.amble.ait.client.models.exteriors.ExteriorModel;
+import dev.amble.ait.data.datapack.exterior.BiomeOverrides;
+import dev.amble.ait.data.schema.exterior.ClientExteriorVariantSchema;
 import com.aitextras.client.models.exteriors.EctoExteriorModel;
 import net.minecraft.util.Identifier;
 import org.joml.Vector3f;

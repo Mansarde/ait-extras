@@ -1,8 +1,8 @@
 package com.aitextras.data.schema.door;
 
 import com.aitextras.data.schema.door.ecto.ClientEctoDoorVariant;
-import loqor.ait.data.schema.door.ClientDoorSchema;
-import loqor.ait.registry.impl.door.ClientDoorRegistry;
+import dev.amble.ait.data.schema.door.ClientDoorSchema;
+import dev.amble.ait.registry.impl.door.ClientDoorRegistry;
 
 public class AITExtrasDoorsClient {
     public static void init() {

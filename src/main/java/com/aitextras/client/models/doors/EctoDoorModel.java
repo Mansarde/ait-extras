@@ -1,10 +1,10 @@
 package com.aitextras.client.models.doors;
 
-import loqor.ait.api.link.v2.block.AbstractLinkableBlockEntity;
-import loqor.ait.client.models.doors.PoliceBoxDoorModel;
-import loqor.ait.client.renderers.AITRenderLayers;
-import loqor.ait.data.schema.exterior.ClientExteriorVariantSchema;
-import loqor.ait.registry.impl.exterior.ClientExteriorVariantRegistry;
+import dev.amble.ait.api.link.v2.block.AbstractLinkableBlockEntity;
+import dev.amble.ait.client.models.doors.PoliceBoxDoorModel;
+import dev.amble.ait.client.renderers.AITRenderLayers;
+import dev.amble.ait.data.schema.exterior.ClientExteriorVariantSchema;
+import dev.amble.ait.registry.impl.exterior.ClientExteriorVariantRegistry;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.VertexConsumer;

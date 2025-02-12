@@ -1,9 +1,9 @@
 package com.aitextras.data.schema.exterior;
 
 import com.aitextras.data.schema.exterior.variant.ecto.EctoExteriorVariant;
-import loqor.ait.api.AITRegistryEvents;
-import loqor.ait.data.schema.exterior.ExteriorVariantSchema;
-import loqor.ait.registry.impl.exterior.ExteriorVariantRegistry;
+import dev.amble.ait.api.AITRegistryEvents;
+import dev.amble.ait.data.schema.exterior.ExteriorVariantSchema;
+import dev.amble.ait.registry.impl.exterior.ExteriorVariantRegistry;
 
 import java.util.LinkedList;
 

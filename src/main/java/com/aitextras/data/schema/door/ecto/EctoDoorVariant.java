@@ -1,8 +1,8 @@
 package com.aitextras.data.schema.door.ecto;
 
 import com.aitextras.AITExtras;
-import loqor.ait.core.AITSounds;
-import loqor.ait.data.schema.door.DoorSchema;
+import dev.amble.ait.core.AITSounds;
+import dev.amble.ait.data.schema.door.DoorSchema;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;

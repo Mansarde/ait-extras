@@ -1,7 +1,7 @@
 package com.aitextras.client.models.exteriors;
 
-import loqor.ait.client.models.exteriors.ExteriorModel;
-import loqor.ait.core.tardis.handler.DoorHandler;
+import dev.amble.ait.client.models.exteriors.ExteriorModel;
+import dev.amble.ait.core.tardis.handler.DoorHandler;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.animation.Animation;

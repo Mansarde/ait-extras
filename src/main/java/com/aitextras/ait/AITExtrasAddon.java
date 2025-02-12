@@ -1,6 +1,6 @@
 package com.aitextras.ait;
 
-import loqor.ait.api.AITModInitializer;
+import dev.amble.ait.api.AITModInitializer;
 
 public class AITExtrasAddon implements AITModInitializer {
 
