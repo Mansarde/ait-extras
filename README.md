@@ -1,3 +1,7 @@
+
+  <img src="https://github.com/amblelabs/modkit/blob/main/promo/header.png?raw=true" width="328" height="86">
+
+
 ![Replace this with a description](https://cdn.modrinth.com/data/cached_images/99b5c76544bfc3c53a228a44d634658d08daed76.png)
 
 ---------
