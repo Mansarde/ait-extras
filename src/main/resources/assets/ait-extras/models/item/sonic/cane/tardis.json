@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "ait-extras:textures/item/sonic_tools/cane/tardis"
+		"0": "ait-extras:item/sonic_tools/cane/tardis"
 	},
 	"elements": [
 		{
