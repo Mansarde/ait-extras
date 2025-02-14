@@ -54,12 +54,12 @@ public class EctoDoorModel extends DoorModel {
     public void renderWithAnimations(AbstractLinkableBlockEntity doorEntity, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
         if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS) {
             DoorHandler door = doorEntity.tardis().get().door();
-            this.TARDIS.getChild("Doors").getChild("left_door").yaw = !door.isLeftOpen() && !door.isOpen() ? 0.0F : 5.0F;
-            this.TARDIS.getChild("Doors").getChild("right_door").yaw = !door.isRightOpen() && !door.areBothOpen() ? 0.0F : -5.0F;
+            this.TARDIS.getChild("Doors").getChild("left_door").yaw = !door.isLeftOpen() && !door.isOpen() ? 0.0F : -5.0F;
+            this.TARDIS.getChild("Doors").getChild("right_door").yaw = !door.isRightOpen() && !door.areBothOpen() ? 0.0F : 5.0F;
         } else {
             float maxRot = 90.0F;
-            this.TARDIS.getChild("Doors").getChild("left_door").yaw = (float)-Math.toRadians((double)(maxRot * doorEntity.tardis().get().door().getLeftRot()));
-            this.TARDIS.getChild("Doors").getChild("right_door").yaw = (float)(Math.toRadians((double)(maxRot * doorEntity.tardis().get().door().getRightRot())));
+            this.TARDIS.getChild("Doors").getChild("left_door").yaw = (float)(Math.toRadians((double)(maxRot * doorEntity.tardis().get().door().getLeftRot())));
+            this.TARDIS.getChild("Doors").getChild("right_door").yaw = (float)-Math.toRadians((double)(maxRot * doorEntity.tardis().get().door().getRightRot()));
         }
 
         matrices.push();
