@@ -99,6 +99,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                         //booth
                     provider.addTranslation("exterior.ait-extras.tinylink", "Tiny Link");
 
+                        //ecto
+                    provider.addTranslation("exterior.ait-extras.ecto", "Ecto");
 
                     //sonics
                     provider.addTranslation("sonic.ait-extras.cane", "Cane");

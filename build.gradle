@@ -60,7 +60,7 @@ dependencies {
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    modApi "com.github.pavatus:ait:${project.ait_version}"
+    modApi "com.github.amblelabs:ait:${project.ait_version}"
 
 
 
