@@ -1,5 +1,7 @@
 package com.aitextras.datagen;
 
+import com.aitextras.core.AITExtrasBlocks;
+import dev.amble.ait.core.AITBlocks;
 import dev.amble.lib.datagen.lang.LanguageType;
 import dev.amble.lib.datagen.lang.AmbleLanguageProvider;
 import dev.amble.lib.datagen.loot.AmbleBlockLootTable;
@@ -45,6 +47,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
     private void genEnglish(FabricDataGenerator.Pack pack) {
         pack.addProvider((((output, registriesFuture) -> {
                     AmbleLanguageProvider provider = new AmbleLanguageProvider(output, LanguageType.EN_US);
+
+            provider.translateBlocks(AITBlocks.class);
 
                     //desktops
                     provider.addTranslation("desktop.ait-extras.axos", "Axos");
@@ -108,11 +112,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("sonic.ait-extras.fob_red", "Fob (Red)");
                     provider.addTranslation("sonic.ait-extras.fob_yellow", "Fob (Yellow)");
 
-
-            //provider.translateBlocks(AITExtrasBlocks.class);
-
-            //provider.translateItems(AITExtrasItems.class);
-
+                    // Blocks
+                provider.addTranslation(AITExtrasBlocks.EXTRAS_MONITOR_BLOCK, "Victorian Monitor");
 
             return provider;
         })));

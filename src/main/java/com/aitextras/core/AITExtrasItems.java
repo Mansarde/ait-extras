@@ -1,5 +1,7 @@
 package com.aitextras.core;
 
 
-public class AITExtrasItems {
+import dev.amble.lib.container.impl.ItemContainer;
+
+public class AITExtrasItems extends ItemContainer {
 }

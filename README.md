@@ -42,7 +42,7 @@ Any questions or want to make a suggestion join the [AiT Addons discord server!
 
 - [Project TinyLink](https://www.youtube.com/@projecttinylink7986) - permission to use their exterior design
 - [Maggie](https://discord.com/channels/1213989169878274068/1289647140485861438) - "Classic" exteriors
-- [Loqor]([https://loqor.dev](https://loqor.dev)) - help with code stuff
+- [Loqor](https://loqor.dev) - help with code stuff
 
 ## Links
 - [Modrinth](https://modrinth.com/project/ait-extras)
