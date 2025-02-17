@@ -114,6 +114,9 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                         //ecto
                     provider.addTranslation("exterior.ait-extras.ecto", "Ecto");
 
+                        //post box
+                    provider.addTranslation("exterior.ait-extras.post_box", "Post Box");
+
                     //sonics
                     provider.addTranslation("sonic.ait-extras.cane", "Cane");
                     provider.addTranslation("sonic.ait-extras.fob_pink", "Fob (Pink)");
