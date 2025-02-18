@@ -6,6 +6,7 @@
 ![Modrinth Game Versions](https://img.shields.io/modrinth/game-versions/ait-extras?link=https%3A%2F%2Fmodrinth.com%2Fmod%2Fait%2Fversions)
 ![Modrinth Downloads](https://img.shields.io/modrinth/dt/ait-extras?logo=modrinth&link=https%3A%2F%2Fmodrinth.com%2Fmod%2Fait)
 
+<a href="https://modrinth.com/project/amblekit"><img src="https://github.com/amblelabs/modkit/blob/main/promo/required.png?raw=true" width="512" height="86"></a>
 ---------
 ## Q&A
 
@@ -29,6 +30,7 @@ Any questions or want to make a suggestion join the [AiT Addons discord server!
 ### Required Mods!
 
 - Requires AiT 1.2.0 and above -> [Download Here](https://modrinth.com/mod/ait/version/1.1.0-1.20.1-release)
+- Requires AmbleKit (latest 1.20.1version) -> [Download Here](https://modrinth.com/mod/amblekit)
 
 -----------
 ## Credits
