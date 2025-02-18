@@ -6,6 +6,7 @@ import com.aitextras.client.models.doors.PostBoxDoorModel;
 import com.aitextras.client.models.exteriors.EctoExteriorModel;
 import com.aitextras.client.models.exteriors.PostBoxExteriorModel;
 import com.aitextras.client.renderers.monitors.ExtrasMonitorRenderer;
+import com.aitextras.client.renderers.monitors.ExtrasScreenMonitorRenderer;
 import com.aitextras.core.AITExtrasBlockEntityTypes;
 import dev.amble.ait.client.models.doors.CapsuleDoorModel;
 import net.fabricmc.api.ClientModInitializer;
@@ -28,5 +29,6 @@ public class AITExtrasClient implements ClientModInitializer {
     public static void blockEntityRendererRegister() {
 
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.EXTRAS_MONITOR_BLOCK_ENTITY_TYPE, ExtrasMonitorRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.EXTRAS_SCREEN_MONITOR_BLOCK_ENTITY_TYPE, ExtrasScreenMonitorRenderer::new);
     }
 }

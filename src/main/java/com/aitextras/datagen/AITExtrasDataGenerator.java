@@ -2,11 +2,12 @@ package com.aitextras.datagen;
 
 import com.aitextras.core.AITExtrasBlocks;
 import dev.amble.ait.core.AITBlocks;
-import dev.amble.ait.core.AITItems;
 import dev.amble.ait.datagen.datagen_providers.AITRecipeProvider;
 import dev.amble.ait.module.ModuleRegistry;
 import dev.amble.lib.datagen.lang.LanguageType;
 import dev.amble.lib.datagen.lang.AmbleLanguageProvider;
+import dev.amble.lib.datagen.loot.AmbleBlockLootTable;
+import dev.amble.lib.datagen.tag.AmbleBlockTagProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
@@ -23,8 +24,17 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
         genLang(pack);
         generateRecipes(pack);
+        genLoot(pack);
+        genTags(pack);
     }
 
+    private void genTags(FabricDataGenerator.Pack pack) {
+        pack.addProvider((((output, registriesFuture) -> new AmbleBlockTagProvider(output, registriesFuture).withBlocks(AITExtrasBlocks.class))));
+    }
+
+    private void genLoot(FabricDataGenerator.Pack pack) {
+        pack.addProvider((((output, registriesFuture) -> new AmbleBlockLootTable(output).withBlocks(AITExtrasBlocks.class))));
+    }
     public void generateRecipes(FabricDataGenerator.Pack pack) {
         pack.addProvider((((output, registriesFuture) -> {
             AITRecipeProvider provider = new AITRecipeProvider(output);
@@ -39,9 +49,19 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .pattern("DED")
                     .pattern("DCD")
                     .input('D', Items.DARK_OAK_PLANKS)
-                    .input('C', Items.CHAIN).input('E', Items.ENDER_EYE)
+                    .input('C', Items.CHAIN)
+                    .input('E', Items.ENDER_EYE)
                     .criterion(hasItem(Items.DARK_OAK_PLANKS), conditionsFromItem(Items.DARK_OAK_PLANKS))
                     .criterion(hasItem(Items.CHAIN), conditionsFromItem(Items.CHAIN))
+                    .criterion(hasItem(Items.ENDER_EYE), conditionsFromItem(Items.ENDER_EYE)));
+
+            provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, AITExtrasBlocks.EXTRAS_SCREEN_MONITOR_BLOCK, 1)
+                    .pattern("BBB")
+                    .pattern("BEB")
+                    .pattern("BBB")
+                    .input('B', Items.BLACK_CONCRETE)
+                    .input('E', Items.ENDER_EYE)
+                    .criterion(hasItem(Items.BLACK_CONCRETE), conditionsFromItem(Items.BLACK_CONCRETE))
                     .criterion(hasItem(Items.ENDER_EYE), conditionsFromItem(Items.ENDER_EYE)));
 
             return provider;
@@ -125,6 +145,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
                     // Blocks
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_MONITOR_BLOCK, "Victorian Monitor");
+                    provider.addTranslation(AITExtrasBlocks.EXTRAS_SCREEN_MONITOR_BLOCK, "Screen");
 
             return provider;
         })));
