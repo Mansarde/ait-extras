@@ -61,8 +61,9 @@ dependencies {
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     modApi "com.github.amblelabs:ait:${project.ait_version}"
-
-
+    modImplementation("com.github.amblelabs:modkit:${project.Amble_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
 
     include(modImplementation("com.github.DrTheodor:mc-multidim:${project.multidim_version}")) {
         exclude(group: "net.fabricmc.fabric-api")
@@ -73,10 +74,11 @@ dependencies {
     include(modImplementation("com.github.DrTheodor:mc-queue:${project.queue_version}")) {
         exclude(group: "net.fabricmc.fabric-api")
     }
-    include(modImplementation("com.github.amblelabs:modkit:${project.Amble_version}")) {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
+  //  include(modImplementation("com.github.amblelabs:modkit:${project.Amble_version}")) {
+       // exclude(group: "net.fabricmc.fabric-api")
+    //}
 }
+
 
 processResources {
     inputs.property "version", project.version
