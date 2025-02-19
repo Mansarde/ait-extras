@@ -1,12 +1,14 @@
 package com.aitextras.datagen;
 
 import com.aitextras.core.AITExtrasBlocks;
+import com.aitextras.core.AITExtrasItems;
 import dev.amble.ait.core.AITBlocks;
 import dev.amble.ait.datagen.datagen_providers.AITRecipeProvider;
 import dev.amble.ait.module.ModuleRegistry;
 import dev.amble.lib.datagen.lang.LanguageType;
 import dev.amble.lib.datagen.lang.AmbleLanguageProvider;
 import dev.amble.lib.datagen.loot.AmbleBlockLootTable;
+import dev.amble.lib.datagen.model.AmbleModelProvider;
 import dev.amble.lib.datagen.tag.AmbleBlockTagProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
@@ -26,8 +28,19 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
         generateRecipes(pack);
         genLoot(pack);
         genTags(pack);
+        genModels(pack);
     }
 
+    private void genModels(FabricDataGenerator.Pack pack) {
+        pack.addProvider((((output, registriesFuture) -> {
+            AmbleModelProvider provider = new AmbleModelProvider(output);
+
+            provider.withBlocks(AITExtrasBlocks.class);
+            provider.withItems(AITExtrasItems.class);
+
+            return provider;
+        })));
+    }
     private void genTags(FabricDataGenerator.Pack pack) {
         pack.addProvider((((output, registriesFuture) -> new AmbleBlockTagProvider(output, registriesFuture).withBlocks(AITExtrasBlocks.class))));
     }
@@ -146,6 +159,19 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     // Blocks
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_MONITOR_BLOCK, "Victorian Monitor");
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_SCREEN_MONITOR_BLOCK, "Screen");
+                    provider.addTranslation(AITExtrasBlocks.EXTRAS_MINT_ROUNDEL, "Mint Roundel");
+                    provider.addTranslation(AITExtrasBlocks.EXTRAS_MINT_ROUNDEL_SIDE, "Mint Roundel");
+                    provider.addTranslation(AITExtrasBlocks.EXTRAS_WHITE_ROUNDEL, "White Roundel");
+                    provider.addTranslation(AITExtrasBlocks.EXTRAS_WHITE_ROUNDEL_SIDE, "White Roundel");
+                    provider.addTranslation(AITExtrasBlocks.EXTRAS_RENAISSANCE_ROUNDEL, "Renaissance Roundel");
+                    provider.addTranslation(AITExtrasBlocks.EXTRAS_RENAISSANCE_ROUNDEL_SIDE, "Renaissance Roundel");
+                    provider.addTranslation(AITExtrasBlocks.EXTRAS_TARDIM_ROUNDEL, "Tardim Roundel");
+                    provider.addTranslation(AITExtrasBlocks.EXTRAS_TARDIM_ROUNDEL_SIDE, "Tardim Roundel");
+                    provider.addTranslation(AITExtrasBlocks.EXTRAS_DARK_OAK_ROUNDEL, "Dark Oak Roundel");
+                    provider.addTranslation(AITExtrasBlocks.EXTRAS_DARK_OAK_ROUNDEL_SIDE, "Dark Oak Roundel");
+                    provider.addTranslation(AITExtrasBlocks.EXTRAS_CRYSTALLINE_BLOCK, "Crystalline Block");
+                    provider.addTranslation("tooltip.ait-extras.roundel_type", "Roundel Type:");
+
 
             return provider;
         })));
