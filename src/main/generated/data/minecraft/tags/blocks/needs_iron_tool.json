@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "ait:martian_gold_ore",
+    "ait:martian_redstone_ore",
+    "ait:martian_lapis_ore",
+    "ait:anorthosite_emerald_ore",
+    "ait:martian_diamond_ore",
+    "ait:anorthosite_gold_ore",
+    "ait:martian_emerald_ore",
+    "ait:anorthosite_lapis_ore",
+    "ait:anorthosite_redstone_ore",
+    "ait:anorthosite_diamond_ore"
+  ]
+}
