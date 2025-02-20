@@ -48,7 +48,7 @@ jobs:
       - name: Publish artifacts
         uses: DrTheodor/discord-webhook-upload-action@v1.2
         with:
-          url: ${{ secrets.EXTRAS_DEV_BUILDS_ADDIE }}
+          url: ${{ secrets.ADDIE_MAIN_SERVER }}
           file: 'build/libs/*'
           username: george addington
           avatar: 'https://i.imgur.com/PLXp29k.png'
