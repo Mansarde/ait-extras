@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-19T19:50:56.0335608	AIT Extras/Model Definitions
+// 1.20.1	2025-02-20T14:03:47.281835	AIT Extras/Model Definitions
 d55f00672b1a8b8e34daff2fa43edd31c553f186 assets\ait-extras\models\item\extras_mint_roundel_side.json
 a2dc09316aae7a4785128aec639da0b1b7215705 assets\ait-extras\models\item\extras_white_roundel.json
 ffd937f5e940100852b3737a178ac7cc88ce00fd assets\ait-extras\models\block\extras_mint_roundel.json
@@ -20,8 +20,8 @@ f416d2179574250a1451dfcd41d0473d3b8b9d55 assets\ait-extras\models\block\extras_w
 64b59d53f4149c9b4b1c496e8b1620f22b82b391 assets\ait-extras\models\item\extras_crystalline_block.json
 9ca2fdff2e05dded4d82ec1934bf6d29c12f3331 assets\ait-extras\models\block\extras_dark_oak_roundel_side.json
 2ba899a76a141023878ad1909dc5307fab72777b assets\ait-extras\blockstates\extras_white_roundel_side.json
-6c4511729627efd3ef79ba8be77a5206606cf700 assets\ait-extras\blockstates\extras_renaissance_roundel.json
 347a4a1524cd0dec75a49865e9f04647338b4008 assets\ait-extras\blockstates\extras_renaissance_roundel_side.json
+6c4511729627efd3ef79ba8be77a5206606cf700 assets\ait-extras\blockstates\extras_renaissance_roundel.json
 1bb0613527483f403bec513ee64a716db7e7efd1 assets\ait-extras\models\item\extras_mint_roundel.json
 82e6b523484b1c7f1ce0dc8a12028acad479c29c assets\ait-extras\models\item\extras_renaissance_roundel.json
 f6e9e5a0bffec10cdc703a76f1231e2e3e6cb777 assets\ait-extras\models\block\extras_renaissance_roundel.json

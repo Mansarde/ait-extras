@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "ait:anorthosite_iron_ore",
-    "ait:anorthosite_copper_ore",
-    "ait:martian_copper_ore",
-    "ait:martian_iron_ore"
-  ]
-}
