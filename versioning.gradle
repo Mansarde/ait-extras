@@ -4,8 +4,8 @@ ext.getCurrentVersion = {
 
     if (branch != null && branch.startsWith("refs/heads/")) {
         branch = branch.substring("refs/heads/".length())
-        // replace / with _
-        branch = branch.replaceAll("/", "_")
+        // replace / with -
+        branch = branch.replaceAll("/", "-")
         if (branch == "main" || branch == "release") {
             branch = null
         }
