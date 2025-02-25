@@ -3,8 +3,10 @@ package com.aitextras.client;
 import com.aitextras.AITExtras;
 import com.aitextras.client.models.doors.EctoDoorModel;
 import com.aitextras.client.models.doors.PostBoxDoorModel;
+import com.aitextras.client.models.doors.VanillaDoorModel;
 import com.aitextras.client.models.exteriors.EctoExteriorModel;
 import com.aitextras.client.models.exteriors.PostBoxExteriorModel;
+import com.aitextras.client.models.exteriors.VanillaExteriorModel;
 import com.aitextras.client.renderers.monitors.ExtrasMonitorRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasScreenMonitorRenderer;
 import com.aitextras.core.AITExtrasBlockEntityTypes;
@@ -24,7 +26,10 @@ public class AITExtrasClient implements ClientModInitializer {
         AITExtras.ECTO.toDoor().setModel(new EctoDoorModel(EctoDoorModel.getTexturedModelData().createModel())).toClient().register();
 
         AITExtras.POSTBOX.setModel(new PostBoxExteriorModel()).toClient().register();
-        AITExtras.POSTBOX.toDoor().setModel(new PostBoxDoorModel(PostBoxDoorModel.getTexturedModelData().createModel())).toClient().register(); //make door model for this!
+        AITExtras.POSTBOX.toDoor().setModel(new PostBoxDoorModel(PostBoxDoorModel.getTexturedModelData().createModel())).toClient().register();
+
+        AITExtras.VANILLA.setModel(new VanillaExteriorModel()).toClient().register();
+        AITExtras.VANILLA.toDoor().setModel(new VanillaDoorModel(VanillaDoorModel.getTexturedModelData().createModel())).toClient().register();
     };
     public static void blockEntityRendererRegister() {
 

@@ -9,6 +9,7 @@ import dev.amble.ait.data.schema.exterior.category.PoliceBoxCategory;
 import dev.amble.ait.data.schema.exterior.variant.addon.AddonExterior;
 import dev.amble.lib.container.RegistryContainer;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.sound.SoundEvents;
 import org.joml.Vector3f;
 
 public class AITExtras implements ModInitializer {
@@ -16,6 +17,7 @@ public class AITExtras implements ModInitializer {
     public static final String MOD_ID = "ait-extras";
     public static AddonExterior ECTO;
     public static AddonExterior POSTBOX;
+    public static AddonExterior VANILLA;
 
 
 
@@ -38,6 +40,13 @@ public class AITExtras implements ModInitializer {
         POSTBOX.setDoor(new AddonExterior.Door(
                         POSTBOX, false, net.minecraft.sound.SoundEvents.BLOCK_WOODEN_TRAPDOOR_OPEN,
                         net.minecraft.sound.SoundEvents.BLOCK_WOODEN_TRAPDOOR_CLOSE))
+                .toDoor().register();
+
+        VANILLA = new AddonExterior(PoliceBoxCategory.REFERENCE, MOD_ID, "vanilla").register();
+        VANILLA.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+        VANILLA.setDoor(new AddonExterior.Door(
+                        VANILLA, false, SoundEvents.BLOCK_IRON_DOOR_OPEN,
+                        net.minecraft.sound.SoundEvents.BLOCK_IRON_DOOR_CLOSE))
                 .toDoor().register();
 
 
