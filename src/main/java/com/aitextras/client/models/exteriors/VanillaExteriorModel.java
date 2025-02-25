@@ -96,7 +96,7 @@ public class VanillaExteriorModel extends ExteriorModel {
 		if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS)
 			this.root.getChild("door").yaw = exterior.tardis().get().door().isOpen() ? 1.575F : 0.0F;
 		else {
-			float maxRot = 90f;
+			float maxRot = -90f;
 			this.root.getChild("door").yaw = (float) Math.toRadians(maxRot * exterior.tardis().get().door().getLeftRot());
 		}
 		matrices.scale(1f, 1f, 1f);
@@ -121,7 +121,7 @@ public class VanillaExteriorModel extends ExteriorModel {
 		if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS)
 			this.root.getChild("door").yaw = falling.tardis().get().door().isOpen() ? 1.575F : 0.0F;
 		else {
-			float maxRot = 90f;
+			float maxRot = -90f;
 			this.root.getChild("door").yaw = (float) Math.toRadians(maxRot * falling.tardis().get().door().getLeftRot());
 		}
 		matrices.scale(1f, 1f, 1f);

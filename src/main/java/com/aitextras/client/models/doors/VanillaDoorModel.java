@@ -55,7 +55,7 @@ public class VanillaDoorModel extends DoorModel {
         if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS) {
             this.BONE.getChild("door").yaw = linkableBlockEntity.tardis().get().door().isOpen() ? 1.575F : 0.0F;
         } else {
-            float maxRot = 90.0F;
+            float maxRot = -90.0F;
             this.BONE.getChild("door").yaw = (float)Math.toRadians((double)(maxRot * linkableBlockEntity.tardis().get().door().getLeftRot()));
         }
 
