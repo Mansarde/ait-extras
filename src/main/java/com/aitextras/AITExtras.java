@@ -43,7 +43,7 @@ public class AITExtras implements ModInitializer {
                 .toDoor().register();
 
         VANILLA = new AddonExterior(PoliceBoxCategory.REFERENCE, MOD_ID, "vanilla").register();
-        VANILLA.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+        VANILLA.setSonicItemTranslations(new Vector3f(1f, 1f, 2f));
         VANILLA.setDoor(new AddonExterior.Door(
                         VANILLA, false, SoundEvents.BLOCK_IRON_DOOR_OPEN,
                         net.minecraft.sound.SoundEvents.BLOCK_IRON_DOOR_CLOSE))
