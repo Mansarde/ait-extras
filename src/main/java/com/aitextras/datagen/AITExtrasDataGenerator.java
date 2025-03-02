@@ -1,8 +1,10 @@
 package com.aitextras.datagen;
 
 import com.aitextras.core.AITExtrasBlocks;
+import com.aitextras.core.AITExtrasItemGroups;
 import com.aitextras.core.AITExtrasItems;
 import dev.amble.ait.core.AITBlocks;
+import dev.amble.ait.core.AITItemGroups;
 import dev.amble.ait.datagen.datagen_providers.AITRecipeProvider;
 import dev.amble.ait.module.ModuleRegistry;
 import dev.amble.lib.datagen.lang.LanguageType;
@@ -175,6 +177,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_CRYSTALLINE_BLOCK, "Crystalline Block");
                     provider.addTranslation("tooltip.ait-extras.roundel_type", "Roundel Type:");
 
+                    // Tabs
+                     provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");
 
             return provider;
         })));

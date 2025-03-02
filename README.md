@@ -1,10 +1,10 @@
-![Replace this with a description](https://cdn.modrinth.com/data/cached_images/99b5c76544bfc3c53a228a44d634658d08daed76.png)
+![ait_extras_logo.png](src/main/resources/assets/ait_extras_logo.png)
 
 
 ![Modrinth Game Versions](https://img.shields.io/modrinth/game-versions/ait-extras?link=https%3A%2F%2Fmodrinth.com%2Fmod%2Fait%2Fversions)
 ![Modrinth Downloads](https://img.shields.io/modrinth/dt/ait-extras?logo=modrinth&link=https%3A%2F%2Fmodrinth.com%2Fmod%2Fait)
 
-<a href="https://modrinth.com/project/amblekit"><img src="https://github.com/amblelabs/modkit/blob/main/promo/required.png?raw=true" width="512" height="86"></a>
+
 ---------
 ## Q&A
 
