@@ -26,6 +26,7 @@ public class EctoExteriorModel extends ExteriorModel {
 		root.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
 		matrices.pop();
 	}
+
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
 		ModelPartData modelPartData = modelData.getRoot();
@@ -139,6 +140,7 @@ public class EctoExteriorModel extends ExteriorModel {
 		ModelPartData cube_r16 = Roof.addChild("cube_r16", ModelPartBuilder.create().uv(28, 305).cuboid(-14.0F, -2.5F, 0.0F, 28.0F, 5.0F, 4.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -68.5F, -17.0F, -0.4363F, 0.0F, 0.0F));
 		return TexturedModelData.of(modelData, 512, 512);
 	}
+
 	@Override
 	public void renderWithAnimations(ExteriorBlockEntity exterior, ModelPart root, MatrixStack matrices,
 									 VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
@@ -158,8 +160,8 @@ public class EctoExteriorModel extends ExteriorModel {
 					: 0.0F;
 		} else {
 			float maxRot = 90f;
-			this.root.getChild("TARDIS").getChild("Doors").getChild("left_door").yaw =(float) Math.toRadians(maxRot*door.getLeftRot());
-			this.root.getChild("TARDIS").getChild("Doors").getChild("right_door").yaw =(float) -Math.toRadians(maxRot*door.getRightRot());
+			this.root.getChild("TARDIS").getChild("Doors").getChild("left_door").yaw = (float) Math.toRadians(maxRot * door.getLeftRot());
+			this.root.getChild("TARDIS").getChild("Doors").getChild("right_door").yaw = (float) -Math.toRadians(maxRot * door.getRightRot());
 		}
 
 		super.renderWithAnimations(exterior, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);
@@ -185,8 +187,8 @@ public class EctoExteriorModel extends ExteriorModel {
 					: 0.0F;
 		} else {
 			float maxRot = 90f;
-			this.root.getChild("TARDIS").getChild("Doors").getChild("left_door").yaw =(float) -Math.toRadians(maxRot*door.getLeftRot());
-			this.root.getChild("TARDIS").getChild("Doors").getChild("right_door").yaw =(float) Math.toRadians(maxRot*door.getRightRot());
+			this.root.getChild("TARDIS").getChild("Doors").getChild("left_door").yaw = (float) -Math.toRadians(maxRot * door.getLeftRot());
+			this.root.getChild("TARDIS").getChild("Doors").getChild("right_door").yaw = (float) Math.toRadians(maxRot * door.getRightRot());
 		}
 
 		super.renderEntity(falling, root, matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
@@ -202,4 +204,8 @@ public class EctoExteriorModel extends ExteriorModel {
 	public ModelPart getPart() {
 		return root; // Return the root part for rendering
 	}
+
+	@Override
+	public void renderDoors(ExteriorBlockEntity exterior, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha, boolean isBOTI) {}
+
 }

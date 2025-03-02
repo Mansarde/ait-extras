@@ -127,7 +127,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("exterior.ait-extras.coral_alternate", "Coral (ALT)");
                     provider.addTranslation("exterior.ait-extras.tokamak_eotd", "Tokamak (EOTD)");
                     provider.addTranslation("exterior.ait-extras.toyota_alternate", "Toyota (ALT)");
-                    provider.addTranslation("exterior.ait-extras.toyota_memorial", "Memorial");
+                    provider.addTranslation("exterior.ait-extras.tokamak", "Crystalline");
                     provider.addTranslation("exterior.ait-extras.yard", "73 Yards");
 
                         //classic box
@@ -136,7 +136,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("exterior.ait-extras.classic_cricketer2", "Cricketer (ALT)");
                     provider.addTranslation("exterior.ait-extras.classic_happiness", "Happiness");
                     provider.addTranslation("exterior.ait-extras.classic_pilot", "Pilot");
-                    provider.addTranslation("exterior.ait-extras.classic_percedent", "Percedent");
+                    provider.addTranslation("exterior.ait-extras.classic_precedent", "Precedent");
                     provider.addTranslation("exterior.ait-extras.classic_snowman", "Snowman");
                     provider.addTranslation("exterior.ait-extras.classic_victorian", "Victorian");
                     provider.addTranslation("exterior.ait-extras.classic_wanderlust", "Wanderlust");
