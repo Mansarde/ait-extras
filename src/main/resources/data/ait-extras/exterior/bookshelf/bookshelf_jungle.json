@@ -5,12 +5,12 @@
   "texture": "ait-extras:textures/blockentities/exteriors/bookshelf/bookshelf_jungle.png",
   "emission": "ait-extras:textures/blockentities/exteriors/bookshelf/bookshelf_jungle_emission.png",
   "overrides":
-  {"snowy": "",
-    "chorus": "",
-    "cherry": "",
-    "sculk": "",
-    "sandy": "",
-    "muddy": "",
-    "red_sandy": ""
+  {"snowy": "ait:textures/blockentities/exteriors/bookshelf/bookshelf_snowy.png",
+    "chorus": "ait:textures/blockentities/exteriors/bookshelf/bookshelf_chorus.png",
+    "cherry": "ait:textures/blockentities/exteriors/bookshelf/bookshelf_cherry.png",
+    "sculk": "ait:textures/blockentities/exteriors/bookshelf/bookshelf_sculk.png",
+    "sandy": "ait:textures/blockentities/exteriors/bookshelf/bookshelf_sandy.png",
+    "muddy": "ait:textures/blockentities/exteriors/bookshelf/bookshelf_muddy.png",
+    "red_sandy": "ait:textures/blockentities/exteriors/bookshelf/bookshelf_red_sandy.png"
   }
 }
