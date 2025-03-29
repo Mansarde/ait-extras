@@ -11,6 +11,7 @@ import dev.amble.lib.datagen.lang.LanguageType;
 import dev.amble.lib.datagen.lang.AmbleLanguageProvider;
 import dev.amble.lib.datagen.loot.AmbleBlockLootTable;
 import dev.amble.lib.datagen.model.AmbleModelProvider;
+import dev.amble.lib.datagen.sound.AmbleSoundProvider;
 import dev.amble.lib.datagen.tag.AmbleBlockTagProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
@@ -43,6 +44,11 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
             return provider;
         })));
     }
+
+    public void generateSoundData(FabricDataGenerator.Pack pack) {
+        pack.addProvider((((output, registriesFuture) -> new AmbleSoundProvider(output))));
+    }
+
     private void genTags(FabricDataGenerator.Pack pack) {
         pack.addProvider((((output, registriesFuture) -> new AmbleBlockTagProvider(output, registriesFuture).withBlocks(AITExtrasBlocks.class))));
     }
@@ -176,6 +182,10 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_DARK_OAK_ROUNDEL_SIDE, "Dark Oak Roundel");
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_CRYSTALLINE_BLOCK, "Crystalline Block");
                     provider.addTranslation("tooltip.ait-extras.roundel_type", "Roundel Type:");
+
+                    // Items
+            provider.addTranslation(AITExtrasItems.MERCURY_NITRO_MUSIC_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");
+            provider.addTranslation(AITExtrasItems.MERCURY_NITRO_MUSIC_DISC, "Music Disc");
 
                     // Tabs
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");
