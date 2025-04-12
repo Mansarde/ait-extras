@@ -13,6 +13,6 @@ public class AITExtrasItems extends ItemContainer {
 
     @AutomaticModel
     @NoEnglish
-    public static final Item MERCURY_NITRO_MUSIC_DISC = new MusicDiscItem(11, AITExtrasSounds.MERCURY_NITRO_MUSIC,
+    public static final Item MERCURY_DISC = new MusicDiscItem(11, AITExtrasSounds.MERCURY_DISC,
             new AItemSettings().maxCount(1).rarity(Rarity.RARE).group(AITExtrasItemGroups.MAIN), 216);
 }

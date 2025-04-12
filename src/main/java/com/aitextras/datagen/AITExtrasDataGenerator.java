@@ -170,22 +170,12 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     // Blocks
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_MONITOR_BLOCK, "Victorian Monitor");
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_SCREEN_MONITOR_BLOCK, "Screen");
-                    provider.addTranslation(AITExtrasBlocks.EXTRAS_MINT_ROUNDEL, "Mint Roundel");
-                    provider.addTranslation(AITExtrasBlocks.EXTRAS_MINT_ROUNDEL_SIDE, "Mint Roundel");
-                    provider.addTranslation(AITExtrasBlocks.EXTRAS_WHITE_ROUNDEL, "White Roundel");
-                    provider.addTranslation(AITExtrasBlocks.EXTRAS_WHITE_ROUNDEL_SIDE, "White Roundel");
-                    provider.addTranslation(AITExtrasBlocks.EXTRAS_RENAISSANCE_ROUNDEL, "Renaissance Roundel");
-                    provider.addTranslation(AITExtrasBlocks.EXTRAS_RENAISSANCE_ROUNDEL_SIDE, "Renaissance Roundel");
-                    provider.addTranslation(AITExtrasBlocks.EXTRAS_TARDIM_ROUNDEL, "Tardim Roundel");
-                    provider.addTranslation(AITExtrasBlocks.EXTRAS_TARDIM_ROUNDEL_SIDE, "Tardim Roundel");
-                    provider.addTranslation(AITExtrasBlocks.EXTRAS_DARK_OAK_ROUNDEL, "Dark Oak Roundel");
-                    provider.addTranslation(AITExtrasBlocks.EXTRAS_DARK_OAK_ROUNDEL_SIDE, "Dark Oak Roundel");
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_CRYSTALLINE_BLOCK, "Crystalline Block");
-                    provider.addTranslation("tooltip.ait-extras.roundel_type", "Roundel Type:");
 
                     // Items
-            provider.addTranslation(AITExtrasItems.MERCURY_NITRO_MUSIC_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");
-            provider.addTranslation(AITExtrasItems.MERCURY_NITRO_MUSIC_DISC, "Music Disc");
+            provider.addTranslation(AITExtrasItems.MERCURY_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");
+            provider.addTranslation(AITExtrasItems.MERCURY_DISC, "Mercury Disc");
+            provider.addTranslation("music.record.mercury_disc", "Mercury Disc");
 
                     // Tabs
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");

@@ -1,14 +1,4 @@
-// 1.20.1	2025-03-02T21:03:37.1859805	AIT Extras/Block Loot Tables
+// 1.20.1	2025-04-12T17:07:11.7114967	AIT Extras/Block Loot Tables
 42ab7baeeb63d34f02f07ed2be1045b5bf1a06e4 data\ait-extras\loot_tables\blocks\extras_monitor_block.json
-dfa97e64f96468e588ba5a37143b5b44b94e2d08 data\ait-extras\loot_tables\blocks\extras_mint_roundel_side.json
-d74fb9aded85a8e11009ec15e3aac10d5172d5a7 data\ait-extras\loot_tables\blocks\extras_tardim_roundel.json
 6e41aeb721597f2597dad2dc551c6cc391cd63c7 data\ait-extras\loot_tables\blocks\extras_crystalline_block.json
-b84c4a1284451875336b577e105e7fc92b6cd287 data\ait-extras\loot_tables\blocks\extras_renaissance_roundel_side.json
-bdbb5798dd091ba573bff74261311a6646efa938 data\ait-extras\loot_tables\blocks\extras_renaissance_roundel.json
-8463000cd809223d6a7d714dbceb7ef758e9a80e data\ait-extras\loot_tables\blocks\extras_dark_oak_roundel.json
-aea81700cb3ad3e8ad40ba1d1550248136abc086 data\ait-extras\loot_tables\blocks\extras_white_roundel_side.json
-7724d563dcedf90b1e544efe5a6e6d979ebcaae4 data\ait-extras\loot_tables\blocks\extras_white_roundel.json
-8f8a6bd8eba021f6eeb8f2ab040cc86951818f23 data\ait-extras\loot_tables\blocks\extras_mint_roundel.json
-a01e686932902cc021b99a09a861acaebe06c199 data\ait-extras\loot_tables\blocks\extras_tardim_roundel_side.json
-52cae91316e90669a0d72d30187c164d24105258 data\ait-extras\loot_tables\blocks\extras_dark_oak_roundel_side.json
 3670a444116a7c3bace4988d9eb4613db2cc954b data\ait-extras\loot_tables\blocks\extras_screen_monitor_block.json
