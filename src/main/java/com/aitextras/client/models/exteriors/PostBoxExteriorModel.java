@@ -1,8 +1,9 @@
 package com.aitextras.client.models.exteriors;
 
 import dev.amble.ait.AITMod;
-import dev.amble.ait.api.link.v2.Linkable;
+import dev.amble.ait.api.tardis.link.v2.Linkable;
 import dev.amble.ait.client.models.exteriors.ExteriorModel;
+import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.blockentities.ExteriorBlockEntity;
 import dev.amble.ait.core.tardis.handler.DoorHandler;
 import net.minecraft.client.model.*;
@@ -58,7 +59,7 @@ public class PostBoxExteriorModel extends ExteriorModel {
 	}
 
 	@Override
-	public void renderWithAnimations(ExteriorBlockEntity exterior, ModelPart root, MatrixStack matrices,
+	public void renderWithAnimations(ClientTardis tardis, ExteriorBlockEntity exterior, ModelPart root, MatrixStack matrices,
 									 VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
 		if (exterior.tardis().isEmpty())
 			return;
@@ -73,7 +74,8 @@ public class PostBoxExteriorModel extends ExteriorModel {
 		matrices.scale(1f, 1f, 1f);
 		matrices.translate(0, -1.5f, 0);
 
-		super.renderWithAnimations(exterior, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);
+		super.renderWithAnimations(tardis, exterior, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);
+
 		matrices.pop();
 	}
 
@@ -108,11 +110,14 @@ public class PostBoxExteriorModel extends ExteriorModel {
 	}
 
 	@Override
+	public void renderDoors(ClientTardis clientTardis, ExteriorBlockEntity exteriorBlockEntity, ModelPart modelPart, MatrixStack matrixStack, VertexConsumer vertexConsumer, int i, int i1, float v, float v1, float v2, float v3, boolean b) {
+
+	}
+
+	@Override
 	public ModelPart getPart() {
 		return root; // Return the root part for rendering
 	}
 
-	@Override
-	public void renderDoors(ExteriorBlockEntity exterior, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha, boolean isBOTI) {}
 
 }

@@ -6,9 +6,10 @@
 package com.aitextras.client.models.doors;
 
 import dev.amble.ait.AITMod;
-import dev.amble.ait.api.link.v2.block.AbstractLinkableBlockEntity;
+import dev.amble.ait.api.tardis.link.v2.block.AbstractLinkableBlockEntity;
 import dev.amble.ait.client.models.doors.DoorModel;
 import dev.amble.ait.client.models.exteriors.BoothExteriorModel;
+import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.tardis.handler.DoorHandler;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.RenderLayer;
@@ -50,7 +51,9 @@ public class VanillaDoorModel extends DoorModel {
         return Builder.create(0.0F).build();
     }
 
-    public void renderWithAnimations(AbstractLinkableBlockEntity linkableBlockEntity, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
+    @Override
+    public void renderWithAnimations(ClientTardis tardis, AbstractLinkableBlockEntity linkableBlockEntity, ModelPart root, MatrixStack matrices,
+                                     VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
         matrices.push();
         if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS) {
             this.BONE.getChild("door").yaw = linkableBlockEntity.tardis().get().door().isOpen() ? 1.575F : 0.0F;
@@ -62,7 +65,7 @@ public class VanillaDoorModel extends DoorModel {
         matrices.scale(1.0F, 1.0F, 1.0F);
         matrices.translate(0.0F, -1.5F, 0.0F);
         matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(180.0F));
-        super.renderWithAnimations(linkableBlockEntity, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);
+        super.renderWithAnimations(tardis, linkableBlockEntity, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);
         matrices.pop();
     }
 }

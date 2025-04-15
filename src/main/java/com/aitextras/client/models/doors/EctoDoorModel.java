@@ -6,8 +6,9 @@
 package com.aitextras.client.models.doors;
 
 import dev.amble.ait.AITMod;
-import dev.amble.ait.api.link.v2.block.AbstractLinkableBlockEntity;
+import dev.amble.ait.api.tardis.link.v2.block.AbstractLinkableBlockEntity;
 import dev.amble.ait.client.models.doors.DoorModel;
+import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.tardis.handler.DoorHandler;
 import net.minecraft.client.model.Dilation;
 import net.minecraft.client.model.ModelData;
@@ -47,34 +48,50 @@ public class EctoDoorModel extends DoorModel {
         return TexturedModelData.of(modelData, 512, 512);
     }
 
-    public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
-        this.TARDIS.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
+    @Override
+    public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red,
+                       float green, float blue, float alpha) {
+        TARDIS.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
     }
 
-    public void renderWithAnimations(AbstractLinkableBlockEntity doorEntity, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
+    @Override
+    public void renderWithAnimations(ClientTardis tardis, AbstractLinkableBlockEntity doorEntity, ModelPart root, MatrixStack matrices,
+                                     VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
+        DoorHandler door = tardis.door();
+
         if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS) {
-            DoorHandler door = doorEntity.tardis().get().door();
-            this.TARDIS.getChild("Doors").getChild("left_door").yaw = !door.isLeftOpen() && !door.isOpen() ? 0.0F : -5.0F;
-            this.TARDIS.getChild("Doors").getChild("right_door").yaw = !door.isRightOpen() && !door.areBothOpen() ? 0.0F : 5.0F;
+            this.TARDIS.getChild("Doors").getChild("left_door").yaw = (door.isLeftOpen() || door.isOpen()) ? -5F : 0.0F;
+            this.TARDIS.getChild("Doors").getChild("right_door").yaw = (door.isRightOpen() || door.areBothOpen())
+                    ? 5F
+                    : 0.0F;
         } else {
-            float maxRot = 90.0F;
-            this.TARDIS.getChild("Doors").getChild("left_door").yaw = (float)(Math.toRadians((double)(maxRot * doorEntity.tardis().get().door().getLeftRot())));
-            this.TARDIS.getChild("Doors").getChild("right_door").yaw = (float)-Math.toRadians((double)(maxRot * doorEntity.tardis().get().door().getRightRot()));
+            float maxRot = 90f;
+            this.TARDIS.getChild("Doors").getChild("left_door").yaw = (float) Math.toRadians(maxRot*door.getLeftRot());
+            this.TARDIS.getChild("Doors").getChild("right_door").yaw = (float) -Math.toRadians(maxRot*door.getRightRot());
         }
 
         matrices.push();
         matrices.scale(0.63F, 0.63F, 0.63F);
-        matrices.translate((double)0.0F, (double)-1.5F, 0.35);
-        matrices.multiply(RotationAxis.NEGATIVE_Y.rotationDegrees(180.0F));
-        super.renderWithAnimations(doorEntity, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);
+        matrices.translate(0, -1.5, 0.35);
+        matrices.multiply(RotationAxis.NEGATIVE_Y.rotationDegrees(180));
+
+        super.renderWithAnimations(tardis, doorEntity, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);
         matrices.pop();
     }
 
+    @Override
     public Animation getAnimationForDoorState(DoorHandler.AnimationDoorState state) {
-        return Builder.create(0.0F).build();
+        return Animation.Builder.create(0).build();/*return switch (state) {
+            case CLOSED -> DoorAnimations.INTERIOR_BOTH_CLOSE_ANIMATION;
+            case FIRST -> DoorAnimations.INTERIOR_FIRST_OPEN_ANIMATION;
+            case SECOND -> DoorAnimations.INTERIOR_SECOND_OPEN_ANIMATION;
+            case BOTH -> DoorAnimations.INTERIOR_BOTH_OPEN_ANIMATION;
+        };*/
     }
 
+    @Override
     public ModelPart getPart() {
-        return this.TARDIS;
+        return TARDIS;
     }
 }
+
