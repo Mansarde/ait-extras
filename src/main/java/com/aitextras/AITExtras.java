@@ -34,8 +34,6 @@ public class AITExtras implements ModInitializer {
         RegistryContainer.register(AITExtrasBlockEntityTypes.class, MOD_ID);
         RegistryContainer.register(AITExtrasItemGroups.class, MOD_ID);
         AITExtrasSounds.init();
-        Registry.register(Registries.SOUND_EVENT, Identifier.of(MOD_ID, "mercury_disc"),
-                SoundEvent.of(Identifier.of(MOD_ID, "mercury_disc")));
     }
 
     private void registerAddonExteriors() {

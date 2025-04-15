@@ -172,10 +172,9 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_SCREEN_MONITOR_BLOCK, "Screen");
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_CRYSTALLINE_BLOCK, "Crystalline Block");
 
-                    // Items
+            // Items
             provider.addTranslation(AITExtrasItems.MERCURY_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");
-            provider.addTranslation(AITExtrasItems.MERCURY_DISC, "Mercury Disc");
-            provider.addTranslation("music.record.mercury_disc", "Mercury Disc");
+            provider.addTranslation(AITExtrasItems.MERCURY_DISC, "Music Disc");
 
                     // Tabs
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");

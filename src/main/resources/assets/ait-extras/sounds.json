@@ -1,7 +1,10 @@
 {
-"mercury_disc": {
-"sounds": [
-"ait-extras:mercury_disc"
-]
-}
+  "music/mercury_disc": {
+    "sounds": [
+      {
+        "name": "music/mercury_disc",
+        "category": "music"
+      }
+    ]
+  }
 }
