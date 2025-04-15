@@ -5,6 +5,7 @@ import com.aitextras.core.AITExtrasItemGroups;
 import com.aitextras.core.AITExtrasItems;
 import dev.amble.ait.core.AITBlocks;
 import dev.amble.ait.core.AITItemGroups;
+import dev.amble.ait.datagen.datagen_providers.AITItemTagProvider;
 import dev.amble.ait.datagen.datagen_providers.AITRecipeProvider;
 import dev.amble.ait.module.ModuleRegistry;
 import dev.amble.lib.datagen.lang.LanguageType;
@@ -32,6 +33,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
         genLoot(pack);
         genTags(pack);
         genModels(pack);
+        generateSoundData(pack);
+        generateItemTags(pack);
     }
 
     private void genModels(FabricDataGenerator.Pack pack) {
@@ -43,6 +46,10 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
             return provider;
         })));
+    }
+
+    public void generateItemTags(FabricDataGenerator.Pack pack) {
+        pack.addProvider(AITExtrasItemTagProvider::new);
     }
 
     public void generateSoundData(FabricDataGenerator.Pack pack) {
