@@ -20,15 +20,7 @@ public class VanillaExteriorModel<LinkableBlockEntity> extends ExteriorModel {
 	public VanillaExteriorModel() {
 		super();
 		this.root = getTexturedModelData().createModel().getChild("bone");
-	}
-
-	public void renderWithAnimations(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
-		matrices.push();
-		// Apply any transformations if needed
-		root.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
-		matrices.pop();
-	}
-	public static TexturedModelData getTexturedModelData() {
+	}public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
 		ModelPartData modelPartData = modelData.getRoot();
 		ModelPartData bone = modelPartData.addChild("bone", ModelPartBuilder.create().uv(0, 0).cuboid(-24.0F, -32.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
@@ -78,7 +70,7 @@ public class VanillaExteriorModel<LinkableBlockEntity> extends ExteriorModel {
 
 		ModelPartData lamp = bone.addChild("lamp", ModelPartBuilder.create().uv(0, 32).cuboid(-8.0F, -16.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -48.0F, 0.0F));
 
-		ModelPartData door = bone.addChild("door", ModelPartBuilder.create().uv(0, 64).cuboid(0.0F, -23.75F, -1.0F, 16.0F, 32.0F, 3.0F, new Dilation(0.0F)), ModelTransform.pivot(-8.0F, -8.25F, -23.0F));
+		ModelPartData door = bone.addChild("door", ModelPartBuilder.create().uv(0, 64).cuboid(-1.5F, -23.75F, -1.3F, 16.0F, 32.0F, 3.0F, new Dilation(0.0F)), ModelTransform.pivot(-6.5F, -8.25F, -22.7F));
 		return TexturedModelData.of(modelData, 128, 128);
 	}
 

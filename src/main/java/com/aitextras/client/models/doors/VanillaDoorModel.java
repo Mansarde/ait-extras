@@ -30,9 +30,18 @@ public class VanillaDoorModel extends DoorModel {
     public static TexturedModelData getTexturedModelData() {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
-        ModelPartData bone = modelPartData.addChild("bone", ModelPartBuilder.create(), ModelTransform.pivot(14.0F, 24.0F, -6.0F));
+        ModelPartData bone = modelPartData.addChild("bone", ModelPartBuilder.create().uv(0, 0).cuboid(-6.0F, -32.0F, -3.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
+                .uv(0, 0).cuboid(-6.0F, -16.0F, -3.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
+                .uv(0, 0).cuboid(-38.0F, -16.0F, -3.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
+                .uv(0, 0).cuboid(-38.0F, -32.0F, -3.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
+                .uv(0, 0).cuboid(-38.0F, -48.0F, -3.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
+                .uv(0, 0).cuboid(-22.0F, -48.0F, -3.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
+                .uv(0, 0).cuboid(-6.0F, -48.0F, -3.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
+                .uv(64, 0).cuboid(-6.0F, -44.0F, 13.0F, 16.0F, 8.0F, 2.0F, new Dilation(0.0F))
+                .uv(64, 0).cuboid(-22.0F, -44.0F, 13.0F, 16.0F, 8.0F, 2.0F, new Dilation(0.0F))
+                .uv(64, 0).cuboid(-38.0F, -44.0F, 13.0F, 16.0F, 8.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(14.0F, 24.0F, -6.0F));
 
-        ModelPartData door = bone.addChild("door", ModelPartBuilder.create().uv(0, 64).cuboid(0.0F, -23.75F, -2.0F, 16.0F, 32.0F, 3.0F, new Dilation(0.0F)), ModelTransform.pivot(-22.0F, -8.25F, -1.0F));
+        ModelPartData door = bone.addChild("door", ModelPartBuilder.create().uv(0, 64).cuboid(-1.5F, -23.75F, -1.3F, 16.0F, 32.0F, 3.0F, new Dilation(0.0F)), ModelTransform.pivot(-20.5F, -8.25F, -1.7F));
         return TexturedModelData.of(modelData, 128, 128);
     }
 
