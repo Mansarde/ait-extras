@@ -3,6 +3,7 @@ package com.aitextras;
 import com.aitextras.core.*;
 import dev.amble.ait.core.AITSounds;
 import dev.amble.ait.data.schema.exterior.category.BoothCategory;
+import dev.amble.ait.data.schema.exterior.category.PlinthCategory;
 import dev.amble.ait.data.schema.exterior.category.PoliceBoxCategory;
 import dev.amble.ait.data.schema.exterior.variant.addon.AddonExterior;
 import dev.amble.lib.container.RegistryContainer;
@@ -19,6 +20,7 @@ public class AITExtras implements ModInitializer {
     public static AddonExterior ECTO;
     public static AddonExterior POSTBOX;
     public static AddonExterior VANILLA;
+    public static AddonExterior CLOCK;
 
     public static Identifier id(String path) {
         return new Identifier(MOD_ID, path);
@@ -103,5 +105,35 @@ public class AITExtras implements ModInitializer {
                     case EAST -> pos.add(0.47, 0.075, 0);
                 };
          });
+
+        //CLOCK
+        CLOCK = new AddonExterior(PlinthCategory.REFERENCE, MOD_ID, "clock").register();
+        CLOCK.setDoor(new AddonExterior.Door(
+                        CLOCK, false, SoundEvents.BLOCK_WOODEN_TRAPDOOR_OPEN,
+                        SoundEvents.BLOCK_WOODEN_TRAPDOOR_CLOSE))
+                .toDoor().register();
+        CLOCK.hasPortals();
+        CLOCK.setPortalTranslations((pos, b) -> {
+            return switch(b) {
+                case 0 -> pos.add(0, -0.35, -0.37); // NORTH
+                case 1, 2, 3 -> pos.add(0, -0.35, -0.37); // NORTH EAST p n
+                case 4 -> pos.add(0, -0.35, 0); // EAST
+                case 5, 6, 7 -> pos.add(0, -0.35, 0.37); // SOUTH EAST p p
+                case 8 -> pos.add(0, -0.35, 0.37); // SOUTH
+                case 9, 10, 11 -> pos.add(-0, -0.35, 0.37); // SOUTH WEST n p
+                case 12 -> pos.add(-0, -0.35, 0); // WEST
+                case 13, 14, 15 -> pos.add(-0, -0.35, -0.37); // NORTH WEST n n
+                default -> pos;
+            };
+        });
+        CLOCK.toDoor().setPortalTranslations((pos, b) -> {
+            return switch(b) {
+                case DOWN, UP -> pos;
+                case NORTH -> pos.add(0, -0.2, -0.4);
+                case SOUTH -> pos.add(0, -0.2, 0.4);
+                case WEST -> pos.add(-0, -0.2, 0);
+                case EAST -> pos.add(0, -0.2, 0);
+            };
+        });
     }
 }

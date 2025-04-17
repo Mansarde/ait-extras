@@ -20,7 +20,8 @@ public class VanillaExteriorModel<LinkableBlockEntity> extends ExteriorModel {
 	public VanillaExteriorModel() {
 		super();
 		this.root = getTexturedModelData().createModel().getChild("bone");
-	}public static TexturedModelData getTexturedModelData() {
+	}
+	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
 		ModelPartData modelPartData = modelData.getRoot();
 		ModelPartData bone = modelPartData.addChild("bone", ModelPartBuilder.create().uv(0, 0).cuboid(-24.0F, -32.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))

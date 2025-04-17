@@ -168,6 +168,9 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                         //vanilla
                     provider.addTranslation("exterior.ait-extras.vanilla", "Vanilla");
 
+                        //clock
+                    provider.addTranslation("exterior.ait-extras.clock", "Clock");
+
                     //sonics
                     provider.addTranslation("sonic.ait-extras.cane", "Cane");
                     provider.addTranslation("sonic.ait-extras.fob_pink", "Fob (Pink)");
