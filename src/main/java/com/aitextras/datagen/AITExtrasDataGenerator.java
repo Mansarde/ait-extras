@@ -144,6 +144,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("exterior.ait-extras.toyota_alternate", "Toyota (ALT)");
                     provider.addTranslation("exterior.ait-extras.tokamak", "Crystalline");
                     provider.addTranslation("exterior.ait-extras.yard", "73 Yards");
+                    provider.addTranslation("exterior.ait-extras.60thmc", "60th Musical Celebration");
 
                         //classic box
                     provider.addTranslation("exterior.ait-extras.tango", "Tango");
