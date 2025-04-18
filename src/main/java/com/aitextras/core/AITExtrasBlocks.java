@@ -3,6 +3,7 @@ package com.aitextras.core;
 import com.aitextras.core.blocks.ExtrasCrystallineBlock;
 import com.aitextras.core.blocks.ExtrasMonitorBlock;
 import com.aitextras.core.blocks.ExtrasScreenMonitorBlock;
+import com.aitextras.core.blocks.SunDialBlock;
 import dev.amble.lib.block.ABlockSettings;
 import dev.amble.lib.container.impl.BlockContainer;
 import dev.amble.lib.datagen.util.AutomaticModel;
@@ -31,5 +32,12 @@ public class AITExtrasBlocks extends BlockContainer {
     public static final Block EXTRAS_CRYSTALLINE_BLOCK = new ExtrasCrystallineBlock(
             ABlockSettings.create().itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().strength(0.01F, 0.01F).pistonBehavior(PistonBehavior.NORMAL));
 
+
+
+
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    public static final Block SUN_DIAL_BLOCK = new SunDialBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+            .instrument(Instrument.COW_BELL).strength(1.5F, 6.0F).pistonBehavior(PistonBehavior.DESTROY));
     
    };

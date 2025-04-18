@@ -9,6 +9,7 @@ import com.aitextras.client.models.exteriors.ClockExteriorModel;
 import com.aitextras.client.models.exteriors.EctoExteriorModel;
 import com.aitextras.client.models.exteriors.PostBoxExteriorModel;
 import com.aitextras.client.models.exteriors.VanillaExteriorModel;
+import com.aitextras.client.renderers.decor.SunDialRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasMonitorRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasScreenMonitorRenderer;
 import com.aitextras.core.AITExtrasBlockEntityTypes;
@@ -51,8 +52,8 @@ public class AITExtrasClient implements ClientModInitializer {
         CLOCK.toDoor().setModel(new ClockDoorModel(ClockDoorModel.getTexturedModelData().createModel())).toClient().register();
     };
     public static void blockEntityRendererRegister() {
-
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.EXTRAS_MONITOR_BLOCK_ENTITY_TYPE, ExtrasMonitorRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.EXTRAS_SCREEN_MONITOR_BLOCK_ENTITY_TYPE, ExtrasScreenMonitorRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.SUN_DIAL_BLOCK_ENTITY_TYPE, SunDialRenderer::new);
     }
 }

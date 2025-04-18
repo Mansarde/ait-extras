@@ -1,18 +1,14 @@
 package com.aitextras.core;
 
-import static dev.amble.ait.core.AITItems.isUnlockedOnThisDay;
-
-import java.util.Calendar;
 
 import com.aitextras.core.blockentities.ExtrasMonitorBlockEntity;
 import com.aitextras.core.blockentities.ExtrasScreenMonitorBlockEntity;
-import dev.amble.ait.core.AITBlocks;
+import com.aitextras.core.blockentities.SunDialBlockEntity;
 import dev.amble.lib.container.impl.BlockEntityContainer;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 
 import net.minecraft.block.entity.BlockEntityType;
 
-import dev.amble.ait.core.blockentities.*;
 
 public class AITExtrasBlockEntityTypes implements BlockEntityContainer{
 
@@ -21,4 +17,7 @@ public class AITExtrasBlockEntityTypes implements BlockEntityContainer{
 
     public static BlockEntityType<ExtrasScreenMonitorBlockEntity> EXTRAS_SCREEN_MONITOR_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
             .create(ExtrasScreenMonitorBlockEntity::new, AITExtrasBlocks.EXTRAS_SCREEN_MONITOR_BLOCK).build();
+
+    public static BlockEntityType<SunDialBlockEntity> SUN_DIAL_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
+            .create(SunDialBlockEntity::new, AITExtrasBlocks.SUN_DIAL_BLOCK).build();
 }

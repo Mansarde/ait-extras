@@ -107,6 +107,7 @@ public class AITExtras implements ModInitializer {
          });
 
 
+
         //CLOCK
         CLOCK = new AddonExterior(new Identifier(MOD_ID, "clock"), MOD_ID, "clock").register();
         CLOCK.setDoor(new AddonExterior.Door(

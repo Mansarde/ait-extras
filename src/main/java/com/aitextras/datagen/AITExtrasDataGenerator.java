@@ -4,8 +4,6 @@ import com.aitextras.core.AITExtrasBlocks;
 import com.aitextras.core.AITExtrasItemGroups;
 import com.aitextras.core.AITExtrasItems;
 import dev.amble.ait.core.AITBlocks;
-import dev.amble.ait.core.AITItemGroups;
-import dev.amble.ait.datagen.datagen_providers.AITItemTagProvider;
 import dev.amble.ait.datagen.datagen_providers.AITRecipeProvider;
 import dev.amble.ait.module.ModuleRegistry;
 import dev.amble.lib.datagen.lang.LanguageType;
@@ -72,7 +70,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
             }));
 
 
-            provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, AITExtrasBlocks.EXTRAS_MONITOR_BLOCK, 1)
+            provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.EXTRAS_MONITOR_BLOCK, 1)
                     .pattern("DDD")
                     .pattern("DED")
                     .pattern("DCD")
@@ -83,16 +81,28 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.CHAIN), conditionsFromItem(Items.CHAIN))
                     .criterion(hasItem(Items.ENDER_EYE), conditionsFromItem(Items.ENDER_EYE)));
 
-            provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, AITExtrasBlocks.EXTRAS_SCREEN_MONITOR_BLOCK, 1)
+            provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.EXTRAS_SCREEN_MONITOR_BLOCK, 1)
                     .pattern("BBB")
                     .pattern("BEB")
                     .pattern("BBB")
                     .input('B', Items.BLACK_CONCRETE)
                     .input('E', Items.ENDER_EYE)
                     .criterion(hasItem(Items.BLACK_CONCRETE), conditionsFromItem(Items.BLACK_CONCRETE))
-                    .criterion(hasItem(Items.ENDER_EYE), conditionsFromItem(Items.ENDER_EYE)));
+                    .criterion(hasItem(Items.ENDER_EYE), conditionsFromItem(Items.ENDER_EYE)))
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.SUN_DIAL_BLOCK, 1)
+                    .pattern("NGN")
+                    .pattern("GAG")
+                    .pattern("NGN")
+                    .input('G', Items.GOLD_INGOT)
+                    .input('A', Items.SPECTRAL_ARROW)
+                    .input('N', Items.GOLD_NUGGET)
+                    .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+                    .criterion(hasItem(Items.ARROW), conditionsFromItem(Items.ARROW))
+                    .criterion(hasItem(Items.GOLD_NUGGET), conditionsFromItem(Items.GOLD_NUGGET)));
 
             return provider;
+
         })));
     }
 
@@ -115,7 +125,6 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("desktop.ait-extras.tron", "Tron");
                     provider.addTranslation("desktop.ait-extras.war_games", "War Games");
                     provider.addTranslation("desktop.ait-extras.academic", "Academic");
-                    provider.addTranslation("desktop.ait-extras.modern_victorian", "Modern Victorian");
                     provider.addTranslation("desktop.ait-extras.rebel", "Rebel");
                     provider.addTranslation("desktop.ait-extras.undercroft", "Undercroft");
                     provider.addTranslation("desktop.ait-extras.tardim", "Tardim");
@@ -182,10 +191,11 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_MONITOR_BLOCK, "Victorian Monitor");
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_SCREEN_MONITOR_BLOCK, "Screen");
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_CRYSTALLINE_BLOCK, "Crystalline Block");
+                    provider.addTranslation(AITExtrasBlocks.SUN_DIAL_BLOCK, "Armillary Sphere");
 
-            // Items
-            provider.addTranslation(AITExtrasItems.MERCURY_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");
-            provider.addTranslation(AITExtrasItems.MERCURY_DISC, "Music Disc");
+                    // Items
+                    provider.addTranslation(AITExtrasItems.MERCURY_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");
+                    provider.addTranslation(AITExtrasItems.MERCURY_DISC, "Music Disc");
 
                     // Tabs
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");
