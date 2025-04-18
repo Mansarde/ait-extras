@@ -46,7 +46,7 @@ public class AITExtras implements ModInitializer {
 
 
      //POSTBOX
-            POSTBOX = new AddonExterior(BoothCategory.REFERENCE, MOD_ID, "post_box").register();
+            POSTBOX = new AddonExterior(new Identifier(MOD_ID, "post_box"), MOD_ID, "post_box").register();
             POSTBOX.setDoor(new AddonExterior.Door(
                          POSTBOX, false, net.minecraft.sound.SoundEvents.BLOCK_WOODEN_TRAPDOOR_OPEN,
                          net.minecraft.sound.SoundEvents.BLOCK_WOODEN_TRAPDOOR_CLOSE))
@@ -77,7 +77,7 @@ public class AITExtras implements ModInitializer {
          });
 
         //VANILLA
-            VANILLA = new AddonExterior(PoliceBoxCategory.REFERENCE, MOD_ID, "vanilla").register();
+            VANILLA = new AddonExterior(new Identifier(MOD_ID, "vanilla"), MOD_ID, "vanilla").register();
             VANILLA.setDoor(new AddonExterior.Door(
                          VANILLA, false, SoundEvents.BLOCK_IRON_DOOR_OPEN,
                          net.minecraft.sound.SoundEvents.BLOCK_IRON_DOOR_CLOSE))
@@ -99,15 +99,16 @@ public class AITExtras implements ModInitializer {
           VANILLA.toDoor().setPortalTranslations((pos, b) -> {
                 return switch(b) {
                  case DOWN, UP -> pos;
-                    case NORTH -> pos.add(0, 0.075, -0.55);
-                    case SOUTH -> pos.add(0, 0.075, 0.47);
+                    case NORTH -> pos.add(0, 0.075, -0.4);
+                    case SOUTH -> pos.add(0, 0.075, 0.4);
                     case WEST -> pos.add(-0.47, 0.075, 0);
                     case EAST -> pos.add(0.47, 0.075, 0);
                 };
          });
 
+
         //CLOCK
-        CLOCK = new AddonExterior(PlinthCategory.REFERENCE, MOD_ID, "clock").register();
+        CLOCK = new AddonExterior(new Identifier(MOD_ID, "clock"), MOD_ID, "clock").register();
         CLOCK.setDoor(new AddonExterior.Door(
                         CLOCK, false, SoundEvents.BLOCK_WOODEN_TRAPDOOR_OPEN,
                         SoundEvents.BLOCK_WOODEN_TRAPDOOR_CLOSE))

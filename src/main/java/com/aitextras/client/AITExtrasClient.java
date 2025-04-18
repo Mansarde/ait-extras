@@ -38,10 +38,11 @@ public class AITExtrasClient implements ClientModInitializer {
         POSTBOX.toDoor().setModel(new PostBoxDoorModel(PostBoxDoorModel.getTexturedModelData().createModel())).toClient().register();
 
         VANILLA.setModel(new VanillaExteriorModel()).toClient().register();
-        VANILLA.setSonicItemTranslations(new Vector3f(0.7f, 1f, 2f));
+        VANILLA.setSonicItemTranslations(new Vector3f(0.7f, 1f, 3f));
         VANILLA.setPortalWidth(1f);
         VANILLA.setPortalHeight(2.5f);
         VANILLA.toDoor().setModel(new VanillaDoorModel(VanillaDoorModel.getTexturedModelData().createModel())).toClient().register();
+
 
         CLOCK.setModel(new ClockExteriorModel<>()).toClient().register();
         CLOCK.setSonicItemTranslations(new Vector3f(0.7f, 1f, 2f));
