@@ -43,7 +43,7 @@ public class AITExtrasClient implements ClientModInitializer {
         VANILLA.setPortalWidth(1f);
         VANILLA.setPortalHeight(2.5f);
         VANILLA.toDoor().setModel(new VanillaDoorModel(VanillaDoorModel.getTexturedModelData().createModel())).toClient().register();
-
+        VANILLA.setHasTransparentDoors(true);
 
         CLOCK.setModel(new ClockExteriorModel<>()).toClient().register();
         CLOCK.setSonicItemTranslations(new Vector3f(0.7f, 1f, 2f));
