@@ -177,6 +177,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
                         //vanilla
                     provider.addTranslation("exterior.ait-extras.vanilla", "Vanilla");
+                    provider.addTranslation("exterior.ait-extras.red", "Vanilla (Glasgow)");
 
                         //clock
                     provider.addTranslation("exterior.ait-extras.clock", "Clock");
