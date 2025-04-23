@@ -201,6 +201,19 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     // Tabs
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");
 
+                    //SFXS
+                    provider.addTranslation("animation.ait-extras.classic_mat", "Classic (Alt)");
+                    provider.addTranslation("animation.ait-extras.classic_demat", "Classic (Alt)");
+                    provider.addTranslation("animation.ait-extras.drumless_demat", "Drumless");
+                    provider.addTranslation("animation.ait-extras.fast_mat", "Fast");
+                    provider.addTranslation("animation.ait-extras.fast_demat", "Fast");
+                    provider.addTranslation("animation.ait-extras.minecart_mat", "Minecart");
+                    provider.addTranslation("animation.ait-extras.minecart_demat", "Minecart");
+                    provider.addTranslation("animation.ait-extras.regen_demat", "Regen");
+                    provider.addTranslation("animation.ait-extras.type70_mat", "Type 70");
+                    provider.addTranslation("animation.ait-extras.type70_demat", "Type 70");
+                    provider.addTranslation("animation.ait-extras.xmas_demat", "Xmas");
+
             return provider;
         })));
     }
