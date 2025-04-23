@@ -1,0 +1,6 @@
+{
+  "id": "ait-extras:regen_demat",
+  "expected_state": "demat",
+  "sound": "ait-extras:tardis/travel/regen_demat",
+  "blockbench_file": "ait:classic"
+}

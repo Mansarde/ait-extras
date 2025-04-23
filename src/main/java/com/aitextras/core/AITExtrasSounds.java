@@ -11,6 +11,21 @@ public class AITExtrasSounds {
     // Music
     public static final SoundEvent MERCURY_DISC = register("music/mercury_disc");
 
+
+    // Misc
+    public static final SoundEvent FAST_MAT = register("tardis/travel/fast_mat");
+    public static final SoundEvent FAST_DEMAT = register("tardis/travel/fast_demat");
+    public static final SoundEvent CLASSIC_ALT_DEMAT = register("tardis/travel/type70_demat");
+    public static final SoundEvent CLASSIC_ALT_MAT = register("tardis/travel/type70_mat");
+    public static final SoundEvent MINECART_DEMAT = register("tardis/travel/minecart_demat");
+    public static final SoundEvent MINECART_FLIGHT = register("tardis/travel/minecart_flight");
+    public static final SoundEvent MINECART_MAT = register("tardis/travel/minecart_mat");
+    public static final SoundEvent CLASSIC_DEMAT = register("tardis/travel/classic_demat");
+    public static final SoundEvent CLASSIC_MAT = register("tardis/travel/classic_mat");
+    public static final SoundEvent DRUMLESS_DEMAT = register("tardis/travel/drumless_demat");
+    public static final SoundEvent REGEN_DEMAT = register("tardis/travel/regen_demat");
+    public static final SoundEvent XMAS_DEMAT = register("tardis/travel/xmas_demat");
+
     // Register a SoundEvent
     private static SoundEvent register(String name) {
         Identifier id = AITExtras.id(name);
