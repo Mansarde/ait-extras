@@ -2,5 +2,5 @@
   "id": "ait-extras:minecart_demat",
   "expected_state": "demat",
   "sound": "ait-extras:tardis/travel/minecart_demat",
-  "blockbench_file": "ait:pulsating"
+  "blockbench_file": "ait:pulsating_demat"
 }

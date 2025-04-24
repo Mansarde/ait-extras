@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"christmas take off": {
+		"xmas_demat": {
 			"loop": true,
 			"animation_length": 13.68,
 			"bones": {
