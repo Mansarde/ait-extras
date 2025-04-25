@@ -49,15 +49,6 @@ public class EctoExteriorModel extends ExteriorModel {
 		ModelPartData cube_r5 = Posts.addChild("cube_r5", ModelPartBuilder.create().uv(12, 473).cuboid(-5.5F, -21.0F, -2.0F, 15.0F, 32.0F, 0.0F, new Dilation(0.0F))
 				.uv(0, 423).cuboid(-5.5F, -29.0F, -2.0F, 15.0F, 52.0F, 0.0F, new Dilation(0.0F)), ModelTransform.of(-25.5F, -35.0F, -23.0F, 0.0F, -0.7854F, 0.0F));
 
-		ModelPartData Doors = TARDIS.addChild("Doors", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
-
-		ModelPartData right_door = Doors.addChild("right_door", ModelPartBuilder.create().uv(181, 177).cuboid(0.5F, -29.5F, -0.5F, 13.0F, 55.0F, 1.0F, new Dilation(0.0F))
-				.uv(0, 198).cuboid(0.5F, -29.5F, -1.3F, 14.0F, 55.0F, 0.0F, new Dilation(0.0F))
-				.uv(0, 0).cuboid(11.5F, -10.5F, -1.5F, 1.0F, 4.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(-13.5F, -29.5F, -15.5F));
-
-		ModelPartData left_door = Doors.addChild("left_door", ModelPartBuilder.create().uv(189, 41).cuboid(-13.5F, -29.5F, -0.5F, 13.0F, 55.0F, 1.0F, new Dilation(0.0F))
-				.uv(0, 0).cuboid(-12.5F, -10.5F, -1.5F, 1.0F, 4.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(13.5F, -29.5F, -15.5F, 0.0F, -0.0436F, 0.0F));
-
 		ModelPartData Walls = TARDIS.addChild("Walls", ModelPartBuilder.create().uv(60, 430).mirrored().cuboid(-21.0F, -43.0F, 13.6F, 6.0F, 31.0F, 6.0F, new Dilation(0.0F)).mirrored(false)
 				.uv(129, 15).cuboid(-16.0F, -60.0F, -14.0F, 1.0F, 56.0F, 28.0F, new Dilation(0.0F))
 				.uv(59, 142).cuboid(-16.5F, -60.0F, -14.0F, 0.0F, 56.0F, 28.0F, new Dilation(0.0F))
@@ -139,6 +130,15 @@ public class EctoExteriorModel extends ExteriorModel {
 				.uv(50, 317).cuboid(-2.0F, -2.0F, -0.25F, 4.0F, 4.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(-11.0F, -75.0F, -14.75F, 0.0F, 0.0F, -0.7854F));
 
 		ModelPartData cube_r16 = Roof.addChild("cube_r16", ModelPartBuilder.create().uv(28, 305).cuboid(-14.0F, -2.5F, 0.0F, 28.0F, 5.0F, 4.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -68.5F, -17.0F, -0.4363F, 0.0F, 0.0F));
+
+		ModelPartData Doors = bone.addChild("Doors", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+
+		ModelPartData right_door = Doors.addChild("right_door", ModelPartBuilder.create().uv(181, 177).cuboid(0.5F, -29.5F, -0.5F, 13.0F, 55.0F, 1.0F, new Dilation(0.0F))
+				.uv(0, 197).cuboid(0.5F, -30.5F, -1.3F, 14.0F, 56.0F, 0.0F, new Dilation(0.0F))
+				.uv(0, 0).cuboid(11.5F, -10.5F, -1.5F, 1.0F, 4.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(-13.5F, -29.5F, -15.5F));
+
+		ModelPartData left_door = Doors.addChild("left_door", ModelPartBuilder.create().uv(189, 41).cuboid(-13.5F, -29.5F, -0.5F, 13.0F, 55.0F, 1.0F, new Dilation(0.0F))
+				.uv(0, 0).cuboid(-12.5F, -10.5F, -1.5F, 1.0F, 4.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(13.5F, -29.5F, -15.5F, 0.0F, -0.0436F, 0.0F));
 		return TexturedModelData.of(modelData, 512, 512);
 	}
 

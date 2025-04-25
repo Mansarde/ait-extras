@@ -2,16 +2,12 @@ package com.aitextras;
 
 import com.aitextras.core.*;
 import dev.amble.ait.core.AITSounds;
-import dev.amble.ait.data.schema.exterior.category.BoothCategory;
-import dev.amble.ait.data.schema.exterior.category.PlinthCategory;
 import dev.amble.ait.data.schema.exterior.category.PoliceBoxCategory;
 import dev.amble.ait.data.schema.exterior.variant.addon.AddonExterior;
 import dev.amble.lib.container.RegistryContainer;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.Vec3d;
 
 
 public class AITExtras implements ModInitializer {
@@ -37,13 +33,34 @@ public class AITExtras implements ModInitializer {
     }
 
     private void registerAddonExteriors() {
-    //ECTO
-
-             ECTO = new AddonExterior(PoliceBoxCategory.REFERENCE, MOD_ID, "ecto").register();
+        //ECTO
+           ECTO = new AddonExterior(PoliceBoxCategory.REFERENCE, MOD_ID, "ecto").register();
            ECTO.setDoor(new AddonExterior.Door(
                            ECTO, true, AITSounds.POLICE_BOX_DOOR_OPEN, AITSounds.POLICE_BOX_DOOR_CLOSE))
                    .toDoor().register();
-
+           ECTO.hasPortals();
+           ECTO.setPortalTranslations((pos, b) -> {
+               return switch(b) {
+                   case 0 -> pos.add(0, -0.05, -0.628); // NORTH
+                   case 1, 2, 3 -> pos.add(0.43, -0.05, -0.43); // NORTH EAST p n
+                   case 4 -> pos.add(0.628, -0.05, 0); // EAST
+                   case 5, 6, 7 -> pos.add(0.43, -0.05, 0.43); // SOUTH EAST p p
+                   case 8 -> pos.add(0, -0.05, 0.628); // SOUTH
+                   case 9, 10, 11 -> pos.add(-0.43, -0.05, 0.43); // SOUTH WEST n p
+                   case 12 -> pos.add(-0.628, -0.05, 0); // WEST
+                   case 13, 14, 15 -> pos.add(-0.43, -0.05, -0.43); // NORTH WEST n n
+                   default -> pos;
+               };
+           });
+           ECTO.toDoor().setPortalTranslations((pos, b) -> {
+               return switch(b) {
+                   case DOWN, UP -> pos;
+                   case NORTH -> pos.add(0, 0.05, -0.45);
+                   case SOUTH -> pos.add(0, 0.05, 0.45);
+                   case WEST -> pos.add(-0.45, 0.05, 0);
+                   case EAST -> pos.add(0.45, 0.05, 0);
+               };
+           });
 
      //POSTBOX
             POSTBOX = new AddonExterior(new Identifier(MOD_ID, "post_box"), MOD_ID, "post_box").register();

@@ -29,8 +29,11 @@ public class AITExtrasClient implements ClientModInitializer {
     }
 
     private void registerClientAddonExteriors() {
-        AITExtras.ECTO.setModel(new EctoExteriorModel()).toClient().register();
-        AITExtras.ECTO.toDoor().setModel(new EctoDoorModel(EctoDoorModel.getTexturedModelData().createModel())).toClient().register();
+        ECTO.setModel(new EctoExteriorModel()).toClient().register();
+        ECTO.setPortalWidth(1.15f);
+        ECTO.setPortalHeight(2.28f);
+        ECTO.toDoor().setModel(new EctoDoorModel(EctoDoorModel.getTexturedModelData().createModel())).toClient().register();
+
 
         POSTBOX.setModel(new PostBoxExteriorModel()).toClient().register();
         POSTBOX.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
@@ -43,7 +46,7 @@ public class AITExtrasClient implements ClientModInitializer {
         VANILLA.setPortalWidth(1f);
         VANILLA.setPortalHeight(2.5f);
         VANILLA.toDoor().setModel(new VanillaDoorModel(VanillaDoorModel.getTexturedModelData().createModel())).toClient().register();
-        VANILLA.setHasTransparentDoors(true);
+        VANILLA.toClient().hasTransparentDoors();
 
         CLOCK.setModel(new ClockExteriorModel<>()).toClient().register();
         CLOCK.setSonicItemTranslations(new Vector3f(0.7f, 1f, 2f));
