@@ -25,7 +25,8 @@ public class AITExtrasItemTagProvider extends FabricTagProvider<Item> {
         // Items
 
         getOrCreateTagBuilder(ItemTags.MUSIC_DISCS)
-                .add(AITExtrasItems.MERCURY_DISC);
+                .add(AITExtrasItems.MERCURY_DISC,
+                        AITExtrasItems.RECALL_DISC);
 
     }
 

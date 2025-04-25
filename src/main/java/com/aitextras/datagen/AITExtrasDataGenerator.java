@@ -4,6 +4,7 @@ import com.aitextras.core.AITExtrasBlocks;
 import com.aitextras.core.AITExtrasItemGroups;
 import com.aitextras.core.AITExtrasItems;
 import dev.amble.ait.core.AITBlocks;
+import dev.amble.ait.core.AITItems;
 import dev.amble.ait.datagen.datagen_providers.AITRecipeProvider;
 import dev.amble.ait.module.ModuleRegistry;
 import dev.amble.lib.datagen.lang.LanguageType;
@@ -98,8 +99,19 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .input('A', Items.SPECTRAL_ARROW)
                     .input('N', Items.GOLD_NUGGET)
                     .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
-                    .criterion(hasItem(Items.ARROW), conditionsFromItem(Items.ARROW))
+                    .criterion(hasItem(Items.SPECTRAL_ARROW), conditionsFromItem(Items.SPECTRAL_ARROW))
                     .criterion(hasItem(Items.GOLD_NUGGET), conditionsFromItem(Items.GOLD_NUGGET)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasItems.RECALL_DISC, 1)
+                    .pattern("SSS")
+                    .pattern("PWP")
+                    .pattern("SSS")
+                    .input('S', AITItems.SUPERHEATED_ZEITON)
+                    .input('W', AITItems.WAYPOINT_CARTRIDGE)
+                    .input('P', AITItems.PLASMIC_MATERIAL)
+                    .criterion(hasItem(AITItems.SUPERHEATED_ZEITON), conditionsFromItem(AITItems.SUPERHEATED_ZEITON))
+                    .criterion(hasItem(AITItems.WAYPOINT_CARTRIDGE), conditionsFromItem(AITItems.WAYPOINT_CARTRIDGE))
+                    .criterion(hasItem(AITItems.PLASMIC_MATERIAL), conditionsFromItem(AITItems.PLASMIC_MATERIAL)));
 
             return provider;
 
@@ -197,6 +209,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     // Items
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC, "Music Disc");
+                    provider.addTranslation(AITExtrasItems.RECALL_DISC.getTranslationKey() + ".desc", "Valid Trips: 1");
+                    provider.addTranslation(AITExtrasItems.RECALL_DISC, "Emergency Recall Disc");
 
                     // Tabs
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");
