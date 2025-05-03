@@ -22,4 +22,8 @@ public class AITExtrasItems extends ItemContainer {
     @AutomaticModel
     @NoEnglish
     public static final Item RECALL_DISC = new RecallDiscItem(new AItemSettings().group(AITExtrasItemGroups.MAIN).maxCount(1));
+
+    @AutomaticModel
+   @NoEnglish
+    public static final Item JELLY_BABIES = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN).food(AITExtrasFoodComponenets.JELLY_BABIES));
 }

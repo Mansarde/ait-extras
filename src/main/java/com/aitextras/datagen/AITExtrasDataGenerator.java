@@ -5,6 +5,7 @@ import com.aitextras.core.AITExtrasItemGroups;
 import com.aitextras.core.AITExtrasItems;
 import dev.amble.ait.core.AITBlocks;
 import dev.amble.ait.core.AITItems;
+import dev.amble.ait.datagen.datagen_providers.AITAchievementProvider;
 import dev.amble.ait.datagen.datagen_providers.AITRecipeProvider;
 import dev.amble.ait.module.ModuleRegistry;
 import dev.amble.lib.datagen.lang.LanguageType;
@@ -16,6 +17,7 @@ import dev.amble.lib.datagen.tag.AmbleBlockTagProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 
@@ -55,7 +57,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider((((output, registriesFuture) -> new AmbleSoundProvider(output))));
     }
 
-    private void genTags(FabricDataGenerator.Pack pack) {
+ private void genTags(FabricDataGenerator.Pack pack) {
         pack.addProvider((((output, registriesFuture) -> new AmbleBlockTagProvider(output, registriesFuture).withBlocks(AITExtrasBlocks.class))));
     }
 
@@ -113,6 +115,17 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(AITItems.WAYPOINT_CARTRIDGE), conditionsFromItem(AITItems.WAYPOINT_CARTRIDGE))
                     .criterion(hasItem(AITItems.PLASMIC_MATERIAL), conditionsFromItem(AITItems.PLASMIC_MATERIAL)));
 
+            ;provider.addShapelessRecipe(ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, AITExtrasItems.JELLY_BABIES, 1)
+                    .create(RecipeCategory.FOOD, AITExtrasItems.JELLY_BABIES, 4)
+                    .input(Items.PAPER)
+                    .input(Items.SUGAR)
+                    .input(Items.RED_DYE)
+                    .input(Items.GREEN_DYE)
+                    .input(Items.MAGENTA_DYE)
+                    .input(Items.YELLOW_DYE)
+                    .criterion(hasItem(Items.PAPER), conditionsFromItem(Items.PAPER))
+                    .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR)));
+
             return provider;
 
         })));
@@ -146,13 +159,13 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     //exteriors
 
                         //bookshelf
-                    provider.addTranslation("exterior.ait-extras.bookshelf_birch", "Birch");
-                    provider.addTranslation("exterior.ait-extras.bookshelf_cherry", "Cherry");
-                    provider.addTranslation("exterior.ait-extras.bookshelf_dark_oak", "Dark Oak");
-                    provider.addTranslation("exterior.ait-extras.bookshelf_jungle", "Jungle");
-                    provider.addTranslation("exterior.ait-extras.bookshelf_mangrove", "Mangrove");
-                    provider.addTranslation("exterior.ait-extras.bookshelf_oak", "Oak");
-                    provider.addTranslation("exterior.ait-extras.bookshelf_spruce", "Spruce");
+                    provider.addTranslation("exterior.ait-extras.bookshelf_birch", "Bookshelf (Birch)");
+                    provider.addTranslation("exterior.ait-extras.bookshelf_cherry", "Bookshelf (Cherry)");
+                    provider.addTranslation("exterior.ait-extras.bookshelf_dark_oak", "Bookshelf (Dark Oak)");
+                    provider.addTranslation("exterior.ait-extras.bookshelf_jungle", "Bookshelf (Jungle)");
+                    provider.addTranslation("exterior.ait-extras.bookshelf_mangrove", "Bookshelf (Mangrove)");
+                    provider.addTranslation("exterior.ait-extras.bookshelf_oak", "Bookshelf (Oak)");
+                    provider.addTranslation("exterior.ait-extras.bookshelf_spruce", "Bookshelf (Spruce)");
 
                         //modern box
                     provider.addTranslation("exterior.ait-extras.aperture_science", "Aperture");
@@ -189,10 +202,14 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
                         //vanilla
                     provider.addTranslation("exterior.ait-extras.vanilla", "Vanilla");
-                    provider.addTranslation("exterior.ait-extras.red", "Vanilla (Glasgow)");
+                    provider.addTranslation("exterior.ait-extras.vanilla_red", "Vanilla (Glasgow)");
 
                         //clock
                     provider.addTranslation("exterior.ait-extras.clock", "Clock");
+                    provider.addTranslation("exterior.ait-extras.clock_oak", "Clock (Oak)");
+                    provider.addTranslation("exterior.ait-extras.clock_spruce", "Clock (Spruce)");
+                    provider.addTranslation("exterior.ait-extras.clock_birch", "Clock (Birch)");
+                    provider.addTranslation("exterior.ait-extras.clock_jungle", "Clock (Jungle)");
 
                     //sonics
                     provider.addTranslation("sonic.ait-extras.cane", "Cane");
@@ -202,7 +219,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
                     // Blocks
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_MONITOR_BLOCK, "Victorian Monitor");
-                    provider.addTranslation(AITExtrasBlocks.EXTRAS_SCREEN_MONITOR_BLOCK, "Screen");
+                    provider.addTranslation(AITExtrasBlocks.EXTRAS_SCREEN_MONITOR_BLOCK, "Screen (3x2)");
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_CRYSTALLINE_BLOCK, "Crystalline Block");
                     provider.addTranslation(AITExtrasBlocks.SUN_DIAL_BLOCK, "Armillary Sphere");
 
@@ -211,6 +228,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC, "Music Disc");
                     provider.addTranslation(AITExtrasItems.RECALL_DISC.getTranslationKey() + ".desc", "Valid Trips: 1");
                     provider.addTranslation(AITExtrasItems.RECALL_DISC, "Emergency Recall Disc");
+                    provider.addTranslation(AITExtrasItems.JELLY_BABIES, "Jelly Babies");
 
                     // Tabs
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");
@@ -227,6 +245,13 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("animation.ait-extras.type70_mat", "Type 70");
                     provider.addTranslation("animation.ait-extras.type70_demat", "Type 70");
                     provider.addTranslation("animation.ait-extras.xmas_demat", "Xmas");
+
+                    //Achievements
+                    provider.addTranslation("advancements.ait-extras.root.title", "AIT Extras");
+                    provider.addTranslation("advancements.ait-extras.root.description", "Like AIT, but more!");
+                    provider.addTranslation("advancements.ait-extras.obtain_jelly_babies.title", "Would you like a Jelly Baby?");
+                    provider.addTranslation("advancements.ait-extras.obtain_jelly_babies.description", "Craft Jelly Babies");
+
 
             return provider;
         })));

@@ -4,6 +4,7 @@ package com.aitextras.core;
 import com.aitextras.AITExtras;
 import dev.amble.lib.container.impl.ItemGroupContainer;
 import dev.amble.lib.itemgroup.AItemGroup;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
 public final class AITExtrasItemGroups implements ItemGroupContainer {
