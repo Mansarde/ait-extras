@@ -1,35 +1,34 @@
 {
   "parent": "ait-extras:root",
+  "criteria": {
+    "jelly_baby": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ait-extras:jelly_babies"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
   "display": {
+    "description": {
+      "translate": "advancements.ait-extras.obtain_jelly_babies.description"
+    },
     "icon": {
       "item": "ait-extras:jelly_babies"
     },
     "title": {
       "translate": "advancements.ait-extras.obtain_jelly_babies.title"
-    },
-    "description": {
-      "translate": "advancements.ait-extras.obtain_jelly_babies.description"
-    },
-    "frame": "challenge",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "obtain_jelly_babies": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "ait-extras:jelly_babies"
-          }
-        ]
-      }
     }
   },
   "requirements": [
     [
-      "obtain_jelly_babies"
+      "jelly_baby"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }
