@@ -115,7 +115,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(AITItems.WAYPOINT_CARTRIDGE), conditionsFromItem(AITItems.WAYPOINT_CARTRIDGE))
                     .criterion(hasItem(AITItems.PLASMIC_MATERIAL), conditionsFromItem(AITItems.PLASMIC_MATERIAL)));
 
-            ;provider.addShapelessRecipe(ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, AITExtrasItems.JELLY_BABIES, 1)
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, AITExtrasItems.JELLY_BABIES, 1);
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
                     .create(RecipeCategory.FOOD, AITExtrasItems.JELLY_BABIES, 4)
                     .input(Items.PAPER)
                     .input(Items.SUGAR)
@@ -125,6 +126,14 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .input(Items.YELLOW_DYE)
                     .criterion(hasItem(Items.PAPER), conditionsFromItem(Items.PAPER))
                     .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_OAK_BLOCK, 1)
+                    .pattern("FFF")
+                    .pattern(" F ")
+                    .pattern(" F ")
+                    .input('F',Items.OAK_FENCE)
+                    .criterion(hasItem(Items.OAK_FENCE), conditionsFromItem(Items.OAK_FENCE)));
+
 
             return provider;
 
@@ -222,6 +231,17 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_SCREEN_MONITOR_BLOCK, "Screen (3x2)");
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_CRYSTALLINE_BLOCK, "Crystalline Block");
                     provider.addTranslation(AITExtrasBlocks.SUN_DIAL_BLOCK, "Armillary Sphere");
+//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_ACACIA_BLOCK, "HatStand");
+//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_BAMBOO_BLOCK, "HatStand");
+//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_BIRCH_BLOCK, "HatStand");
+//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_CHERRY_BLOCK, "HatStand");
+//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_CRIMSON_BLOCK, "HatStand");
+//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_DARK_OAK_BLOCK, "HatStand");
+//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_JUNGLE_BLOCK, "HatStand");
+//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_MANGROVE_BLOCK, "HatStand");
+                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_OAK_BLOCK, "HatStand");
+//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_SPRUCE_BLOCK, "HatStand");
+//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_WARPED_BLOCK, "HatStand");
 
                     // Items
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");
@@ -251,6 +271,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("advancements.ait-extras.root.description", "Like AIT, but more!");
                     provider.addTranslation("advancements.ait-extras.obtain_jelly_babies.title", "Would you like a Jelly Baby?");
                     provider.addTranslation("advancements.ait-extras.obtain_jelly_babies.description", "Craft Jelly Babies");
+                    provider.addTranslation("advancements.ait-extras.obtain_extras_monitor_block.title", "Critical Timing Malfunction!");
+                    provider.addTranslation("advancements.ait-extras.obtain_extras_monitor_block.description", "Craft The Victorian Monitor");
 
 
             return provider;

@@ -6,10 +6,10 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.util.math.BlockPos;
 
 
-public class SunDialBlockEntity extends BlockEntity {
+public class HatStandOakBlockEntity extends BlockEntity {
 
-    public SunDialBlockEntity(BlockPos pos, BlockState state) {
-        super(AITExtrasBlockEntityTypes.SUN_DIAL_BLOCK_ENTITY_TYPE, pos, state);
+    public HatStandOakBlockEntity(BlockPos pos, BlockState state) {
+        super(AITExtrasBlockEntityTypes.HAT_STAND_OAK_BLOCK_ENTITY_TYPE, pos, state);
     }
 
     public float getScale() {

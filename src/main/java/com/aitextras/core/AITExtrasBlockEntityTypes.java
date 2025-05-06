@@ -3,6 +3,7 @@ package com.aitextras.core;
 
 import com.aitextras.core.blockentities.ExtrasMonitorBlockEntity;
 import com.aitextras.core.blockentities.ExtrasScreenMonitorBlockEntity;
+import com.aitextras.core.blockentities.HatStandOakBlockEntity;
 import com.aitextras.core.blockentities.SunDialBlockEntity;
 import dev.amble.lib.container.impl.BlockEntityContainer;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
@@ -20,4 +21,7 @@ public class AITExtrasBlockEntityTypes implements BlockEntityContainer{
 
     public static BlockEntityType<SunDialBlockEntity> SUN_DIAL_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
             .create(SunDialBlockEntity::new, AITExtrasBlocks.SUN_DIAL_BLOCK).build();
+
+    public static BlockEntityType<HatStandOakBlockEntity> HAT_STAND_OAK_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
+            .create(HatStandOakBlockEntity::new, AITExtrasBlocks.HAT_STAND_OAK_BLOCK).build();
 }
