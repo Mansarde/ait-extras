@@ -134,6 +134,76 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .input('F',Items.OAK_FENCE)
                     .criterion(hasItem(Items.OAK_FENCE), conditionsFromItem(Items.OAK_FENCE)));
 
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_ACACIA_BLOCK, 1)
+                    .pattern("FFF")
+                    .pattern(" F ")
+                    .pattern(" F ")
+                    .input('F',Items.ACACIA_FENCE)
+                    .criterion(hasItem(Items.ACACIA_FENCE), conditionsFromItem(Items.ACACIA_FENCE)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_BAMBOO_BLOCK, 1)
+                    .pattern("FFF")
+                    .pattern(" F ")
+                    .pattern(" F ")
+                    .input('F',Items.BAMBOO_FENCE)
+                    .criterion(hasItem(Items.BAMBOO_FENCE), conditionsFromItem(Items.BAMBOO_FENCE)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_BIRCH_BLOCK, 1)
+                    .pattern("FFF")
+                    .pattern(" F ")
+                    .pattern(" F ")
+                    .input('F',Items.BIRCH_FENCE)
+                    .criterion(hasItem(Items.BIRCH_FENCE), conditionsFromItem(Items.BIRCH_FENCE)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_CHERRY_BLOCK, 1)
+                    .pattern("FFF")
+                    .pattern(" F ")
+                    .pattern(" F ")
+                    .input('F',Items.CHERRY_FENCE)
+                    .criterion(hasItem(Items.CHERRY_FENCE), conditionsFromItem(Items.CHERRY_FENCE)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_CRIMSON_BLOCK, 1)
+                    .pattern("FFF")
+                    .pattern(" F ")
+                    .pattern(" F ")
+                    .input('F',Items.CRIMSON_FENCE)
+                    .criterion(hasItem(Items.CRIMSON_FENCE), conditionsFromItem(Items.CRIMSON_FENCE)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_DARK_OAK_BLOCK, 1)
+                    .pattern("FFF")
+                    .pattern(" F ")
+                    .pattern(" F ")
+                    .input('F',Items.DARK_OAK_FENCE)
+                    .criterion(hasItem(Items.DARK_OAK_FENCE), conditionsFromItem(Items.DARK_OAK_FENCE)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_JUNGLE_BLOCK, 1)
+                    .pattern("FFF")
+                    .pattern(" F ")
+                    .pattern(" F ")
+                    .input('F',Items.JUNGLE_FENCE)
+                    .criterion(hasItem(Items.JUNGLE_FENCE), conditionsFromItem(Items.JUNGLE_FENCE)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_MANGROVE_BLOCK, 1)
+                    .pattern("FFF")
+                    .pattern(" F ")
+                    .pattern(" F ")
+                    .input('F',Items.MANGROVE_FENCE)
+                    .criterion(hasItem(Items.MANGROVE_FENCE), conditionsFromItem(Items.MANGROVE_FENCE)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_SPRUCE_BLOCK, 1)
+                    .pattern("FFF")
+                    .pattern(" F ")
+                    .pattern(" F ")
+                    .input('F',Items.SPRUCE_FENCE)
+                    .criterion(hasItem(Items.SPRUCE_FENCE), conditionsFromItem(Items.SPRUCE_FENCE)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_WARPED_BLOCK, 1)
+                    .pattern("FFF")
+                    .pattern(" F ")
+                    .pattern(" F ")
+                    .input('F',Items.WARPED_FENCE)
+                    .criterion(hasItem(Items.WARPED_FENCE), conditionsFromItem(Items.WARPED_FENCE)));
+
 
             return provider;
 
