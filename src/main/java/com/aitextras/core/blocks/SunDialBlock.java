@@ -6,6 +6,8 @@ import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.particle.BlockStateParticleEffect;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
@@ -20,6 +22,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
 public class SunDialBlock extends BlockWithEntity implements BlockEntityProvider {
@@ -78,6 +81,27 @@ public class SunDialBlock extends BlockWithEntity implements BlockEntityProvider
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(ROTATION);
+    }
+
+    @Override
+    public void onBroken(WorldAccess world, BlockPos pos, BlockState state) {
+        if (world instanceof World clientWorld && clientWorld.isClient) {
+            VoxelShape shape = state.getOutlineShape(clientWorld, pos);
+            shape.forEachBox((minX, minY, minZ, maxX, maxY, maxZ) -> {
+                for (int i = 0; i < 10; i++) {
+                    double offsetX = clientWorld.random.nextDouble() * (maxX - minX) + minX;
+                    double offsetY = clientWorld.random.nextDouble() * (maxY - minY) + minY;
+                    double offsetZ = clientWorld.random.nextDouble() * (maxZ - minZ) + minZ;
+
+                    clientWorld.addParticle(new BlockStateParticleEffect(ParticleTypes.BLOCK, state),
+                            pos.getX() + offsetX,
+                            pos.getY() + offsetY,
+                            pos.getZ() + offsetZ,
+                            0, 0, 0);
+                }
+            });
+        }
+        super.onBroken(world, pos, state);
     }
 
 

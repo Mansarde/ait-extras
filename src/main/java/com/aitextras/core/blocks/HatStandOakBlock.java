@@ -6,6 +6,8 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
+import net.minecraft.particle.BlockStateParticleEffect;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
@@ -18,6 +20,8 @@ import net.minecraft.util.math.RotationPropertyHelper;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -86,5 +90,26 @@ public class HatStandOakBlock extends BlockWithEntity implements BlockEntityProv
         tooltip.add(Text.literal("Variant: OAK").formatted(Formatting.GOLD));
 
 }
+
+    @Override
+    public void onBroken(WorldAccess world, BlockPos pos, BlockState state) {
+        if (world instanceof World clientWorld && clientWorld.isClient) {
+            VoxelShape shape = state.getOutlineShape(clientWorld, pos);
+            shape.forEachBox((minX, minY, minZ, maxX, maxY, maxZ) -> {
+                for (int i = 0; i < 10; i++) {
+                    double offsetX = clientWorld.random.nextDouble() * (maxX - minX) + minX;
+                    double offsetY = clientWorld.random.nextDouble() * (maxY - minY) + minY;
+                    double offsetZ = clientWorld.random.nextDouble() * (maxZ - minZ) + minZ;
+
+                    clientWorld.addParticle(new BlockStateParticleEffect(ParticleTypes.BLOCK, state),
+                            pos.getX() + offsetX,
+                            pos.getY() + offsetY,
+                            pos.getZ() + offsetZ,
+                            0, 0, 0);
+                }
+            });
+        }
+        super.onBroken(world, pos, state);
+    }
 }
 

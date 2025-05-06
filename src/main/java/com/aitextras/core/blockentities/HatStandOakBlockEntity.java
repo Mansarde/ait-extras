@@ -13,7 +13,9 @@ public class HatStandOakBlockEntity extends BlockEntity {
     }
 
     public float getScale() {
-        return 1;
+        return 1.2f; // Replace with logic to dynamically determine the scale if needed
     }
+
+
 }
 

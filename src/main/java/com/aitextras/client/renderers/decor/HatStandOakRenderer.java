@@ -32,7 +32,7 @@ public class HatStandOakRenderer<T extends HatStandOakBlockEntity> implements Bl
         float h = RotationPropertyHelper.toDegrees(k);
 
         matrices.push();
-        matrices.translate(0.5f, 1.5f, 0.5f);
+        matrices.translate(0.5f, 1.85f, 0.5f);
         matrices.multiply(RotationAxis.NEGATIVE_Y.rotationDegrees(h));
         matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(180));
 

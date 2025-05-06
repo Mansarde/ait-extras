@@ -76,4 +76,6 @@ public class HatStandModel extends SinglePartEntityModel {
     public ModelPart getPart() {
         return root;
     }
+
+
 }
