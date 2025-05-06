@@ -9,8 +9,7 @@ import com.aitextras.client.models.exteriors.ClockExteriorModel;
 import com.aitextras.client.models.exteriors.EctoExteriorModel;
 import com.aitextras.client.models.exteriors.PostBoxExteriorModel;
 import com.aitextras.client.models.exteriors.VanillaExteriorModel;
-import com.aitextras.client.renderers.decor.HatStandOakRenderer;
-import com.aitextras.client.renderers.decor.SunDialRenderer;
+import com.aitextras.client.renderers.decor.*;
 import com.aitextras.client.renderers.monitors.ExtrasMonitorRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasScreenMonitorRenderer;
 import com.aitextras.core.AITExtrasBlockEntityTypes;
@@ -60,5 +59,15 @@ public class AITExtrasClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.EXTRAS_SCREEN_MONITOR_BLOCK_ENTITY_TYPE, ExtrasScreenMonitorRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.SUN_DIAL_BLOCK_ENTITY_TYPE, SunDialRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HAT_STAND_OAK_BLOCK_ENTITY_TYPE, HatStandOakRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HAT_STAND_ACACIA_BLOCK_ENTITY_TYPE, HatStandAcaciaRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HAT_STAND_BAMBOO_BLOCK_ENTITY_TYPE, HatStandBambooRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HAT_STAND_BIRCH_BLOCK_ENTITY_TYPE, HatStandBirchRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HAT_STAND_CHERRY_BLOCK_ENTITY_TYPE, HatStandCherryRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HAT_STAND_CRIMSON_BLOCK_ENTITY_TYPE, HatStandCrimsonRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HAT_STAND_DARK_OAK_BLOCK_ENTITY_TYPE, HatStandDarkOakRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HAT_STAND_JUNGLE_BLOCK_ENTITY_TYPE, HatStandJungleRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HAT_STAND_MANGROVE_BLOCK_ENTITY_TYPE, HatStandMangroveRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HAT_STAND_SPRUCE_BLOCK_ENTITY_TYPE, HatStandSpruceRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HAT_STAND_WARPED_BLOCK_ENTITY_TYPE, HatStandWarpedRenderer::new);
     }
 }

@@ -231,17 +231,17 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_SCREEN_MONITOR_BLOCK, "Screen (3x2)");
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_CRYSTALLINE_BLOCK, "Crystalline Block");
                     provider.addTranslation(AITExtrasBlocks.SUN_DIAL_BLOCK, "Armillary Sphere");
-//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_ACACIA_BLOCK, "HatStand");
-//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_BAMBOO_BLOCK, "HatStand");
-//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_BIRCH_BLOCK, "HatStand");
-//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_CHERRY_BLOCK, "HatStand");
-//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_CRIMSON_BLOCK, "HatStand");
-//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_DARK_OAK_BLOCK, "HatStand");
-//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_JUNGLE_BLOCK, "HatStand");
-//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_MANGROVE_BLOCK, "HatStand");
-                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_OAK_BLOCK, "HatStand");
-//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_SPRUCE_BLOCK, "HatStand");
-//                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_WARPED_BLOCK, "HatStand");
+                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_ACACIA_BLOCK, "Hat Stand");
+                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_BAMBOO_BLOCK, "Hat Stand");
+                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_BIRCH_BLOCK, "Hat Stand");
+                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_CHERRY_BLOCK, "Hat Stand");
+                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_CRIMSON_BLOCK, "Hat Stand");
+                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_DARK_OAK_BLOCK, "Hat Stand");
+                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_JUNGLE_BLOCK, "Hat Stand");
+                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_MANGROVE_BLOCK, "Hat Stand");
+                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_OAK_BLOCK, "Hat Stand");
+                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_SPRUCE_BLOCK, "Hat Stand");
+                    provider.addTranslation(AITExtrasBlocks.HAT_STAND_WARPED_BLOCK, "Hat Stand");
 
                     // Items
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");
