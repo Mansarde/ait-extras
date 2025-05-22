@@ -132,9 +132,9 @@ public class ExtrasScreenMonitorRenderer<T extends ExtrasScreenMonitorBlockEntit
         this.textRenderer.drawWithOutline(Text.of(name).asOrderedText(), 150 - (this.textRenderer.getWidth(name)), 78,
                 0xFFFFFF, 0x000000, matrices.peek().getPositionMatrix(), vertexConsumers, 0xF000F0);
 
-        if (tardis.alarm().enabled().get())
-            this.textRenderer.drawWithOutline(Text.of("⚠").asOrderedText(), 140, 0, 0xFE0000, 0x000000,
-                    matrices.peek().getPositionMatrix(), vertexConsumers, 0xF000F0);
+       if (tardis.alarm().enabled().get())
+           this.textRenderer.drawWithOutline(Text.of("⚠").asOrderedText(), 140, 0, 0xFE0000, 0x000000,
+                   matrices.peek().getPositionMatrix(), vertexConsumers, 0xF000F0);
 
         matrices.pop();
     }
