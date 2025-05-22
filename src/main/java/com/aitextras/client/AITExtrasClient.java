@@ -1,14 +1,8 @@
 package com.aitextras.client;
 
 import com.aitextras.AITExtras;
-import com.aitextras.client.models.doors.ClockDoorModel;
-import com.aitextras.client.models.doors.EctoDoorModel;
-import com.aitextras.client.models.doors.PostBoxDoorModel;
-import com.aitextras.client.models.doors.VanillaDoorModel;
-import com.aitextras.client.models.exteriors.ClockExteriorModel;
-import com.aitextras.client.models.exteriors.EctoExteriorModel;
-import com.aitextras.client.models.exteriors.PostBoxExteriorModel;
-import com.aitextras.client.models.exteriors.VanillaExteriorModel;
+import com.aitextras.client.models.doors.*;
+import com.aitextras.client.models.exteriors.*;
 import com.aitextras.client.renderers.decor.*;
 import com.aitextras.client.renderers.monitors.ExtrasMonitorRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasScreenMonitorRenderer;
@@ -34,7 +28,6 @@ public class AITExtrasClient implements ClientModInitializer {
         ECTO.setPortalHeight(2.28f);
         ECTO.toDoor().setModel(new EctoDoorModel(EctoDoorModel.getTexturedModelData().createModel())).toClient().register();
 
-
         POSTBOX.setModel(new PostBoxExteriorModel()).toClient().register();
         POSTBOX.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
         POSTBOX.setPortalWidth(0.9f);
@@ -46,13 +39,18 @@ public class AITExtrasClient implements ClientModInitializer {
         VANILLA.setPortalWidth(1f);
         VANILLA.setPortalHeight(2.5f);
         VANILLA.toDoor().setModel(new VanillaDoorModel(VanillaDoorModel.getTexturedModelData().createModel())).toClient().register();
-        VANILLA.toClient().hasTransparentDoors();
+//        VANILLA.toClient().hasTransparentDoors();
 
         CLOCK.setModel(new ClockExteriorModel<>()).toClient().register();
         CLOCK.setSonicItemTranslations(new Vector3f(0.7f, 1f, 2f));
         CLOCK.setPortalWidth(1f);
         CLOCK.setPortalHeight(2f);
         CLOCK.toDoor().setModel(new ClockDoorModel(ClockDoorModel.getTexturedModelData().createModel())).toClient().register();
+
+        BOX.setModel(new BoxExteriorModel()).toClient().register();
+        BOX.setPortalWidth(1.15f);
+        BOX.setPortalHeight(2.28f);
+        BOX.toDoor().setModel(new BoxDoorModel(BoxDoorModel.getTexturedModelData().createModel())).toClient().register();
     };
     public static void blockEntityRendererRegister() {
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.EXTRAS_MONITOR_BLOCK_ENTITY_TYPE, ExtrasMonitorRenderer::new);
