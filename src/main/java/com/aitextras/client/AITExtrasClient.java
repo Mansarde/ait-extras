@@ -47,10 +47,16 @@ public class AITExtrasClient implements ClientModInitializer {
         CLOCK.setPortalHeight(2f);
         CLOCK.toDoor().setModel(new ClockDoorModel(ClockDoorModel.getTexturedModelData().createModel())).toClient().register();
 
-        BOX.setModel(new BoxExteriorModel()).toClient().register();
-        BOX.setPortalWidth(1.15f);
-        BOX.setPortalHeight(2.28f);
-        BOX.toDoor().setModel(new BoxDoorModel(BoxDoorModel.getTexturedModelData().createModel())).toClient().register();
+        CLASSICTT.setModel(new ClassicTTExteriorModel()).toClient().register();
+        CLASSICTT.setSonicItemTranslations(new Vector3f(0.7f, 1f, 2f));
+        CLASSICTT.setPortalWidth(1f);
+        CLASSICTT.setPortalHeight(2f);
+        CLASSICTT.toDoor().setModel(new ClassicTTDoorModel(ClassicTTDoorModel.getTexturedModelData().createModel())).toClient().register();
+
+//        BOX.setModel(new BoxExteriorModel()).toClient().register();
+//        BOX.setPortalWidth(1.15f);
+//        BOX.setPortalHeight(2.28f);
+//        BOX.toDoor().setModel(new BoxDoorModel(BoxDoorModel.getTexturedModelData().createModel())).toClient().register();
     };
     public static void blockEntityRendererRegister() {
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.EXTRAS_MONITOR_BLOCK_ENTITY_TYPE, ExtrasMonitorRenderer::new);
