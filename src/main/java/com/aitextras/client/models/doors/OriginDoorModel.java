@@ -18,10 +18,10 @@ import net.minecraft.client.render.entity.animation.Animation.Builder;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.math.RotationAxis;
 
-public class OriginTTDoorModel extends DoorModel {
+public class OriginDoorModel extends DoorModel {
     private final ModelPart bone;
 
-    public OriginTTDoorModel(ModelPart root) {
+    public OriginDoorModel(ModelPart root) {
         super(RenderLayer::getEntityCutoutNoCull);
         this.bone = root.getChild("bone");
     }

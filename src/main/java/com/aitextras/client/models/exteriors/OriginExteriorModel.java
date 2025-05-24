@@ -13,10 +13,10 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
 
 
-public class OriginTTExteriorModel extends ExteriorModel {
+public class OriginExteriorModel extends ExteriorModel {
 	private final ModelPart root;
 
-	public OriginTTExteriorModel() {
+	public OriginExteriorModel() {
 		super();
 		this.root = getTexturedModelData().createModel().getChild("bone");
 	}

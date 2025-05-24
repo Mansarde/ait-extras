@@ -1,6 +1,6 @@
 {
-  "id": "ait-extras:origin_tt_soul",
-  "category": "ait:capsule",
-  "parent": "ait-extras:origin",
+  "id": "ait-extras:origin_soul",
+  "category": "ait-extras:origin",
+  "parent": "ait-extras:exterior/origin",
   "texture": "ait-extras:textures/blockentities/exteriors/origin/origin_soul.png"
 }

@@ -47,11 +47,11 @@ public class AITExtrasClient implements ClientModInitializer {
         CLOCK.setPortalHeight(2f);
         CLOCK.toDoor().setModel(new ClockDoorModel(ClockDoorModel.getTexturedModelData().createModel())).toClient().register();
 
-        ORIGINTT.setModel(new OriginTTExteriorModel()).toClient().register();
-        ORIGINTT.setSonicItemTranslations(new Vector3f(0.7f, 1f, 2f));
-        ORIGINTT.setPortalWidth(1f);
-        ORIGINTT.setPortalHeight(2f);
-        ORIGINTT.toDoor().setModel(new OriginTTDoorModel(OriginTTDoorModel.getTexturedModelData().createModel())).toClient().register();
+        ORIGIN.setModel(new OriginExteriorModel()).toClient().register();
+        ORIGIN.setSonicItemTranslations(new Vector3f(0.7f, 1f, 2f));
+        ORIGIN.setPortalWidth(1f);
+        ORIGIN.setPortalHeight(2f);
+        ORIGIN.toDoor().setModel(new OriginDoorModel(OriginDoorModel.getTexturedModelData().createModel())).toClient().register();
 
 //        BOX.setModel(new BoxExteriorModel()).toClient().register();
 //        BOX.setPortalWidth(1.15f);

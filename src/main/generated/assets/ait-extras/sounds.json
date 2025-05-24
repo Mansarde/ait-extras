@@ -4,16 +4,6 @@
       "ait-extras:music/mercury_disc"
     ]
   },
-  "tardis/capsule_door_close": {
-    "sounds": [
-      "ait-extras:tardis/capsule_door_close"
-    ]
-  },
-  "tardis/capsule_door_open": {
-    "sounds": [
-      "ait-extras:tardis/capsule_door_open"
-    ]
-  },
   "tardis/classic_box_door_close": {
     "sounds": [
       "ait-extras:tardis/classic_box_door_close"

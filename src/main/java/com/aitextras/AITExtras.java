@@ -18,7 +18,7 @@ public class AITExtras implements ModInitializer {
     public static AddonExterior POSTBOX;
     public static AddonExterior VANILLA;
     public static AddonExterior CLOCK;
-    public static AddonExterior ORIGINTT;
+    public static AddonExterior ORIGIN;
     public static AddonExterior BOX;
 
     public static Identifier id(String path) {
@@ -160,14 +160,14 @@ public class AITExtras implements ModInitializer {
 
 
 
-        //ORIGINTT
-        ORIGINTT = new AddonExterior(CapsuleCategory.REFERENCE, MOD_ID, "origin").register();
-        ORIGINTT.setDoor(new AddonExterior.Door(
-                        ORIGINTT, false, SoundEvents.BLOCK_IRON_DOOR_OPEN,
+        //ORIGIN
+        ORIGIN = new AddonExterior(new Identifier(MOD_ID, "origin"), MOD_ID, "origin").register();
+        ORIGIN.setDoor(new AddonExterior.Door(
+                        ORIGIN, false, SoundEvents.BLOCK_IRON_DOOR_OPEN,
                         SoundEvents.BLOCK_IRON_DOOR_CLOSE))
                 .toDoor().register();
-        ORIGINTT.hasPortals();
-        ORIGINTT.setPortalTranslations((pos, b) -> {
+        ORIGIN.hasPortals();
+        ORIGIN.setPortalTranslations((pos, b) -> {
             return switch(b) {
                 case 0 -> pos.add(0, -0.04, -0.37); // NORTH
                 case 1, 2, 3 -> pos.add(0, -0.04, -0.37); // NORTH EAST p n
@@ -180,7 +180,7 @@ public class AITExtras implements ModInitializer {
                 default -> pos;
             };
         });
-        ORIGINTT.toDoor().setPortalTranslations((pos, b) -> {
+        ORIGIN.toDoor().setPortalTranslations((pos, b) -> {
             return switch(b) {
                 case DOWN, UP -> pos;
                 case NORTH -> pos.add(0.1, 0.05, -0.3);
