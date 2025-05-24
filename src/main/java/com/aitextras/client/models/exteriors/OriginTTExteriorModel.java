@@ -13,10 +13,10 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
 
 
-public class ClassicTTExteriorModel extends ExteriorModel {
+public class OriginTTExteriorModel extends ExteriorModel {
 	private final ModelPart root;
 
-	public ClassicTTExteriorModel() {
+	public OriginTTExteriorModel() {
 		super();
 		this.root = getTexturedModelData().createModel().getChild("bone");
 	}
@@ -39,6 +39,7 @@ public class ClassicTTExteriorModel extends ExteriorModel {
 				.uv(96, 67).cuboid(-4.9706F, -45.0F, -11.0F, 9.9411F, 3.0F, 0.0F, new Dilation(0.001F))
 				.uv(0, 104).cuboid(-4.9706F, -46.0F, -10.0F, 9.9411F, 4.0F, 20.0F, new Dilation(0.001F))
 				.uv(0, 0).cuboid(-12.0F, -42.1F, -12.0F, 24.0F, 0.0F, 24.0F, new Dilation(0.0F))
+				.uv(159, 0).cuboid(-12.0F, -46.1F, -12.0F, 24.0F, 0.0F, 24.0F, new Dilation(0.0F))
 				.uv(0, 24).cuboid(-12.0F, -34.09F, -12.0F, 24.0F, 0.0F, 24.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 21.0F, 0.0F));
 
 		ModelPartData octagon_r1 = top.addChild("octagon_r1", ModelPartBuilder.create().uv(60, 104).cuboid(-4.9706F, -46.0F, -10.0F, 9.9411F, 4.0F, 20.0F, new Dilation(0.001F))
@@ -73,7 +74,7 @@ public class ClassicTTExteriorModel extends ExteriorModel {
 
 		ModelPartData bottom = body.addChild("bottom", ModelPartBuilder.create().uv(0, 48).cuboid(-12.0F, -2.1F, -12.0F, 24.0F, 0.0F, 24.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 21.0F, 0.0F));
 
-		ModelPartData Door = bone.addChild("Door", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -21.1F, 0.1F));
+		ModelPartData Door = bone.addChild("Door", ModelPartBuilder.create(), ModelTransform.of(0.0F, -21.1F, 0.1F, 0.0F, 0.0436F, 0.0F));
 
 		ModelPartData octagon_r11 = Door.addChild("octagon_r11", ModelPartBuilder.create().uv(46, 153).cuboid(-3.7635F, -16.0F, -1.0F, 5.0F, 32.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(-7.4246F, 5.0F, -7.4246F, 0.0F, -2.3562F, 0.0F));
 
