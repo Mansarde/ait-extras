@@ -19,30 +19,46 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.math.RotationAxis;
 
 public class ClassicTTDoorModel extends DoorModel {
-    private final ModelPart BONE;
+    private final ModelPart bone;
 
     public ClassicTTDoorModel(ModelPart root) {
         super(RenderLayer::getEntityCutoutNoCull);
-        this.BONE = root.getChild("bone");
+        this.bone = root.getChild("bone");
     }
 
     public static TexturedModelData getTexturedModelData() {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
-        ModelPartData bone = modelPartData.addChild("bone", ModelPartBuilder.create().uv(116, 76).cuboid(-7.0F, -33.0F, -1.0F, 2.0F, 33.0F, 1.0F, new Dilation(0.0F))
-                .uv(116, 76).cuboid(-23.0F, -33.0F, -1.0F, 2.0F, 33.0F, 1.0F, new Dilation(0.0F))
-                .uv(78, 85).cuboid(-21.0F, -29.0F, -1.4F, 14.0F, 29.0F, 0.0F, new Dilation(0.0F))
-                .uv(12, 12).cuboid(-22.0F, -33.0F, -2.0F, 16.0F, 2.0F, 4.0F, new Dilation(0.0F))
-                .uv(84, 26).cuboid(-21.0F, -31.0F, -1.0F, 14.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(14.0F, 24.0F, -6.0F));
+        ModelPartData bone = modelPartData.addChild("bone", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 24.0F, 2.0F));
 
-        ModelPartData door = bone.addChild("door", ModelPartBuilder.create().uv(37, 115).cuboid(-13.0F, 6.25F, -2.0F, 14.0F, 2.0F, 2.0F, new Dilation(0.0F))
-                .uv(1, 96).cuboid(-13.0F, -20.75F, -1.0F, 14.0F, 27.0F, 1.0F, new Dilation(0.0F))
-                .uv(34, 63).cuboid(-13.0F, -10.75F, -1.2F, 2.0F, 1.0F, 0.0F, new Dilation(0.0F)), ModelTransform.pivot(-8.0F, -8.25F, 0.0F));
-        return TexturedModelData.of(modelData, 128, 128);
+        ModelPartData body = bone.addChild("body", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -19.1F, 0.0F));
+
+        ModelPartData top = body.addChild("top", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 21.0F, 0.0F));
+
+        ModelPartData octagon_r1 = top.addChild("octagon_r1", ModelPartBuilder.create().uv(18, 87).mirrored().cuboid(-4.9706F, -4.0F, -1.0F, 6.0F, 8.0F, 9.0F, new Dilation(0.001F)).mirrored(false), ModelTransform.of(6.0F, -38.0F, -3.0F, 0.0F, -3.1416F, 0.0F));
+
+        ModelPartData octagon_r2 = top.addChild("octagon_r2", ModelPartBuilder.create().uv(18, 87).cuboid(-1.0294F, -4.0F, -1.0F, 6.0F, 8.0F, 9.0F, new Dilation(0.001F)), ModelTransform.of(-6.0F, -38.0F, -3.0F, 0.0F, 3.1416F, 0.0F));
+
+        ModelPartData octagon_r3 = top.addChild("octagon_r3", ModelPartBuilder.create().uv(15, 87).cuboid(-4.9706F, -4.0F, -1.0F, 9.9411F, 8.0F, 9.0F, new Dilation(0.001F)), ModelTransform.of(0.0F, -38.0F, -3.0F, 0.0F, 3.1416F, 0.0F));
+
+        ModelPartData middle = body.addChild("middle", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 21.0F, 0.0F));
+
+        ModelPartData octagon_r4 = middle.addChild("octagon_r4", ModelPartBuilder.create().uv(34, 153).cuboid(-2.0F, -16.0F, 0.0F, 4.0F, 32.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(-9.3787F, -18.0F, -5.4706F, 0.0F, 0.7854F, 0.0F));
+
+        ModelPartData octagon_r5 = middle.addChild("octagon_r5", ModelPartBuilder.create().uv(22, 153).cuboid(-2.0F, -16.0F, 0.0F, 4.0F, 32.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(9.3787F, -18.0F, -5.4706F, 0.0F, -0.7854F, 0.0F));
+
+        ModelPartData bottom = body.addChild("bottom", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 21.0F, 0.0F));
+
+        ModelPartData Door = bone.addChild("Door", ModelPartBuilder.create().uv(0, 153).cuboid(-4.7635F, -11.0F, -10.1F, 9.5269F, 32.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -21.1F, 0.1F, 0.0F, 0.0436F, 0.0F));
+
+        ModelPartData octagon_r6 = Door.addChild("octagon_r6", ModelPartBuilder.create().uv(46, 153).cuboid(-2.5F, -16.0F, -0.5F, 5.0F, 32.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(-6.1777F, 5.0F, -7.9645F, 0.0F, 0.7854F, 0.0F));
+
+        ModelPartData octagon_r7 = Door.addChild("octagon_r7", ModelPartBuilder.create().uv(154, 129).cuboid(-2.5F, -16.0F, -0.5F, 5.0F, 32.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(6.1777F, 5.0F, -7.9645F, 0.0F, -0.7854F, 0.0F));
+        return TexturedModelData.of(modelData, 256, 256);
     }
 
     public ModelPart getPart() {
-        return this.BONE;
+        return this.bone;
     }
 
     public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
@@ -61,10 +77,10 @@ public class ClassicTTDoorModel extends DoorModel {
                                      VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
         matrices.push();
         if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS) {
-            this.BONE.getChild("door").yaw = linkableBlockEntity.tardis().get().door().isOpen() ? 1.575F : 0.0F;
+            this.bone.getChild("Door").yaw = linkableBlockEntity.tardis().get().door().isOpen() ? 1.575F : 0.0F;
         } else {
-            float maxRot = -90.0F;
-            this.BONE.getChild("door").yaw = (float)Math.toRadians((double)(maxRot * linkableBlockEntity.tardis().get().door().getLeftRot()));
+            float maxRot = 90.0F;
+            this.bone.getChild("Door").yaw = (float)Math.toRadians((double)(maxRot * linkableBlockEntity.tardis().get().door().getLeftRot()));
         }
 
         matrices.scale(1.0F, 1.0F, 1.0F);

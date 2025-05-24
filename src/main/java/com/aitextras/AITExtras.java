@@ -100,7 +100,7 @@ public class AITExtras implements ModInitializer {
             VANILLA = new AddonExterior(new Identifier(MOD_ID, "vanilla"), MOD_ID, "vanilla").register();
             VANILLA.setDoor(new AddonExterior.Door(
                          VANILLA, false, SoundEvents.BLOCK_IRON_DOOR_OPEN,
-                         net.minecraft.sound.SoundEvents.BLOCK_IRON_DOOR_CLOSE))
+                         SoundEvents.BLOCK_IRON_DOOR_CLOSE))
                 .toDoor().register();
             VANILLA.hasPortals();
             VANILLA.setPortalTranslations((pos, b) -> {
@@ -163,30 +163,30 @@ public class AITExtras implements ModInitializer {
         //CLASSICTT
         CLASSICTT = new AddonExterior(CapsuleCategory.REFERENCE, MOD_ID, "classic_tt").register();
         CLASSICTT.setDoor(new AddonExterior.Door(
-                        CLASSICTT, false, SoundEvents.BLOCK_WOODEN_TRAPDOOR_OPEN,
-                        SoundEvents.BLOCK_WOODEN_TRAPDOOR_CLOSE))
+                        CLASSICTT, false, SoundEvents.BLOCK_IRON_DOOR_OPEN,
+                        SoundEvents.BLOCK_IRON_DOOR_CLOSE))
                 .toDoor().register();
         CLASSICTT.hasPortals();
         CLASSICTT.setPortalTranslations((pos, b) -> {
             return switch(b) {
-                case 0 -> pos.add(0, -0.35, -0.37); // NORTH
-                case 1, 2, 3 -> pos.add(0, -0.35, -0.37); // NORTH EAST p n
-                case 4 -> pos.add(0, -0.35, 0); // EAST
-                case 5, 6, 7 -> pos.add(0, -0.35, 0.37); // SOUTH EAST p p
-                case 8 -> pos.add(0, -0.35, 0.37); // SOUTH
-                case 9, 10, 11 -> pos.add(-0, -0.35, 0.37); // SOUTH WEST n p
-                case 12 -> pos.add(-0, -0.35, 0); // WEST
-                case 13, 14, 15 -> pos.add(-0, -0.35, -0.37); // NORTH WEST n n
+                case 0 -> pos.add(0, -0.04, -0.37); // NORTH
+                case 1, 2, 3 -> pos.add(0, -0.04, -0.37); // NORTH EAST p n
+                case 4 -> pos.add(0, -0.04, 0); // EAST
+                case 5, 6, 7 -> pos.add(0, -0.04, 0.37); // SOUTH EAST p p
+                case 8 -> pos.add(0, -0.04, 0.37); // SOUTH
+                case 9, 10, 11 -> pos.add(-0, -0.04, 0.37); // SOUTH WEST n p
+                case 12 -> pos.add(-0, -0.04, 0); // WEST
+                case 13, 14, 15 -> pos.add(-0, -0.04, -0.37); // NORTH WEST n n
                 default -> pos;
             };
         });
         CLASSICTT.toDoor().setPortalTranslations((pos, b) -> {
             return switch(b) {
                 case DOWN, UP -> pos;
-                case NORTH -> pos.add(0, -0.2, -0.4);
-                case SOUTH -> pos.add(0, -0.2, 0.4);
-                case WEST -> pos.add(-0, -0.2, 0);
-                case EAST -> pos.add(0, -0.2, 0);
+                case NORTH -> pos.add(0.1, 0.05, -0.3);
+                case SOUTH -> pos.add(0.1, 0.05, 0.3);
+                case WEST -> pos.add(-0, 0.05, 0);
+                case EAST -> pos.add(0, 0.05, 0);
             };
         });
 
