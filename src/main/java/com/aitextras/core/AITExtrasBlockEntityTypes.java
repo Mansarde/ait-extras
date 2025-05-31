@@ -51,4 +51,7 @@ public class AITExtrasBlockEntityTypes implements BlockEntityContainer{
 
     public static BlockEntityType<HatStandWarpedBlockEntity> HAT_STAND_WARPED_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
             .create(HatStandWarpedBlockEntity::new, AITExtrasBlocks.HAT_STAND_WARPED_BLOCK).build();
+
+    public static BlockEntityType<CrystalBlockEntity> CRYSTAL_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
+            .create(CrystalBlockEntity::new, AITExtrasBlocks.CRYSTAL_BLOCK).build();
 }
