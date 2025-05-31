@@ -127,6 +127,15 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.PAPER), conditionsFromItem(Items.PAPER))
                     .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR)));
 
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.FOOD, AITExtrasItems.CUSTARD_CREAM, 4)
+                    .input(Items.MILK_BUCKET)
+                    .input(Items.SUGAR)
+                    .input(Items.EGG)
+                    .criterion(hasItem(Items.MILK_BUCKET), conditionsFromItem(Items.MILK_BUCKET))
+                    .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
+                    .criterion(hasItem(Items.EGG), conditionsFromItem(Items.EGG)));
+
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_OAK_BLOCK, 1)
                     .pattern("FFF")
                     .pattern(" F ")
@@ -327,6 +336,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasItems.RECALL_DISC.getTranslationKey() + ".desc", "Valid Trips: 1");
                     provider.addTranslation(AITExtrasItems.RECALL_DISC, "Emergency Recall Disc");
                     provider.addTranslation(AITExtrasItems.JELLY_BABIES, "Jelly Babies");
+                    provider.addTranslation(AITExtrasItems.CUSTARD_CREAM, "Custard Cream");
 
                     // Tabs
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");

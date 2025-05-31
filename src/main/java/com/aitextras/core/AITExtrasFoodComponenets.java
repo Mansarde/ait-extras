@@ -14,4 +14,11 @@ public class AITExtrasFoodComponenets {
             .snack()
             .alwaysEdible()
             .build();
+
+    public static final FoodComponent CUSTARD_CREAM = new FoodComponent.Builder()
+            .hunger(2)
+            .saturationModifier(0.2f)
+            .snack()
+            .alwaysEdible()
+            .build();
 }
