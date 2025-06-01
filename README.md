@@ -51,3 +51,4 @@
 ## Links
 - [Modrinth](https://modrinth.com/project/ait-extras)
 - [Github](https://github.com/amblelabs/ait-extras)
+- [Discord Server](https://discord.gg/5JDKuzarcS)
