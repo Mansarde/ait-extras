@@ -16,6 +16,7 @@ import dev.amble.lib.datagen.sound.AmbleSoundProvider;
 import dev.amble.lib.datagen.tag.AmbleBlockTagProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
@@ -73,7 +74,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
             }));
 
 
-            provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.EXTRAS_MONITOR_BLOCK, 1)
+            provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.EXTRAS_MONITOR_BLOCK, 1)
                     .pattern("DDD")
                     .pattern("DED")
                     .pattern("DCD")
@@ -84,7 +85,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.CHAIN), conditionsFromItem(Items.CHAIN))
                     .criterion(hasItem(Items.ENDER_EYE), conditionsFromItem(Items.ENDER_EYE)));
 
-            provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.EXTRAS_SCREEN_MONITOR_BLOCK, 1)
+            provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.EXTRAS_SCREEN_MONITOR_BLOCK, 1)
                     .pattern("BBB")
                     .pattern("BEB")
                     .pattern("BBB")
@@ -93,7 +94,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.BLACK_CONCRETE), conditionsFromItem(Items.BLACK_CONCRETE))
                     .criterion(hasItem(Items.ENDER_EYE), conditionsFromItem(Items.ENDER_EYE)))
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.SUN_DIAL_BLOCK, 1)
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.SUN_DIAL_BLOCK, 1)
                     .pattern("NGN")
                     .pattern("GAG")
                     .pattern("NGN")
@@ -136,82 +137,121 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
                     .criterion(hasItem(Items.EGG), conditionsFromItem(Items.EGG)));
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_OAK_BLOCK, 1)
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_OAK_BLOCK, 1)
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
                     .input('F',Items.OAK_FENCE)
                     .criterion(hasItem(Items.OAK_FENCE), conditionsFromItem(Items.OAK_FENCE)));
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_ACACIA_BLOCK, 1)
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_ACACIA_BLOCK, 1)
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
                     .input('F',Items.ACACIA_FENCE)
                     .criterion(hasItem(Items.ACACIA_FENCE), conditionsFromItem(Items.ACACIA_FENCE)));
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_BAMBOO_BLOCK, 1)
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_BAMBOO_BLOCK, 1)
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
                     .input('F',Items.BAMBOO_FENCE)
                     .criterion(hasItem(Items.BAMBOO_FENCE), conditionsFromItem(Items.BAMBOO_FENCE)));
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_BIRCH_BLOCK, 1)
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_BIRCH_BLOCK, 1)
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
                     .input('F',Items.BIRCH_FENCE)
                     .criterion(hasItem(Items.BIRCH_FENCE), conditionsFromItem(Items.BIRCH_FENCE)));
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_CHERRY_BLOCK, 1)
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_CHERRY_BLOCK, 1)
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
                     .input('F',Items.CHERRY_FENCE)
                     .criterion(hasItem(Items.CHERRY_FENCE), conditionsFromItem(Items.CHERRY_FENCE)));
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_CRIMSON_BLOCK, 1)
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_CRIMSON_BLOCK, 1)
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
                     .input('F',Items.CRIMSON_FENCE)
                     .criterion(hasItem(Items.CRIMSON_FENCE), conditionsFromItem(Items.CRIMSON_FENCE)));
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_DARK_OAK_BLOCK, 1)
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_DARK_OAK_BLOCK, 1)
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
                     .input('F',Items.DARK_OAK_FENCE)
                     .criterion(hasItem(Items.DARK_OAK_FENCE), conditionsFromItem(Items.DARK_OAK_FENCE)));
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_JUNGLE_BLOCK, 1)
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_JUNGLE_BLOCK, 1)
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
                     .input('F',Items.JUNGLE_FENCE)
                     .criterion(hasItem(Items.JUNGLE_FENCE), conditionsFromItem(Items.JUNGLE_FENCE)));
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_MANGROVE_BLOCK, 1)
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_MANGROVE_BLOCK, 1)
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
                     .input('F',Items.MANGROVE_FENCE)
                     .criterion(hasItem(Items.MANGROVE_FENCE), conditionsFromItem(Items.MANGROVE_FENCE)));
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_SPRUCE_BLOCK, 1)
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_SPRUCE_BLOCK, 1)
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
                     .input('F',Items.SPRUCE_FENCE)
                     .criterion(hasItem(Items.SPRUCE_FENCE), conditionsFromItem(Items.SPRUCE_FENCE)));
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.HAT_STAND_WARPED_BLOCK, 1)
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_WARPED_BLOCK, 1)
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
                     .input('F',Items.WARPED_FENCE)
                     .criterion(hasItem(Items.WARPED_FENCE), conditionsFromItem(Items.WARPED_FENCE)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CRYSTAL_ZEITON_BLOCK, 1)
+                    .pattern(" Z ")
+                    .pattern(" B ")
+                    .pattern(" Z ")
+                    .input('B',AITBlocks.ZEITON_BLOCK)
+                    .input('Z',AITItems.ZEITON_SHARD)
+                    .criterion(hasItem(AITBlocks.ZEITON_BLOCK), conditionsFromItem(AITBlocks.ZEITON_BLOCK)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CRYSTAL_MASTER_BLOCK, 1)
+                    .pattern(" A ")
+                    .pattern(" B ")
+                    .pattern(" Z ")
+                    .input('B',AITBlocks.ZEITON_BLOCK)
+                    .input('Z',AITItems.ZEITON_SHARD)
+                    .input('A',Items.AMETHYST_SHARD)
+                    .criterion(hasItem(Blocks.AMETHYST_BLOCK), conditionsFromItem(Blocks.AMETHYST_BLOCK)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.CRYSTAL_BLOCK, 1)
+                    .pattern(" C ")
+                    .pattern(" B ")
+                    .pattern(" C ")
+                    .input('B',AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK)
+                    .input('C',AITExtrasItems.CRYSTALLINE_SHARD)
+                    .criterion(hasItem(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK), conditionsFromItem(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK, 1)
+                    .pattern("CCC")
+                    .pattern("CCC")
+                    .pattern("CCC")
+                    .input('C',AITExtrasItems.CRYSTALLINE_SHARD)
+                    .criterion(hasItem(AITExtrasItems.CRYSTALLINE_SHARD), conditionsFromItem(AITExtrasItems.CRYSTALLINE_SHARD)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.EXTRAS_CRYSTALLINE_BLOCK, 1)
+                    .pattern("BBB")
+                    .pattern("BBB")
+                    .pattern("BBB")
+                    .input('B',AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK)
+                    .criterion(hasItem(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK), conditionsFromItem(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK)));
 
 
             return provider;
@@ -331,6 +371,9 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.HAT_STAND_OAK_BLOCK, "Hat Stand");
                     provider.addTranslation(AITExtrasBlocks.HAT_STAND_SPRUCE_BLOCK, "Hat Stand");
                     provider.addTranslation(AITExtrasBlocks.HAT_STAND_WARPED_BLOCK, "Hat Stand");
+                    provider.addTranslation(AITExtrasBlocks.CRYSTAL_BLOCK, "Roof Crystal");
+                    provider.addTranslation(AITExtrasBlocks.CRYSTAL_ZEITON_BLOCK, "Roof Crystal (Zeiton)");
+                    provider.addTranslation(AITExtrasBlocks.CRYSTAL_MASTER_BLOCK, "Roof Crystal (Master)");
 
                     // Items
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");
@@ -364,6 +407,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("advancements.ait-extras.obtain_jelly_babies.description", "Craft Jelly Babies");
                     provider.addTranslation("advancements.ait-extras.obtain_extras_monitor_block.title", "Critical Timing Malfunction!");
                     provider.addTranslation("advancements.ait-extras.obtain_extras_monitor_block.description", "Craft The Victorian Monitor");
+            provider.addTranslation("advancements.ait-extras.obtain_custard_cream.title", "Holy Pixels!");
+            provider.addTranslation("advancements.ait-extras.obtain_custard_cream.description", "Can you believe that this texture is 60x47 pixels?");
 
 
             return provider;

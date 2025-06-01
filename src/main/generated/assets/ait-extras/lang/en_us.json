@@ -1,4 +1,6 @@
 {
+  "advancements.ait-extras.obtain_custard_cream.description": "Can you believe that this texture is 60x47 pixels?",
+  "advancements.ait-extras.obtain_custard_cream.title": "Holy Pixels!",
   "advancements.ait-extras.obtain_extras_monitor_block.description": "Craft The Victorian Monitor",
   "advancements.ait-extras.obtain_extras_monitor_block.title": "Critical Timing Malfunction!",
   "advancements.ait-extras.obtain_jelly_babies.description": "Craft Jelly Babies",
@@ -16,6 +18,9 @@
   "animation.ait-extras.type70_demat": "Type 70",
   "animation.ait-extras.type70_mat": "Type 70",
   "animation.ait-extras.xmas_demat": "Xmas",
+  "block.ait-extras.crystal_block": "Roof Crystal",
+  "block.ait-extras.crystal_master_block": "Roof Crystal (Master)",
+  "block.ait-extras.crystal_zeiton_block": "Roof Crystal (Zeiton)",
   "block.ait-extras.crystalline_ore": "Crystalline Ore",
   "block.ait-extras.crystalline_shard_block": "Crystalline Shard Block",
   "block.ait-extras.extras_crystalline_block": "Crystalline Block",

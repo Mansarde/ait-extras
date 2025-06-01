@@ -54,4 +54,10 @@ public class AITExtrasBlockEntityTypes implements BlockEntityContainer{
 
     public static BlockEntityType<CrystalBlockEntity> CRYSTAL_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
             .create(CrystalBlockEntity::new, AITExtrasBlocks.CRYSTAL_BLOCK).build();
+
+    public static BlockEntityType<CrystalZeitonBlockEntity> CRYSTAL_ZEITON_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
+            .create(CrystalZeitonBlockEntity::new, AITExtrasBlocks.CRYSTAL_ZEITON_BLOCK).build();
+
+    public static BlockEntityType<CrystalMasterBlockEntity> CRYSTAL_MASTER_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
+            .create(CrystalMasterBlockEntity::new, AITExtrasBlocks.CRYSTAL_MASTER_BLOCK).build();
 }

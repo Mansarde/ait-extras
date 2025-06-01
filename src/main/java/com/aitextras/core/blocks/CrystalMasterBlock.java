@@ -1,6 +1,6 @@
 package com.aitextras.core.blocks;
 
-import com.aitextras.core.blockentities.CrystalBlockEntity;
+import com.aitextras.core.blockentities.CrystalMasterBlockEntity;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.particle.BlockStateParticleEffect;
@@ -13,10 +13,10 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
-public class CrystalBlock extends BlockWithEntity implements BlockEntityProvider {
+public class CrystalMasterBlock extends BlockWithEntity implements BlockEntityProvider {
     protected static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 32.0, 16.0);
 
-    public CrystalBlock(Settings settings) {
+    public CrystalMasterBlock(Settings settings) {
         super(settings);
     }
 
@@ -38,7 +38,7 @@ public class CrystalBlock extends BlockWithEntity implements BlockEntityProvider
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new CrystalBlockEntity(pos, state);
+        return new CrystalMasterBlockEntity(pos, state);
     }
 
 
