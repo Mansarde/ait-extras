@@ -5,27 +5,8 @@
 ![Modrinth Game Versions](https://img.shields.io/modrinth/game-versions/ait-extras?link=https%3A%2F%2Fmodrinth.com%2Fmod%2Fait%2Fversions)
 ![Modrinth Downloads](https://img.shields.io/modrinth/dt/ait-extras?logo=modrinth&link=https%3A%2F%2Fmodrinth.com%2Fmod%2Fait)
 ---------
-## Q&A
 
-### What does this add / do?
-
-- This builds on top of AiT features by adding; exteriors, interiors, consoles, sonics, and more..
-
-### Why does it only work on AiT 1.3.0 and above?
-
-- AiT 1.3.0 is the latest accessible version (at the time) and has features that are required for the certain things to work, these features weren't present in previous versions of the mod.
-
-### Will this mod be ported to forge or neoforge?
-
-- No, even though AiT had a forge version, this mod will be exclusively for fabric. Why, AiT's forge version is no longer supported and i dont feel like porting the mod everytime.
-
-
-### How do i get access to betas?
-- Either via the AmbleLabs discord server's donator role OR via [Addie's kofi](https://ko-fi.com/addi3dabaddie)!
-
-### Can you add... / How do you use...?
-- You can suggest stuff on the github issues page or on [my (Addies) discord server!
-  ](https://discord.com/invite/cRPjGDy37p), I will also answer any questions on either site!
+### [Q&A HERE](https://github.com/amblelabs/ait-extras/wiki/Q&A)
 
 ---------------
 
