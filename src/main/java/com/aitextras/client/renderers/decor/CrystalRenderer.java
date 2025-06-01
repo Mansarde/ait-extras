@@ -19,9 +19,9 @@ import net.minecraft.util.math.RotationPropertyHelper;
 public class CrystalRenderer<T extends CrystalBlockEntity> implements BlockEntityRenderer<T> {
 
     public static final Identifier CRYSTAL_TEXTURE = new Identifier(AITExtras.MOD_ID,
-            "textures/blockentities/crystal/crystalline.png");
+            "textures/blockentities/decor/crystal/crystalline.png");
     public static final Identifier EMISSIVE_CRYSTAL_TEXTURE = new Identifier(AITExtras.MOD_ID,
-            "textures/blockentities/crystal/crystalline_emission.png");
+            "textures/blockentities/decor/crystal/crystalline_emission.png");
     private final CrystalModel crystalModel;
 
     public CrystalRenderer(BlockEntityRendererFactory.Context ctx) {
@@ -32,9 +32,8 @@ public class CrystalRenderer<T extends CrystalBlockEntity> implements BlockEntit
     public void render(T entity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
 
 
-        // Retrieve scale dynamically and apply it
-        float scale = entity.getScale();
-        matrices.scale(scale, scale, scale);
+        matrices.push();
+        matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(180f));
 
         this.crystalModel.render(matrices,
                 vertexConsumers.getBuffer(RenderLayer.getEntityTranslucent(CRYSTAL_TEXTURE)), light, overlay, 1.0F,

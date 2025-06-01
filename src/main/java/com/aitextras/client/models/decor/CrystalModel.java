@@ -29,7 +29,7 @@ public class CrystalModel extends SinglePartEntityModel {
                 .uv(130, 48).cuboid(-5.0847F, -24.9593F, -6.1222F, 10.0F, 0.0F, 10.0F, new Dilation(0.001F))
                 .uv(62, 126).cuboid(-3.0847F, -24.9613F, -6.316F, 6.0F, 5.0F, 1.0F, new Dilation(0.002F))
                 .uv(87, 61).cuboid(-3.0847F, -24.9613F, -6.516F, 6.0F, 5.0F, 0.0F, new Dilation(0.0F))
-                .uv(74, 102).cuboid(-3.0847F, -24.9613F, -6.716F, 6.0F, 5.0F, 0.0F, new Dilation(0.0F)), ModelTransform.of(0.0847F, -1.0387F, -0.0309F, 0.0F, 0.0F, -3.1416F));
+                .uv(74, 102).cuboid(-3.0847F, -24.9613F, -6.716F, 6.0F, 5.0F, 0.0F, new Dilation(0.0F)), ModelTransform.of(-5.9153F, -1.0387F, -6.0309F, 0.0F, 0.0F, -3.1416F));
 
         ModelPartData cube_r1 = rotor_jodie.addChild("cube_r1", ModelPartBuilder.create().uv(74, 102).cuboid(-3.0F, -7.001F, -6.6469F, 6.0F, 5.0F, 0.0F, new Dilation(0.0F))
                 .uv(87, 61).cuboid(-3.0F, -7.001F, -6.4469F, 6.0F, 5.0F, 0.0F, new Dilation(0.0F))

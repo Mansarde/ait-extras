@@ -317,6 +317,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_MONITOR_BLOCK, "Victorian Monitor");
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_SCREEN_MONITOR_BLOCK, "Screen (3x2)");
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_CRYSTALLINE_BLOCK, "Crystalline Block");
+                    provider.addTranslation(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK, "Crystalline Shard Block");
+                    provider.addTranslation(AITExtrasBlocks.CRYSTALLINE_ORE, "Crystalline Ore");
                     provider.addTranslation(AITExtrasBlocks.SUN_DIAL_BLOCK, "Armillary Sphere");
                     provider.addTranslation(AITExtrasBlocks.HAT_STAND_ACACIA_BLOCK, "Hat Stand");
                     provider.addTranslation(AITExtrasBlocks.HAT_STAND_BAMBOO_BLOCK, "Hat Stand");
@@ -337,6 +339,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasItems.RECALL_DISC, "Emergency Recall Disc");
                     provider.addTranslation(AITExtrasItems.JELLY_BABIES, "Jelly Babies");
                     provider.addTranslation(AITExtrasItems.CUSTARD_CREAM, "Custard Cream");
+                    provider.addTranslation(AITExtrasItems.CRYSTALLINE_SHARD, "Crystalline Shard");
 
                     // Tabs
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");

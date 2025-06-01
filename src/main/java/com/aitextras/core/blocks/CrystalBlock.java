@@ -1,18 +1,11 @@
 package com.aitextras.core.blocks;
 
-import com.aitextras.core.blockentities.SunDialBlockEntity;
+import com.aitextras.core.blockentities.CrystalBlockEntity;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.particle.BlockStateParticleEffect;
 import net.minecraft.particle.ParticleTypes;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.IntProperty;
-import net.minecraft.state.property.Properties;
-import net.minecraft.util.BlockMirror;
-import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.RotationPropertyHelper;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
@@ -21,9 +14,6 @@ import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
 public class CrystalBlock extends BlockWithEntity implements BlockEntityProvider {
-    public static final int MAX_ROTATION_INDEX = RotationPropertyHelper.getMax();
-    private static final int MAX_ROTATIONS = MAX_ROTATION_INDEX + 1;
-    public static final IntProperty ROTATION = Properties.ROTATION;
     protected static final VoxelShape SHAPE = Block.createCuboidShape(16.0, 0.0, 16.0, 32.0, 16.0, 16.0);
 
     public CrystalBlock(Settings settings) {
@@ -48,7 +38,7 @@ public class CrystalBlock extends BlockWithEntity implements BlockEntityProvider
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new SunDialBlockEntity(pos, state);
+        return new CrystalBlockEntity(pos, state);
     }
 
 

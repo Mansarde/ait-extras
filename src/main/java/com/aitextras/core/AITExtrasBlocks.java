@@ -94,4 +94,16 @@ public class AITExtrasBlocks extends BlockContainer {
     public static final Block CRYSTAL_BLOCK = new CrystalBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
+
+    @AutomaticModel
+    @NoEnglish
+    public static final Block CRYSTALLINE_SHARD_BLOCK = new Block(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
+
+    @AutomaticModel
+    @NoEnglish
+    public static final Block CRYSTALLINE_ORE = new Block(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE));
    };

@@ -28,5 +28,10 @@ public class AITExtrasItems extends ItemContainer {
     public static final Item JELLY_BABIES = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN).food(AITExtrasFoodComponenets.JELLY_BABIES));
 
     @AutomaticModel
+    @NoEnglish
     public static final Item CUSTARD_CREAM = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN).food(AITExtrasFoodComponenets.CUSTARD_CREAM));
+
+    @AutomaticModel
+    @NoEnglish
+    public static final Item CRYSTALLINE_SHARD = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN));
 }
