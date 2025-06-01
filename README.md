@@ -19,7 +19,7 @@
 ## Credits
 
 ### Developers:
-- [Addi3_Astarr](https://modrinth.com/user/Addi3_Astarr) (Lead Developer)
+- [Addi3_Astarr](https://addieastarr.carrd.co/) (Lead Developer)
 
 ---
 ### Thank You's:
