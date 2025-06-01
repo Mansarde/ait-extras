@@ -27,6 +27,7 @@ public class AITExtrasSounds {
     public static final SoundEvent XMAS_DEMAT = register("tardis/travel/xmas_demat");
     public static final SoundEvent CLASSIC_BOX_DOOR_OPEN = register("tardis/classic_box_door_open");
     public static final SoundEvent CLASSIC_BOX_DOOR_CLOSE = register("tardis/classic_box_door_close");
+    public static final SoundEvent SHIELD_HUM = register("tardis/shield_hum");
 
     // Register a SoundEvent
     private static SoundEvent register(String name) {
