@@ -30,6 +30,7 @@
 - [Maketendo](https://modrinth.com/user/Maketendo) - Setting the mod up
 
 ## Links
+- [Wiki](https://github.com/amblelabs/ait-extras/wiki)
 - [Modrinth](https://modrinth.com/project/ait-extras)
 - [Github](https://github.com/amblelabs/ait-extras)
 - [Discord Server](https://discord.gg/5JDKuzarcS)
