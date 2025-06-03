@@ -6,6 +6,7 @@
 package com.aitextras.client.models.doors;
 
 import dev.amble.ait.AITMod;
+import dev.amble.ait.client.AITModClient;
 import dev.amble.ait.client.models.doors.DoorModel;
 import dev.amble.ait.client.models.exteriors.BoothExteriorModel;
 import dev.amble.ait.client.tardis.ClientTardis;
@@ -60,7 +61,7 @@ public class PostBoxDoorModel extends DoorModel {
     public void renderWithAnimations(ClientTardis tardis, dev.amble.ait.api.tardis.link.v2.block.AbstractLinkableBlockEntity linkableBlockEntity, ModelPart root, MatrixStack matrices,
                                      VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
         matrices.push();
-        if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS) {
+        if (!AITModClient.CONFIG.animateDoors) {
             this.BONE.getChild("door").yaw = linkableBlockEntity.tardis().get().door().isOpen() ? 1.575F : 0.0F;
         } else {
             float maxRot = -90.0F;

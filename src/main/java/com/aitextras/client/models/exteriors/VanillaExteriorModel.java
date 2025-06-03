@@ -3,6 +3,7 @@ package com.aitextras.client.models.exteriors;
 import dev.amble.ait.AITMod;
 import dev.amble.ait.api.tardis.link.v2.Linkable;
 import dev.amble.ait.api.tardis.link.v2.block.AbstractLinkableBlockEntity;
+import dev.amble.ait.client.AITModClient;
 import dev.amble.ait.client.models.exteriors.ExteriorModel;
 import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.blockentities.ExteriorBlockEntity;
@@ -88,7 +89,7 @@ public class VanillaExteriorModel<LinkableBlockEntity> extends ExteriorModel {
 			return;
 
 		matrices.push();
-		if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS)
+		if (!AITModClient.CONFIG.animateDoors)
 			this.root.getChild("door").yaw = exterior.tardis().get().door().isOpen() ? 1.575F : 0.0F;
 		else {
 			float maxRot = -90f;
@@ -114,7 +115,7 @@ public class VanillaExteriorModel<LinkableBlockEntity> extends ExteriorModel {
 			return;
 
 		matrices.push();
-		if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS)
+		if (!AITModClient.CONFIG.animateDoors)
 			this.root.getChild("door").yaw = falling.tardis().get().door().isOpen() ? 1.575F : 0.0F;
 		else {
 			float maxRot = -90f;
