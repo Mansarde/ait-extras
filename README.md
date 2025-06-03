@@ -14,6 +14,15 @@
 
 - Requires AiT 1.3.0 and above -> [Download Here](https://modrinth.com/mod/ait/versions)
 - Requires AmbleKit (latest 1.20.1 version) -> [Download Here](https://modrinth.com/mod/amblekit/versions)
+- Requires YACL (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/yacl/versions?g=1.20.1&l=fabric)
+
+### Recommended Mods!
+
+- JEI (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/jei/versions?g=1.20.1&l=fabric)
+  
+**Alternativly**
+  
+- REI (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/rei/versions?g=1.20.1&l=fabric)
 
 -----------
 ## Credits
