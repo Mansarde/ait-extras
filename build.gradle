@@ -21,11 +21,16 @@ repositories {
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
     // for more information about repositories.
 
-    maven { url "https://jitpack.io"
+    maven {
+        url "https://jitpack.io"
         metadataSources {
             artifact() // Look directly for artifact
         }
     }
+
+    // Scheduler, Queue, MultiDim, AutoJSON
+    maven { url "https://theo.is-a.dev/maven-repo/" }
+
 
     maven { url "https://maven.shedaniel.me/" }
     maven { url "https://maven.terraformersmc.com/releases/" }
@@ -68,13 +73,13 @@ dependencies {
 
     modImplementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
 
-    include(modImplementation("com.github.DrTheodor:mc-multidim:${project.multidim_version}")) {
+    include(modImplementation("dev.drtheo:multidim:${project.multidim_version}")) {
         exclude(group: "net.fabricmc.fabric-api")
     }
-    include(modImplementation("com.github.DrTheodor:mc-scheduler:${project.scheduler_version}")) {
+    include(modImplementation("dev.drtheo:scheduler:${project.scheduler_version}")) {
         exclude(group: "net.fabricmc.fabric-api")
     }
-    include(modImplementation("com.github.DrTheodor:mc-queue:${project.queue_version}")) {
+    include(modImplementation("dev.drtheo:queue:${project.queue_version}")) {
         exclude(group: "net.fabricmc.fabric-api")
     }
   //  include(modImplementation("com.github.amblelabs:modkit:${project.Amble_version}")) {
