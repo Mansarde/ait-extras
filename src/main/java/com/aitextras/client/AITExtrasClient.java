@@ -52,11 +52,6 @@ public class AITExtrasClient implements ClientModInitializer {
         ORIGIN.setPortalWidth(1f);
         ORIGIN.setPortalHeight(2f);
         ORIGIN.toDoor().setModel(new OriginDoorModel(OriginDoorModel.getTexturedModelData().createModel())).toClient().register();
-
-//        BOX.setModel(new BoxExteriorModel()).toClient().register();
-//        BOX.setPortalWidth(1.15f);
-//        BOX.setPortalHeight(2.28f);
-//        BOX.toDoor().setModel(new BoxDoorModel(BoxDoorModel.getTexturedModelData().createModel())).toClient().register();
     };
     public static void blockEntityRendererRegister() {
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.EXTRAS_MONITOR_BLOCK_ENTITY_TYPE, ExtrasMonitorRenderer::new);

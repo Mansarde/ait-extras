@@ -189,34 +189,5 @@ public class AITExtras implements ModInitializer {
                 case EAST -> pos.add(0, 0.05, 0);
             };
         });
-
-        //BOX
-//        BOX = new AddonExterior(PoliceBoxCategory.REFERENCE, MOD_ID, "box").register();
-//        BOX.setDoor(new AddonExterior.Door(
-//                        BOX, true, AITExtrasSounds.CLASSIC_BOX_DOOR_OPEN, AITExtrasSounds.CLASSIC_BOX_DOOR_CLOSE))
-//                .toDoor().register();
-//        BOX.hasPortals();
-//        BOX.setPortalTranslations((pos, b) -> {
-//            return switch(b) {
-//                case 0 -> pos.add(0, -0.05, -0.628); // NORTH
-//                case 1, 2, 3 -> pos.add(0.43, -0.05, -0.43); // NORTH EAST p n
-//                case 4 -> pos.add(0.628, -0.05, 0); // EAST
-//                case 5, 6, 7 -> pos.add(0.43, -0.05, 0.43); // SOUTH EAST p p
-//                case 8 -> pos.add(0, -0.05, 0.628); // SOUTH
-//                case 9, 10, 11 -> pos.add(-0.43, -0.05, 0.43); // SOUTH WEST n p
-//                case 12 -> pos.add(-0.628, -0.05, 0); // WEST
-//                case 13, 14, 15 -> pos.add(-0.43, -0.05, -0.43); // NORTH WEST n n
-//                default -> pos;
-//            };
-//        });
-//        BOX.toDoor().setPortalTranslations((pos, b) -> {
-//            return switch(b) {
-//                case DOWN, UP -> pos;
-//                case NORTH -> pos.add(0, 0.05, -0.45);
-//                case SOUTH -> pos.add(0, 0.05, 0.45);
-//                case WEST -> pos.add(-0.45, 0.05, 0);
-//                case EAST -> pos.add(0.45, 0.05, 0);
-//            };
-//        });
     }
 }
