@@ -9,6 +9,9 @@ import com.aitextras.client.renderers.monitors.ExtrasScreenMonitorRenderer;
 import com.aitextras.core.AITExtrasBlockEntityTypes;
 import dev.amble.ait.client.models.doors.CapsuleDoorModel;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.util.math.Vec3d;
 import org.joml.Vector3f;
@@ -71,5 +74,14 @@ public class AITExtrasClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CRYSTAL_BLOCK_ENTITY_TYPE, CrystalRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CRYSTAL_ZEITON_BLOCK_ENTITY_TYPE, CrystalZeitonRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CRYSTAL_MASTER_BLOCK_ENTITY_TYPE, CrystalMasterRenderer::new);
+
+
+        // Register builtin resourcepacks
+        FabricLoader.getInstance().getModContainer("ait-extras").ifPresent(modContainer -> {
+            ResourceManagerHelper.registerBuiltinResourcePack(id("logo"), modContainer, ResourcePackActivationType.DEFAULT_ENABLED);
+            ResourceManagerHelper.registerBuiltinResourcePack(id("darkgui"), modContainer, ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(id("lowresitems"), modContainer, ResourcePackActivationType.NORMAL);
+        });
+
     }
 }
