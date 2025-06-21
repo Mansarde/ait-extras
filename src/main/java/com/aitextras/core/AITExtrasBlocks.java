@@ -4,6 +4,7 @@ import com.aitextras.core.blocks.*;
 import dev.amble.lib.block.ABlockSettings;
 import dev.amble.lib.container.impl.BlockContainer;
 import dev.amble.lib.datagen.util.AutomaticModel;
+import dev.amble.lib.datagen.util.NoBlockDrop;
 import dev.amble.lib.datagen.util.NoEnglish;
 import dev.amble.lib.datagen.util.PickaxeMineable;
 import dev.amble.lib.item.AItemSettings;
@@ -119,6 +120,7 @@ public class AITExtrasBlocks extends BlockContainer {
 
     @AutomaticModel
     @NoEnglish
+    @NoBlockDrop
     public static final Block CRYSTALLINE_ORE = new Block(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE));
