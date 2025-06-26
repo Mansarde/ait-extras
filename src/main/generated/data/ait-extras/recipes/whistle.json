@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot"
+    },
+    "B": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "pattern": [
+    "AAA",
+    " BA",
+    "   "
+  ],
+  "result": {
+    "item": "ait-extras:whistle"
+  },
+  "show_notification": true
+}
