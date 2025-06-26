@@ -253,6 +253,13 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .input('B',AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK)
                     .criterion(hasItem(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK), conditionsFromItem(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK)));
 
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasItems.WHISTLE, 1)
+                    .pattern("AAA")
+                    .pattern(" BA")
+                    .pattern("   ")
+                    .input('A',Items.IRON_INGOT)
+                    .input('B',Items.ENDER_EYE)
+                    .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.ENDER_EYE)));
 
             return provider;
 
@@ -383,6 +390,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasItems.JELLY_BABIES, "Jelly Babies");
                     provider.addTranslation(AITExtrasItems.CUSTARD_CREAM, "Custard Cream");
                     provider.addTranslation(AITExtrasItems.CRYSTALLINE_SHARD, "Crystalline Shard");
+                    provider.addTranslation(AITExtrasItems.WHISTLE, "Summon Whistle");
 
                     // Tabs
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");
