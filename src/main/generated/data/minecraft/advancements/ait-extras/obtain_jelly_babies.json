@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:ait-extras/root",
+  "criteria": {
+    "obtain_jelly_babies": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ait-extras:jelly_babies"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "achievement.ait-extras.description.obtain_jelly_babies"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "item": "ait-extras:jelly_babies"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "achievement.ait-extras.title.obtain_jelly_babies"
+    }
+  },
+  "requirements": [
+    [
+      "obtain_jelly_babies"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

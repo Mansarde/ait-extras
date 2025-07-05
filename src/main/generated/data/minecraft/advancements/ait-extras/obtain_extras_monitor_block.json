@@ -1,7 +1,7 @@
 {
-  "parent": "ait-extras:obtain_jelly_babies",
+  "parent": "minecraft:ait-extras/root",
   "criteria": {
-    "extras_monitor_block": {
+    "obtain_extras_monitor_block": {
       "conditions": {
         "items": [
           {
@@ -15,19 +15,23 @@
     }
   },
   "display": {
+    "announce_to_chat": true,
     "description": {
-      "translate": "advancements.ait-extras.obtain_extras_monitor_block.description"
+      "translate": "achievement.ait-extras.description.obtain_extras_monitor_block"
     },
+    "frame": "challenge",
+    "hidden": true,
     "icon": {
       "item": "ait-extras:extras_monitor_block"
     },
+    "show_toast": true,
     "title": {
-      "translate": "advancements.ait-extras.obtain_extras_monitor_block.title"
+      "translate": "achievement.ait-extras.title.obtain_extras_monitor_block"
     }
   },
   "requirements": [
     [
-      "extras_monitor_block"
+      "obtain_extras_monitor_block"
     ]
   ],
   "sends_telemetry_event": true

@@ -1,7 +1,6 @@
 {
-  "parent": "ait-extras:root",
   "criteria": {
-    "jelly_baby": {
+    "root": {
       "conditions": {
         "items": [
           {
@@ -15,19 +14,24 @@
     }
   },
   "display": {
+    "announce_to_chat": false,
+    "background": "ait-extras:textures/block/crystalline_shard_block.png",
     "description": {
-      "translate": "advancements.ait-extras.obtain_jelly_babies.description"
+      "translate": "achievement.ait-extras.description.root"
     },
+    "frame": "task",
+    "hidden": false,
     "icon": {
-      "item": "ait-extras:jelly_babies"
+      "item": "ait-extras:recall_disc"
     },
+    "show_toast": false,
     "title": {
-      "translate": "advancements.ait-extras.obtain_jelly_babies.title"
+      "translate": "achievement.ait-extras.title.root"
     }
   },
   "requirements": [
     [
-      "jelly_baby"
+      "root"
     ]
   ],
   "sends_telemetry_event": true

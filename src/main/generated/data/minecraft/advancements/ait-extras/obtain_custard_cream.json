@@ -1,7 +1,7 @@
 {
-  "parent": "ait-extras:obtain_extras_monitor_block",
+  "parent": "minecraft:ait-extras/obtain_jelly_babies",
   "criteria": {
-    "jelly_baby": {
+    "obtain_custard_cream": {
       "conditions": {
         "items": [
           {
@@ -15,19 +15,23 @@
     }
   },
   "display": {
+    "announce_to_chat": true,
     "description": {
-      "translate": "advancements.ait-extras.obtain_jcustard_cream.description"
+      "translate": "achievement.ait-extras.description.obtain_custard_cream"
     },
+    "frame": "goal",
+    "hidden": true,
     "icon": {
       "item": "ait-extras:custard_cream"
     },
+    "show_toast": true,
     "title": {
-      "translate": "advancements.ait-extras.obtain_custard_cream.title"
+      "translate": "achievement.ait-extras.title.obtain_custard_cream"
     }
   },
   "requirements": [
     [
-      "custard_cream"
+      "obtain_custard_cream"
     ]
   ],
   "sends_telemetry_event": true

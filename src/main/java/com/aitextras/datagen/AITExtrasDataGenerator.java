@@ -5,7 +5,6 @@ import com.aitextras.core.AITExtrasItemGroups;
 import com.aitextras.core.AITExtrasItems;
 import dev.amble.ait.core.AITBlocks;
 import dev.amble.ait.core.AITItems;
-import dev.amble.ait.datagen.datagen_providers.AITAchievementProvider;
 import dev.amble.ait.datagen.datagen_providers.AITRecipeProvider;
 import dev.amble.ait.module.ModuleRegistry;
 import dev.amble.lib.datagen.lang.LanguageType;
@@ -37,6 +36,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
         genModels(pack);
         generateSoundData(pack);
         generateItemTags(pack);
+        generateachivement(pack);
+        pack.addProvider((output, registriesFuture) -> new AITExtrasWorldGenerator(output, registriesFuture));
     }
 
     private void genModels(FabricDataGenerator.Pack pack) {
@@ -48,6 +49,10 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
             return provider;
         })));
+    }
+
+    private void generateachivement(FabricDataGenerator.Pack pack) {
+        pack.addProvider(AITExtrasAchievementProvider::new);
     }
 
     public void generateItemTags(FabricDataGenerator.Pack pack) {
@@ -409,14 +414,14 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("animation.ait-extras.xmas_demat", "Xmas");
 
                     //Achievements
-                    provider.addTranslation("advancements.ait-extras.root.title", "AIT Extras");
-                    provider.addTranslation("advancements.ait-extras.root.description", "Like AIT, but more!");
-                    provider.addTranslation("advancements.ait-extras.obtain_jelly_babies.title", "Would you like a Jelly Baby?");
-                    provider.addTranslation("advancements.ait-extras.obtain_jelly_babies.description", "Craft Jelly Babies");
-                    provider.addTranslation("advancements.ait-extras.obtain_extras_monitor_block.title", "Critical Timing Malfunction!");
-                    provider.addTranslation("advancements.ait-extras.obtain_extras_monitor_block.description", "Craft The Victorian Monitor");
-            provider.addTranslation("advancements.ait-extras.obtain_custard_cream.title", "Holy Pixels!");
-            provider.addTranslation("advancements.ait-extras.obtain_custard_cream.description", "Can you believe that this texture is 60x47 pixels?");
+                    provider.addTranslation("achievement.ait-extras.title.root", "AIT Extras");
+                    provider.addTranslation("achievement.ait-extras.description.root", "Like AIT, but more!");
+                    provider.addTranslation("achievement.ait-extras.title.obtain_jelly_babies", "Would you like a Jelly Baby?");
+                    provider.addTranslation("achievement.ait-extras.description.obtain_jelly_babies", "Craft Jelly Babies");
+                    provider.addTranslation("achievement.ait-extras.title.obtain_extras_monitor_block", "Critical Timing Malfunction!");
+                    provider.addTranslation("achievement.ait-extras.description.obtain_extras_monitor_block", "Craft The Victorian Monitor");
+            provider.addTranslation("achievement.ait-extras.title.obtain_custard_cream", "Yum, Yum, Yum!");
+            provider.addTranslation("achievement.ait-extras.description.obtain_custard_cream", "funfact: Custard Creams are one of the best biscuits in the world!");
 
 
             return provider;
