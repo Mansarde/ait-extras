@@ -18,26 +18,88 @@ import java.util.List;
 
 public class AITExtrasConfiguredFeature {
     public static final RegistryKey<ConfiguredFeature<?,  ?>>CRYSTALLINE_ORE_KEY = registerKey("crystalline_ore");
+    public static final RegistryKey<ConfiguredFeature<?,  ?>>ZIRCONIUM_ORE_KEY = registerKey("zirconium_ore");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
+
+
         RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
+
+
+
+
         List<OreFeatureConfig.Target> overworldCrystallineOre = List.of(
+
+
                 OreFeatureConfig.createTarget(deepslateReplaceables, AITExtrasBlocks.CRYSTALLINE_ORE.getDefaultState())
+
+
+
+
 
         );
 
-        register(context, CRYSTALLINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldCrystallineOre, 10,0.0f));
+
+
+
+
+        register(context, CRYSTALLINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldCrystallineOre, 5,0.0f));
+
+        List<OreFeatureConfig.Target> overworldZirconiumOre = List.of(
+
+
+                OreFeatureConfig.createTarget(deepslateReplaceables, AITExtrasBlocks.ZIRCONIUM_ORE.getDefaultState())
+
+
+
+
+
+        );
+
+
+
+
+
+        register(context, ZIRCONIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldCrystallineOre, 8,0.0f));
+
+
     }
+
+
+
+
+
+
+
+
+
+
 
 
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
+
+
         return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(AITExtras.MOD_ID, name));
+
+
     }
 
+
+
+
+
     private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> context,
+
+
                                                                                    RegistryKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
+
+
         context.register(key, new ConfiguredFeature<>(feature, configuration));
+
+
     }
+
+
 }

@@ -2,6 +2,8 @@ package com.aitextras.core;
 
 
 import com.aitextras.core.blockentities.*;
+import com.aitextras.core.blockentities.hudolinsupport.HudolinSupportBaseBlockEntity;
+import com.aitextras.core.blockentities.hudolinsupport.HudolinSupportTopBlockEntity;
 import dev.amble.lib.container.impl.BlockEntityContainer;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 
@@ -60,4 +62,10 @@ public class AITExtrasBlockEntityTypes implements BlockEntityContainer{
 
     public static BlockEntityType<CrystalMasterBlockEntity> CRYSTAL_MASTER_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
             .create(CrystalMasterBlockEntity::new, AITExtrasBlocks.CRYSTAL_MASTER_BLOCK).build();
+
+    public static BlockEntityType<HudolinSupportBaseBlockEntity> HUDOLIN_SUPPORT_BASE_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
+            .create(HudolinSupportBaseBlockEntity::new, AITExtrasBlocks.HUDOLIN_SUPPORT_BASE_BLOCK).build();
+
+    public static BlockEntityType<HudolinSupportTopBlockEntity> HUDOLIN_SUPPORT_TOP_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
+            .create(HudolinSupportTopBlockEntity::new, AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK).build();
 }

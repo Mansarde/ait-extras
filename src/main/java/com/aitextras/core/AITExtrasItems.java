@@ -23,7 +23,7 @@ public class AITExtrasItems extends ItemContainer {
 
     @AutomaticModel
     @NoEnglish
-    public static final Item RECALL_DISC = new RecallDiscItem(new AItemSettings().group(AITExtrasItemGroups.MAIN).maxCount(1));
+    public static final Item RECALL_DISC = new RecallDiscItem(new AItemSettings().maxCount(1));
 
     @AutomaticModel
    @NoEnglish
@@ -36,6 +36,14 @@ public class AITExtrasItems extends ItemContainer {
     @AutomaticModel
     @NoEnglish
     public static final Item CRYSTALLINE_SHARD = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN));
+
+    @AutomaticModel
+    @NoEnglish
+    public static final Item ZIRCONIUM_ALLOY = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN));
+
+    @AutomaticModel
+    @NoEnglish
+    public static final Item ZIRCONIUM_INGOT = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN));
 
     @NoEnglish
     public static final Item WHISTLE = new WhistleItem(new AItemSettings().group(AITExtrasItemGroups.MAIN));

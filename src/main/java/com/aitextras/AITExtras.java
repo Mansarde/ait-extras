@@ -1,6 +1,7 @@
 package com.aitextras;
 
 import com.aitextras.core.*;
+import com.aitextras.world.gen.AITExtrasWorldGeneration;
 import dev.amble.ait.core.AITSounds;
 import dev.amble.ait.data.schema.exterior.category.CapsuleCategory;
 import dev.amble.ait.data.schema.exterior.category.PoliceBoxCategory;
@@ -33,6 +34,7 @@ public class AITExtras implements ModInitializer {
         RegistryContainer.register(AITExtrasBlockEntityTypes.class, MOD_ID);
         RegistryContainer.register(AITExtrasItemGroups.class, MOD_ID);
         AITExtrasSounds.init();
+        AITExtrasWorldGeneration.generateAITExtrasWorldGen();
     }
 
     private void registerAddonExteriors() {

@@ -16,24 +16,38 @@ import java.util.List;
 
 public class AITExtrasPlacedFeatures {
     public static final RegistryKey<PlacedFeature> CRYSTALLINE_ORE_PLACED_KEY = registerKey("crystalline_ore_placed");
-
+    public static final RegistryKey<PlacedFeature> ZIRCONIUM_ORE_PLACED_KEY = registerKey("zirconium_ore_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
-        register(context, CRYSTALLINE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(AITExtrasConfiguredFeature.CRYSTALLINE_ORE_KEY),
+        register(
+                context,
+                CRYSTALLINE_ORE_PLACED_KEY,
+                configuredFeatureRegistryEntryLookup.getOrThrow(AITExtrasConfiguredFeature.CRYSTALLINE_ORE_KEY),
                 AITExtrasOrePlacement.modifiersWithCount(1,
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(-64), YOffset.fixed(0))));
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-64), YOffset.fixed(0)))
+        );
+
+        register(
+                context,
+                ZIRCONIUM_ORE_PLACED_KEY,
+                configuredFeatureRegistryEntryLookup.getOrThrow(AITExtrasConfiguredFeature.ZIRCONIUM_ORE_KEY),
+                AITExtrasOrePlacement.modifiersWithCount(1,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-64), YOffset.fixed(0)))
+        );
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(AITExtras.MOD_ID, name));
     }
 
-    private static void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> configuration,
-                                 List<PlacementModifier> modifiers) {
+    private static void register(
+            Registerable<PlacedFeature> context,
+            RegistryKey<PlacedFeature> key,
+            RegistryEntry<ConfiguredFeature<?, ?>> configuration,
+            List<PlacementModifier> modifiers
+    ) {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }
-
-
 }

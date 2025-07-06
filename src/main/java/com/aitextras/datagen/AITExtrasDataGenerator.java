@@ -3,6 +3,8 @@ package com.aitextras.datagen;
 import com.aitextras.core.AITExtrasBlocks;
 import com.aitextras.core.AITExtrasItemGroups;
 import com.aitextras.core.AITExtrasItems;
+import com.aitextras.world.AITExtrasConfiguredFeature;
+import com.aitextras.world.AITExtrasPlacedFeatures;
 import dev.amble.ait.core.AITBlocks;
 import dev.amble.ait.core.AITItems;
 import dev.amble.ait.datagen.datagen_providers.AITRecipeProvider;
@@ -20,6 +22,8 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.RegistryBuilder;
+import net.minecraft.registry.RegistryKeys;
 
 import static net.minecraft.data.server.recipe.RecipeProvider.conditionsFromItem;
 import static net.minecraft.data.server.recipe.RecipeProvider.hasItem;
@@ -37,7 +41,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
         generateSoundData(pack);
         generateItemTags(pack);
         generateachivement(pack);
-        pack.addProvider((output, registriesFuture) -> new AITExtrasWorldGenerator(output, registriesFuture));
+        pack.addProvider(AITExtrasWorldGenerator::new);
     }
 
     private void genModels(FabricDataGenerator.Pack pack) {
@@ -49,6 +53,20 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
             return provider;
         })));
+    }
+
+    @Override
+
+
+    public void buildRegistry(RegistryBuilder registryBuilder) {
+
+
+        registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, AITExtrasConfiguredFeature::bootstrap);
+
+
+        registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, AITExtrasPlacedFeatures::bootstrap);
+
+
     }
 
     private void generateachivement(FabricDataGenerator.Pack pack) {
@@ -386,6 +404,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.CRYSTAL_BLOCK, "Roof Crystal");
                     provider.addTranslation(AITExtrasBlocks.CRYSTAL_ZEITON_BLOCK, "Roof Crystal (Zeiton)");
                     provider.addTranslation(AITExtrasBlocks.CRYSTAL_MASTER_BLOCK, "Roof Crystal (Master)");
+                    provider.addTranslation(AITExtrasBlocks.HUDOLIN_SUPPORT_BASE_BLOCK, "Hudolin Support (Base)");
+                    provider.addTranslation(AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK, "Hudolin Support (Top)");
 
                     // Items
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");
@@ -395,6 +415,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasItems.JELLY_BABIES, "Jelly Babies");
                     provider.addTranslation(AITExtrasItems.CUSTARD_CREAM, "Custard Cream");
                     provider.addTranslation(AITExtrasItems.CRYSTALLINE_SHARD, "Crystalline Shard");
+                    provider.addTranslation(AITExtrasItems.ZIRCONIUM_ALLOY, "Zirconium Alloy");
+                    provider.addTranslation(AITExtrasItems.ZIRCONIUM_INGOT, "Zirconium Ingot");
                     provider.addTranslation(AITExtrasItems.WHISTLE, "Summon Whistle");
 
                     // Tabs
