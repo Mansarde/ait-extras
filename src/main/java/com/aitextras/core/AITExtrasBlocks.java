@@ -33,7 +33,7 @@ public class AITExtrasBlocks extends BlockContainer {
    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
    @NoEnglish
     public static final Block EXTRAS_CRYSTALLINE_BLOCK = new ExtrasCrystallineBlock(
-            ABlockSettings.create().itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().strength(0.01F, 0.01F).pistonBehavior(PistonBehavior.NORMAL));
+            ABlockSettings.create().itemSettings(new AItemSettings()).nonOpaque().strength(0.01F, 0.01F).pistonBehavior(PistonBehavior.NORMAL));
 
    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
    @NoEnglish
@@ -135,15 +135,17 @@ public class AITExtrasBlocks extends BlockContainer {
 
     @AutomaticModel
     @NoEnglish
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     @NoBlockDrop
     public static final Block CRYSTALLINE_ORE = new Block(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
-            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE));
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
 
     @AutomaticModel
     @NoEnglish
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     @NoBlockDrop
     public static final Block ZIRCONIUM_ORE = new Block(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
-            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE));
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.DEEPSLATE));
    };

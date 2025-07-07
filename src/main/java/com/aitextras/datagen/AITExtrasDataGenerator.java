@@ -284,6 +284,30 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .input('B',Items.ENDER_EYE)
                     .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.ENDER_EYE)));
 
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.ZIRCONIUM_INGOT, 4)
+                    .input(Items.IRON_INGOT)
+                    .input(AITExtrasItems.ZIRCONIUM_ALLOY)
+                    .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                    .criterion(hasItem(AITExtrasItems.ZIRCONIUM_ALLOY), conditionsFromItem(AITExtrasItems.ZIRCONIUM_ALLOY)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HUDOLIN_SUPPORT_BASE_BLOCK, 1)
+                    .pattern("III")
+                    .pattern(" IA")
+                    .pattern("   ")
+                    .input('A',AITExtrasItems.ZIRCONIUM_ALLOY)
+                    .input('I',AITExtrasItems.ZIRCONIUM_INGOT)
+                    .criterion(hasItem(AITExtrasItems.ZIRCONIUM_ALLOY), conditionsFromItem(AITExtrasItems.ZIRCONIUM_ALLOY)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK, 1)
+                    .pattern("AI ")
+                    .pattern(" II")
+                    .pattern(" IA")
+                    .input('A',AITExtrasItems.ZIRCONIUM_ALLOY)
+                    .input('I',AITExtrasItems.ZIRCONIUM_INGOT)
+                    .criterion(hasItem(AITExtrasItems.ZIRCONIUM_ALLOY), conditionsFromItem(AITExtrasItems.ZIRCONIUM_ALLOY)));
+
+
             return provider;
 
         })));
