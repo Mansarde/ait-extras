@@ -98,7 +98,5 @@ public class HudolinSupportBaseBlock extends BlockWithEntity implements BlockEnt
         }
         super.onBroken(world, pos, state);
     }
-
-
 }
 

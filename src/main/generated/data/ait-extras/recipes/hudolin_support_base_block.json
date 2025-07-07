@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "ait-extras:zirconium_alloy"
+    },
+    "I": {
+      "item": "ait-extras:zirconium_ingot"
+    }
+  },
+  "pattern": [
+    "III",
+    " IA",
+    "   "
+  ],
+  "result": {
+    "item": "ait-extras:hudolin_support_base_block"
+  },
+  "show_notification": true
+}

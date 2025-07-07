@@ -68,6 +68,5 @@ public class CrystalBlock extends BlockWithEntity implements BlockEntityProvider
         super.onBroken(world, pos, state);
     }
 
-
 }
 

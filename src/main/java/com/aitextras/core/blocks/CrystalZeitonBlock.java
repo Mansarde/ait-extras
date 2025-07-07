@@ -67,7 +67,5 @@ public class CrystalZeitonBlock extends BlockWithEntity implements BlockEntityPr
         }
         super.onBroken(world, pos, state);
     }
-
-
 }
 
