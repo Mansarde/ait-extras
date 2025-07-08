@@ -2,13 +2,18 @@
 
 
 
-![Modrinth Game Versions](https://img.shields.io/modrinth/game-versions/ait-extras?link=https%3A%2F%2Fmodrinth.com%2Fmod%2Fait%2Fversions)
-![Modrinth Downloads](https://img.shields.io/modrinth/dt/ait-extras?logo=modrinth&link=https%3A%2F%2Fmodrinth.com%2Fmod%2Fait)
 
+
+
+
+<sub>please do not upload this to any other site without Addie's permission</sub>
+-------------
+
+[<img alt="curseforge" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/curseforge_vector.svg">](https://legacy.curseforge.com/minecraft/mc-mods/ait-extras) <!-- SVG version -->
+[<img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg">](https://modrinth.com/mod/ait-extras) <!-- SVG version -->
 [<img alt="amble" height="56" src="https://raw.githubusercontent.com/amblelabs/modkit/refs/heads/main/promo/cozy_vector_requires.svg">](https://modrinth.com/mod/amblekit)
 [<img alt="fabric" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/fabric_vector.svg">](https://fabricmc.net/) <!-- SVG version -->
 
--------------
 -------------
 <h2>
   <img src="https://cdn.modrinth.com/data/cached_images/b18b275a0e9bb4000e015b935b65037166301538.png"
@@ -55,7 +60,7 @@
 - Requires AiT 1.3.0 and above -> [Download Here](https://modrinth.com/mod/ait/versions)
 - Requires AmbleKit (latest 1.20.1 version) -> [Download Here](https://modrinth.com/mod/amblekit/versions)
 - Requires YACL (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/yacl/versions?g=1.20.1&l=fabric)
-  
+
 <h2>
   <img src="https://cdn.modrinth.com/data/cached_images/29848556cea889595907388e4cb59a97a4e86aea.png"
        alt="Need Help? Confused? Don't know what a feature does?"
@@ -66,9 +71,9 @@
 </h2>
 
 - JEI (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/jei/versions?g=1.20.1&l=fabric)
-  
+
 **Alternativly**
-  
+
 - REI (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/rei/versions?g=1.20.1&l=fabric)
 
 -------------
@@ -108,3 +113,4 @@
 ### - [Modrinth](https://modrinth.com/project/ait-extras)
 ### - [Github](https://github.com/amblelabs/ait-extras)
 ### - [Discord Server](https://discord.gg/5JDKuzarcS)
+### - [CurseForge](https://legacy.curseforge.com/minecraft/mc-mods/ait-extras)
