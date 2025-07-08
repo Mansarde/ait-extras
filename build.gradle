@@ -37,6 +37,10 @@ repositories {
 
     // YACL
     maven { url 'https://maven.isxander.dev/releases' }
+
+    // AmbleKit
+    maven { url "https://api.modrinth.com/maven" }
+
 }
 
 //loom {
@@ -62,29 +66,16 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-    include (implementation "net.objecthunter:exp4j:0.4.8")
+    include(implementation "net.objecthunter:exp4j:0.4.8")
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     modImplementation "com.github.amblelabs:ait:${project.ait_version}"
-    modImplementation("com.github.amblelabs:modkit:${project.Amble_version}") {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
-
     modImplementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
 
-    include(modImplementation("dev.drtheo:multidim:${project.multidim_version}")) {
+    modImplementation("maven.modrinth:amblekit:${project.amblekit_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
-    include(modImplementation("dev.drtheo:scheduler:${project.scheduler_version}")) {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
-    include(modImplementation("dev.drtheo:queue:${project.queue_version}")) {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
-  //  include(modImplementation("com.github.amblelabs:modkit:${project.Amble_version}")) {
-       // exclude(group: "net.fabricmc.fabric-api")
-    //}
 }
 
 
@@ -92,12 +83,14 @@ processResources {
     inputs.property "version", project.version
     inputs.property "minecraft_version", project.minecraft_version
     inputs.property "loader_version", project.loader_version
+    inputs.property "amblekit_version", project.amblekit_version
     inputs.property "yacl_version", project.yacl_version
     filteringCharset "UTF-8"
 
     filesMatching("fabric.mod.json") {
         expand "version": project.version,
                 "minecraft_version": project.minecraft_version,
+                "amblekit_version": project.amblekit_version,
                 "loader_version": project.loader_version,
                 "yacl_version": project.yacl_version
     }
