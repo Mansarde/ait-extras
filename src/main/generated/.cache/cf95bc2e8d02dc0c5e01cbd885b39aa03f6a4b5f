@@ -1,20 +1,26 @@
-// 1.20.1	2025-07-08T00:03:18.429199849	AIT Extras/Model Definitions
+// 1.20.1	2025-07-08T22:13:38.569134975	AIT Extras/Model Definitions
+50c6da96fcc5d010ff41a29cf8d030cc5f56888d assets/ait-extras/models/block/polished_compact_zeiton.json
+28c1aae22f79085146b73a60f2ceb5a6fc2d0e62 assets/ait-extras/blockstates/zirconium_ore.json
+bc212680ae0c034afd1580261b66541d34200f5f assets/ait-extras/models/item/custard_cream.json
+58f954544a9a723746ae12261b765d83e4192e46 assets/ait-extras/models/item/recall_disc.json
+428e2076d00da9f166bc3a813df6ea725c53871c assets/ait-extras/models/block/zirconium_ore.json
+4fdd06c735a00540254948944f79e3639b1194e7 assets/ait-extras/models/item/crystalline_shard.json
+2dcb09a90973260cf6836e62c94453efe703d31c assets/ait-extras/models/item/zirconium_ore.json
+ec1d601a6c9f3a6cf8b31acfca27511f593ca60d assets/ait-extras/models/block/compact_zeiton_bricks.json
+68d2d9759361d36432d207f11cec1dfaf744f8eb assets/ait-extras/models/item/crystalline_shard_block.json
+ba7f91106fa379229e0e45526e5bce35dd5144ae assets/ait-extras/blockstates/polished_compact_zeiton.json
+ef90f54f6bdd04224f88be67163a914aa2f5d80a assets/ait-extras/models/item/polished_compact_zeiton.json
+fabca9c8f2d31baa5d8ca31db5ff1908de8a822a assets/ait-extras/blockstates/crystalline_ore.json
+5845b6d1309fb9674b7d0522a06529e70d3a2f5d assets/ait-extras/blockstates/compact_zeiton_bricks.json
+475564c19dc2dd6b5df78548a6464cb779bf0dbb assets/ait-extras/models/block/crystalline_ore.json
 c3e5aed6d07422ddf522982000372fed44ec4968 assets/ait-extras/models/block/extras_crystalline_block.json
 5405b11923380e3e2c888371ce4d75f3b622cb5d assets/ait-extras/blockstates/extras_crystalline_block.json
 88a62a238d89b060282219a1167cb42c3236ecd8 assets/ait-extras/models/item/zirconium_alloy.json
 59407a6f07ea28a0b24e79762d6a1341fc755b6c assets/ait-extras/models/item/crystalline_ore.json
 508a905079b4e7215883caf175a7c8147cbbcf7b assets/ait-extras/models/item/mercury_disc.json
 397a315e07aab033b99cb4ea6618a90d8e3637a2 assets/ait-extras/models/block/crystalline_shard_block.json
-28c1aae22f79085146b73a60f2ceb5a6fc2d0e62 assets/ait-extras/blockstates/zirconium_ore.json
-bc212680ae0c034afd1580261b66541d34200f5f assets/ait-extras/models/item/custard_cream.json
 234664002e70e8f10a718901501ecfbf88f968e6 assets/ait-extras/models/item/jelly_babies.json
+48a091a9e388fe613274cc78c7814bcada8f2469 assets/ait-extras/models/item/compact_zeiton_bricks.json
 b5d0c4c8b6608101443a2b042ef1aa1c88562721 assets/ait-extras/blockstates/crystalline_shard_block.json
-58f954544a9a723746ae12261b765d83e4192e46 assets/ait-extras/models/item/recall_disc.json
-428e2076d00da9f166bc3a813df6ea725c53871c assets/ait-extras/models/block/zirconium_ore.json
-4fdd06c735a00540254948944f79e3639b1194e7 assets/ait-extras/models/item/crystalline_shard.json
-2dcb09a90973260cf6836e62c94453efe703d31c assets/ait-extras/models/item/zirconium_ore.json
-68d2d9759361d36432d207f11cec1dfaf744f8eb assets/ait-extras/models/item/crystalline_shard_block.json
-fabca9c8f2d31baa5d8ca31db5ff1908de8a822a assets/ait-extras/blockstates/crystalline_ore.json
-475564c19dc2dd6b5df78548a6464cb779bf0dbb assets/ait-extras/models/block/crystalline_ore.json
 64b59d53f4149c9b4b1c496e8b1620f22b82b391 assets/ait-extras/models/item/extras_crystalline_block.json
 188a0be849c429c42690da470bf410c7d60651a9 assets/ait-extras/models/item/zirconium_ingot.json

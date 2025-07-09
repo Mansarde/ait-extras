@@ -11,6 +11,9 @@ import dev.amble.lib.datagen.util.NoEnglish;
 import dev.amble.lib.datagen.util.PickaxeMineable;
 import dev.amble.lib.item.AItemSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.StairsBlock;
+import net.minecraft.block.WallBlock;
 import net.minecraft.block.enums.Instrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.sound.BlockSoundGroup;
@@ -148,4 +151,66 @@ public class AITExtrasBlocks extends BlockContainer {
     public static final Block ZIRCONIUM_ORE = new Block(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.DEEPSLATE));
+
+ @AutomaticModel
+ @NoEnglish
+ @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+ public static final Block COMPACT_ZEITON_BRICKS = new Block(ABlockSettings.create()
+         .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
+
+
+ @NoEnglish
+ @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+ public static final Block COMPACT_ZEITON_BRICK_STAIRS = new StairsBlock(
+         COMPACT_ZEITON_BRICKS.getDefaultState(),
+         ABlockSettings.create()
+                 .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+                 .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK)
+ );
+
+
+ @NoEnglish
+ @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+ public static final Block COMPACT_ZEITON_BRICK_SLAB = new SlabBlock(ABlockSettings.create()
+         .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
+
+
+ @NoEnglish
+ @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+ public static final Block COMPACT_ZEITON_BRICK_WALL = new WallBlock(ABlockSettings.create()
+         .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
+
+ @AutomaticModel
+ @NoEnglish
+ @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+ public static final Block POLISHED_COMPACT_ZEITON = new Block(ABlockSettings.create()
+         .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
+
+
+ @NoEnglish
+ @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+ public static final Block POLISHED_COMPACT_ZEITON_STAIRS = new StairsBlock(
+         COMPACT_ZEITON_BRICKS.getDefaultState(),
+         ABlockSettings.create()
+                 .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+                 .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK)
+ );
+
+
+ @NoEnglish
+ @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+ public static final Block POLISHED_COMPACT_ZEITON_SLAB = new SlabBlock(ABlockSettings.create()
+         .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
+
+
+ @NoEnglish
+ @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+ public static final Block POLISHED_COMPACT_ZEITON_WALL = new WallBlock(ABlockSettings.create()
+         .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
    };

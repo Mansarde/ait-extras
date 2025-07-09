@@ -9,6 +9,7 @@ import dev.amble.ait.core.AITBlocks;
 import dev.amble.ait.core.AITItems;
 import dev.amble.ait.datagen.datagen_providers.AITRecipeProvider;
 import dev.amble.ait.module.ModuleRegistry;
+import dev.amble.ait.module.planet.core.PlanetBlocks;
 import dev.amble.lib.datagen.lang.LanguageType;
 import dev.amble.lib.datagen.lang.AmbleLanguageProvider;
 import dev.amble.lib.datagen.loot.AmbleBlockLootTable;
@@ -18,13 +19,19 @@ import dev.amble.lib.datagen.tag.AmbleBlockTagProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.block.Blocks;
+import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.SingleItemRecipeJsonBuilder;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.StonecuttingRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.util.Identifier;
 
+import static com.ibm.icu.impl.CurrencyData.provider;
 import static net.minecraft.data.server.recipe.RecipeProvider.conditionsFromItem;
 import static net.minecraft.data.server.recipe.RecipeProvider.hasItem;
 
@@ -90,11 +97,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
     }
     public void generateRecipes(FabricDataGenerator.Pack pack) {
         pack.addProvider((((output, registriesFuture) -> {
-            AITRecipeProvider provider = new AITRecipeProvider(output);
-
-            ModuleRegistry.instance().iterator().forEachRemaining(module -> module.getDataGenerator().ifPresent(dataGenerator -> {
-                dataGenerator.recipes(provider);
-            }));
+            AITExtrasRecipeProvider provider = new AITExtrasRecipeProvider(output);
 
 
             provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.EXTRAS_MONITOR_BLOCK, 1)
@@ -307,10 +310,33 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .input('I',AITExtrasItems.ZIRCONIUM_INGOT)
                     .criterion(hasItem(AITExtrasItems.ZIRCONIUM_ALLOY), conditionsFromItem(AITExtrasItems.ZIRCONIUM_ALLOY)));
 
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.POLISHED_COMPACT_ZEITON, 4)
+                    .pattern("ZZ")
+                    .pattern("ZZ")
+                    .input('Z',AITBlocks.COMPACT_ZEITON)
+                    .criterion(hasItem(AITBlocks.COMPACT_ZEITON), conditionsFromItem(AITBlocks.COMPACT_ZEITON)));
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.COMPACT_ZEITON_BRICKS, 4)
+                    .pattern("PP")
+                    .pattern("PP")
+                    .input('P',AITExtrasBlocks.POLISHED_COMPACT_ZEITON)
+                    .criterion(hasItem(AITExtrasBlocks.POLISHED_COMPACT_ZEITON), conditionsFromItem(AITExtrasBlocks.POLISHED_COMPACT_ZEITON)));
+
+            provider.addStonecutting(AITBlocks.COMPACT_ZEITON, AITExtrasBlocks.POLISHED_COMPACT_ZEITON);
+
+            provider.addStonecutting(AITExtrasBlocks.POLISHED_COMPACT_ZEITON, AITExtrasBlocks.COMPACT_ZEITON_BRICKS);
 
             return provider;
 
         })));
+    }
+
+    public void models(AmbleModelProvider provider, BlockStateModelGenerator generator) {
+
+        BlockStateModelGenerator.BlockTexturePool compact_zeiton_brick_pool = generator.registerCubeAllModelTexturePool(AITExtrasBlocks.COMPACT_ZEITON_BRICKS);
+        compact_zeiton_brick_pool.slab(AITExtrasBlocks.COMPACT_ZEITON_BRICK_SLAB);
+        compact_zeiton_brick_pool.stairs(AITExtrasBlocks.COMPACT_ZEITON_BRICK_STAIRS);
+        compact_zeiton_brick_pool.wall(AITExtrasBlocks.COMPACT_ZEITON_BRICK_WALL);
     }
 
     private void genLang(FabricDataGenerator.Pack pack) {
@@ -430,6 +456,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.CRYSTAL_MASTER_BLOCK, "Roof Crystal (Master)");
                     provider.addTranslation(AITExtrasBlocks.HUDOLIN_SUPPORT_BASE_BLOCK, "Hudolin Support (Base)");
                     provider.addTranslation(AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK, "Hudolin Support (Top)");
+                    provider.addTranslation(AITExtrasBlocks.POLISHED_COMPACT_ZEITON, "Polished Compact Zeiton");
+                    provider.addTranslation(AITExtrasBlocks.COMPACT_ZEITON_BRICKS, "Compact Zeiton Bricks");
 
                     // Items
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");
