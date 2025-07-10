@@ -152,7 +152,7 @@ public class AITExtrasBlocks extends BlockContainer {
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.DEEPSLATE));
 
- @AutomaticModel
+
  @NoEnglish
  @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
  public static final Block COMPACT_ZEITON_BRICKS = new Block(ABlockSettings.create()
@@ -183,7 +183,7 @@ public class AITExtrasBlocks extends BlockContainer {
          .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
          .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
 
- @AutomaticModel
+
  @NoEnglish
  @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
  public static final Block POLISHED_COMPACT_ZEITON = new Block(ABlockSettings.create()

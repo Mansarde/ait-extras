@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "ait-extras:block/compact_zeiton_bricks"
+  }
+}

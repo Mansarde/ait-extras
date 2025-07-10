@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-08T22:13:38.105517477	AIT Extras/Block Loot Tables
+// 1.20.1	2025-07-10T17:41:51.269217912	AIT Extras/Block Loot Tables
 189a1d32c7789f98fd9ad6580a50ab33c4e74162 data/ait-extras/loot_tables/blocks/hat_stand_spruce_block.json
 c34f7119de72caf48c61c557aad859970a526f87 data/ait-extras/loot_tables/blocks/hudolin_support_top_block.json
 e2172bfde943ccee0f5c5c76d3dce4e173976b1f data/ait-extras/loot_tables/blocks/compact_zeiton_brick_stairs.json
@@ -6,8 +6,8 @@ e2172bfde943ccee0f5c5c76d3dce4e173976b1f data/ait-extras/loot_tables/blocks/comp
 b548a7723e66818d2bbd9a1898daa07c773cb8f3 data/ait-extras/loot_tables/blocks/hat_stand_jungle_block.json
 39497349d493dac005472b5c185ea5738c04d314 data/ait-extras/loot_tables/blocks/polished_compact_zeiton_stairs.json
 4e5b3d8e87ad8437a4519224ad7425ba3b5b7c6d data/ait-extras/loot_tables/blocks/hat_stand_bamboo_block.json
-19e1c740197d88c6a26d2fffafe8d37bd982b6ba data/ait-extras/loot_tables/blocks/hat_stand_mangrove_block.json
 c341d990bbb714b2d48c1ea49fc4783acdd308ce data/ait-extras/loot_tables/blocks/crystal_master_block.json
+19e1c740197d88c6a26d2fffafe8d37bd982b6ba data/ait-extras/loot_tables/blocks/hat_stand_mangrove_block.json
 3c47d1586393f119340184a0ce0848512961e993 data/ait-extras/loot_tables/blocks/compact_zeiton_brick_wall.json
 479d66f5336270bca1d84a4fdc378b4f2cfb04dd data/ait-extras/loot_tables/blocks/crystal_block.json
 3670a444116a7c3bace4988d9eb4613db2cc954b data/ait-extras/loot_tables/blocks/extras_screen_monitor_block.json

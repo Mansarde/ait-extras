@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ait-extras:block/polished_compact_zeiton_slab"
+    },
+    "type=double": {
+      "model": "ait-extras:block/polished_compact_zeiton"
+    },
+    "type=top": {
+      "model": "ait-extras:block/polished_compact_zeiton_slab_top"
+    }
+  }
+}

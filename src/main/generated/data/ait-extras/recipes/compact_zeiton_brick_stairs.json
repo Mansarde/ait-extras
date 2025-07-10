@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "X": {
+      "item": "ait-extras:compact_zeiton_bricks"
+    }
+  },
+  "pattern": [
+    "  X",
+    " XX",
+    "XXX"
+  ],
+  "result": {
+    "count": 4,
+    "item": "ait-extras:compact_zeiton_brick_stairs"
+  },
+  "show_notification": true
+}

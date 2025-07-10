@@ -7,9 +7,7 @@ import com.aitextras.world.AITExtrasConfiguredFeature;
 import com.aitextras.world.AITExtrasPlacedFeatures;
 import dev.amble.ait.core.AITBlocks;
 import dev.amble.ait.core.AITItems;
-import dev.amble.ait.datagen.datagen_providers.AITRecipeProvider;
-import dev.amble.ait.module.ModuleRegistry;
-import dev.amble.ait.module.planet.core.PlanetBlocks;
+import dev.amble.ait.datagen.datagen_providers.AITModelProvider;
 import dev.amble.lib.datagen.lang.LanguageType;
 import dev.amble.lib.datagen.lang.AmbleLanguageProvider;
 import dev.amble.lib.datagen.loot.AmbleBlockLootTable;
@@ -19,19 +17,13 @@ import dev.amble.lib.datagen.tag.AmbleBlockTagProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.SingleItemRecipeJsonBuilder;
 import net.minecraft.item.Items;
-import net.minecraft.recipe.Ingredient;
-import net.minecraft.recipe.StonecuttingRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
 
-import static com.ibm.icu.impl.CurrencyData.provider;
 import static net.minecraft.data.server.recipe.RecipeProvider.conditionsFromItem;
 import static net.minecraft.data.server.recipe.RecipeProvider.hasItem;
 
@@ -51,15 +43,15 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(AITExtrasWorldGenerator::new);
     }
 
-    private void genModels(FabricDataGenerator.Pack pack) {
-        pack.addProvider((((output, registriesFuture) -> {
-            AmbleModelProvider provider = new AmbleModelProvider(output);
 
+    private void genModels(FabricDataGenerator.Pack pack) {
+        pack.addProvider(((output, registriesFuture) -> {
+            AITExtrasModelGen provider = new AITExtrasModelGen(output);
             provider.withBlocks(AITExtrasBlocks.class);
             provider.withItems(AITExtrasItems.class);
-
             return provider;
-        })));
+        }));
+
     }
 
     @Override
@@ -316,27 +308,73 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .input('Z',AITBlocks.COMPACT_ZEITON)
                     .criterion(hasItem(AITBlocks.COMPACT_ZEITON), conditionsFromItem(AITBlocks.COMPACT_ZEITON)));
 
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.POLISHED_COMPACT_ZEITON_STAIRS, 4)
+                            .pattern("  X")
+                            .pattern(" XX")
+                            .pattern("XXX")
+                            .input('X', AITExtrasBlocks.POLISHED_COMPACT_ZEITON)
+                            .criterion(hasItem(AITExtrasBlocks.POLISHED_COMPACT_ZEITON), conditionsFromItem(AITExtrasBlocks.POLISHED_COMPACT_ZEITON)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.POLISHED_COMPACT_ZEITON_SLAB, 6)
+                            .pattern("XXX")
+                            .input('X', AITExtrasBlocks.POLISHED_COMPACT_ZEITON)
+                            .criterion(hasItem(AITExtrasBlocks.POLISHED_COMPACT_ZEITON), conditionsFromItem(AITExtrasBlocks.POLISHED_COMPACT_ZEITON)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.POLISHED_COMPACT_ZEITON_WALL, 6)
+                            .pattern("XXX")
+                            .pattern("XXX")
+                            .input('X', AITExtrasBlocks.POLISHED_COMPACT_ZEITON)
+                            .criterion(hasItem(AITExtrasBlocks.POLISHED_COMPACT_ZEITON), conditionsFromItem(AITExtrasBlocks.POLISHED_COMPACT_ZEITON)));
+
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.COMPACT_ZEITON_BRICKS, 4)
                     .pattern("PP")
                     .pattern("PP")
                     .input('P',AITExtrasBlocks.POLISHED_COMPACT_ZEITON)
                     .criterion(hasItem(AITExtrasBlocks.POLISHED_COMPACT_ZEITON), conditionsFromItem(AITExtrasBlocks.POLISHED_COMPACT_ZEITON)));
 
-            provider.addStonecutting(AITBlocks.COMPACT_ZEITON, AITExtrasBlocks.POLISHED_COMPACT_ZEITON);
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.COMPACT_ZEITON_BRICK_STAIRS, 4)
+                            .pattern("  X")
+                            .pattern(" XX")
+                            .pattern("XXX")
+                            .input('X', AITExtrasBlocks.COMPACT_ZEITON_BRICKS)
+                            .criterion(hasItem(AITExtrasBlocks.COMPACT_ZEITON_BRICKS), conditionsFromItem(AITExtrasBlocks.COMPACT_ZEITON_BRICKS)));
 
-            provider.addStonecutting(AITExtrasBlocks.POLISHED_COMPACT_ZEITON, AITExtrasBlocks.COMPACT_ZEITON_BRICKS);
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.COMPACT_ZEITON_BRICK_SLAB, 6)
+                            .pattern("XXX")
+                            .input('X', AITExtrasBlocks.COMPACT_ZEITON_BRICKS)
+                            .criterion(hasItem(AITExtrasBlocks.COMPACT_ZEITON_BRICKS), conditionsFromItem(AITExtrasBlocks.COMPACT_ZEITON_BRICKS)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.COMPACT_ZEITON_BRICK_WALL, 6)
+                            .pattern("XXX")
+                            .pattern("XXX")
+                            .input('X', AITExtrasBlocks.COMPACT_ZEITON_BRICKS)
+                            .criterion(hasItem(AITExtrasBlocks.COMPACT_ZEITON_BRICKS), conditionsFromItem(AITExtrasBlocks.COMPACT_ZEITON_BRICKS)));
+
+            provider.addStonecutting(AITBlocks.COMPACT_ZEITON, AITExtrasBlocks.POLISHED_COMPACT_ZEITON,1);
+
+            provider.addStonecutting(AITExtrasBlocks.POLISHED_COMPACT_ZEITON, AITExtrasBlocks.COMPACT_ZEITON_BRICKS, 1);
+
+            provider.addStonecutting(AITExtrasBlocks.POLISHED_COMPACT_ZEITON, AITExtrasBlocks.POLISHED_COMPACT_ZEITON_SLAB, 2);
+
+            provider.addStonecutting(AITExtrasBlocks.POLISHED_COMPACT_ZEITON, AITExtrasBlocks.POLISHED_COMPACT_ZEITON_STAIRS, 1);
+
+            provider.addStonecutting(AITExtrasBlocks.POLISHED_COMPACT_ZEITON, AITExtrasBlocks.POLISHED_COMPACT_ZEITON_WALL, 1);
+
+            provider.addStonecutting(AITExtrasBlocks.COMPACT_ZEITON_BRICKS, AITExtrasBlocks.COMPACT_ZEITON_BRICK_SLAB,2);
+
+            provider.addStonecutting(AITExtrasBlocks.COMPACT_ZEITON_BRICKS, AITExtrasBlocks.COMPACT_ZEITON_BRICK_STAIRS,1);
+
+            provider.addStonecutting(AITExtrasBlocks.COMPACT_ZEITON_BRICKS, AITExtrasBlocks.COMPACT_ZEITON_BRICK_WALL,1);
 
             return provider;
 
         })));
-    }
-
-    public void models(AmbleModelProvider provider, BlockStateModelGenerator generator) {
-
-        BlockStateModelGenerator.BlockTexturePool compact_zeiton_brick_pool = generator.registerCubeAllModelTexturePool(AITExtrasBlocks.COMPACT_ZEITON_BRICKS);
-        compact_zeiton_brick_pool.slab(AITExtrasBlocks.COMPACT_ZEITON_BRICK_SLAB);
-        compact_zeiton_brick_pool.stairs(AITExtrasBlocks.COMPACT_ZEITON_BRICK_STAIRS);
-        compact_zeiton_brick_pool.wall(AITExtrasBlocks.COMPACT_ZEITON_BRICK_WALL);
     }
 
     private void genLang(FabricDataGenerator.Pack pack) {
@@ -457,7 +495,14 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.HUDOLIN_SUPPORT_BASE_BLOCK, "Hudolin Support (Base)");
                     provider.addTranslation(AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK, "Hudolin Support (Top)");
                     provider.addTranslation(AITExtrasBlocks.POLISHED_COMPACT_ZEITON, "Polished Compact Zeiton");
+                    provider.addTranslation(AITExtrasBlocks.POLISHED_COMPACT_ZEITON_SLAB, "Polished Compact Zeiton Slab");
+                    provider.addTranslation(AITExtrasBlocks.POLISHED_COMPACT_ZEITON_STAIRS, "Polished Compact Zeiton Stairs");
+                    provider.addTranslation(AITExtrasBlocks.POLISHED_COMPACT_ZEITON_WALL, "Polished Compact Zeiton Wall");
                     provider.addTranslation(AITExtrasBlocks.COMPACT_ZEITON_BRICKS, "Compact Zeiton Bricks");
+                    provider.addTranslation(AITExtrasBlocks.COMPACT_ZEITON_BRICK_WALL, "Compact Zeiton Brick Wall");
+                    provider.addTranslation(AITExtrasBlocks.COMPACT_ZEITON_BRICK_STAIRS, "Compact Zeiton Brick Stairs");
+                    provider.addTranslation(AITExtrasBlocks.COMPACT_ZEITON_BRICK_SLAB, "Compact Zeiton Brick Slab");
+                    provider.addTranslation(AITExtrasBlocks.ZIRCONIUM_ORE, "Zirconium Ore");
 
                     // Items
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");

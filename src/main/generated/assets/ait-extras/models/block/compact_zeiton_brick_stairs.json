@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "ait-extras:block/compact_zeiton_bricks",
+    "side": "ait-extras:block/compact_zeiton_bricks",
+    "top": "ait-extras:block/compact_zeiton_bricks"
+  }
+}

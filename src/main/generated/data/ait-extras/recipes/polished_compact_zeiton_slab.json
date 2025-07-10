@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "X": {
+      "item": "ait-extras:polished_compact_zeiton"
+    }
+  },
+  "pattern": [
+    "XXX"
+  ],
+  "result": {
+    "count": 6,
+    "item": "ait-extras:polished_compact_zeiton_slab"
+  },
+  "show_notification": true
+}
