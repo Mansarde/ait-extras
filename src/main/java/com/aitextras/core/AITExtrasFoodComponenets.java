@@ -21,4 +21,10 @@ public class AITExtrasFoodComponenets {
             .snack()
             .alwaysEdible()
             .build();
+
+    public static final FoodComponent RICE_PUDDING = new FoodComponent.Builder()
+            .hunger(4)
+            .saturationModifier(0.3f)
+            .build();
+
 }

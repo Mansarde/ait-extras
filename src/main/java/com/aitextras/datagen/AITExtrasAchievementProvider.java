@@ -45,6 +45,14 @@ public class AITExtrasAchievementProvider extends FabricAdvancementProvider {
                 .criterion("obtain_custard_cream", InventoryChangedCriterion.Conditions.items(AITExtrasItems.CUSTARD_CREAM))
                 .build(consumer, AITExtras.MOD_ID + "/obtain_custard_cream");
 
+        Advancement ricePudding = Advancement.Builder.create().parent(jellyBabies)
+                .display(AITExtrasItems.RICE_PUDDING,
+                        Text.translatable("achievement.ait-extras.title.obtain_rice_pudding"),
+                        Text.translatable("achievement.ait-extras.description.obtain_rice_pudding"),
+                        null, AdvancementFrame.GOAL, true, true, true)
+                .criterion("obtain_rice_pudding", InventoryChangedCriterion.Conditions.items(AITExtrasItems.RICE_PUDDING))
+                .build(consumer, AITExtras.MOD_ID + "/obtain_rice_pudding");
+
         Advancement extrasMonitorBlock = Advancement.Builder.create().parent(root)
                 .display(AITExtrasBlocks.EXTRAS_MONITOR_BLOCK,
                         Text.translatable("achievement.ait-extras.title.obtain_extras_monitor_block"),

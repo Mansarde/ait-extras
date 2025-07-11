@@ -155,6 +155,17 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
                     .criterion(hasItem(Items.EGG), conditionsFromItem(Items.EGG)));
 
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.FOOD, AITExtrasItems.RICE_PUDDING, 1)
+                    .input(Items.MILK_BUCKET)
+                    .input(Items.SUGAR)
+                    .input(Items.WHEAT)
+                    .input(Items.BOWL)
+                    .criterion(hasItem(Items.MILK_BUCKET), conditionsFromItem(Items.MILK_BUCKET))
+                    .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
+                    .criterion(hasItem(Items.WHEAT), conditionsFromItem(Items.WHEAT))
+                    .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL)));
+
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_OAK_BLOCK, 1)
                     .pattern("FFF")
                     .pattern(" F ")
@@ -511,6 +522,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasItems.RECALL_DISC, "Emergency Recall Disc");
                     provider.addTranslation(AITExtrasItems.JELLY_BABIES, "Jelly Babies");
                     provider.addTranslation(AITExtrasItems.CUSTARD_CREAM, "Custard Cream");
+                    provider.addTranslation(AITExtrasItems.RICE_PUDDING, "Rice Pudding");
                     provider.addTranslation(AITExtrasItems.CRYSTALLINE_SHARD, "Crystalline Shard");
                     provider.addTranslation(AITExtrasItems.ZIRCONIUM_ALLOY, "Zirconium Alloy");
                     provider.addTranslation(AITExtrasItems.ZIRCONIUM_INGOT, "Zirconium Ingot");
@@ -539,8 +551,10 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("achievement.ait-extras.description.obtain_jelly_babies", "Craft Jelly Babies");
                     provider.addTranslation("achievement.ait-extras.title.obtain_extras_monitor_block", "Critical Timing Malfunction!");
                     provider.addTranslation("achievement.ait-extras.description.obtain_extras_monitor_block", "Craft The Victorian Monitor");
-            provider.addTranslation("achievement.ait-extras.title.obtain_custard_cream", "Yum, Yum, Yum!");
-            provider.addTranslation("achievement.ait-extras.description.obtain_custard_cream", "funfact: Custard Creams are one of the best biscuits in the world!");
+                    provider.addTranslation("achievement.ait-extras.title.obtain_custard_cream", "Yum, Yum, Yum!");
+                    provider.addTranslation("achievement.ait-extras.description.obtain_custard_cream", "funfact: Custard Creams are one of the best biscuits in the world!");
+                    provider.addTranslation("achievement.ait-extras.title.obtain_rice_pudding", "UNLIMITED RICE PUDDING!!!");
+                    provider.addTranslation("achievement.ait-extras.description.obtain_rice_pudding", "Powerful. Crush the lesser races. Conquer the galaxy. Unimaginable power. Unlimited rice pudding, et cetera, et cetera.");
 
 
             return provider;
