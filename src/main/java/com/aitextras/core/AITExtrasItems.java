@@ -35,6 +35,10 @@ public class AITExtrasItems extends ItemContainer {
 
     @AutomaticModel
     @NoEnglish
+    public static final Item RICE_PUDDING = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN).food(AITExtrasFoodComponenets.RICE_PUDDING));
+
+    @AutomaticModel
+    @NoEnglish
     public static final Item CRYSTALLINE_SHARD = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN));
 
     @AutomaticModel
