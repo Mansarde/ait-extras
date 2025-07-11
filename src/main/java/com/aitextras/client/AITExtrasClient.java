@@ -51,8 +51,8 @@ public class AITExtrasClient implements ClientModInitializer {
 
         ORIGIN.setModel(new OriginExteriorModel()).toClient().register();
         ORIGIN.setSonicItemTranslations(new Vector3f(0.7f, 1f, 2f));
-        ORIGIN.setPortalWidth(1f);
-        ORIGIN.setPortalHeight(2f);
+        ORIGIN.setPortalWidth(1.2f);
+        ORIGIN.setPortalHeight(2.4f);
         ORIGIN.toDoor().setModel(new OriginDoorModel(OriginDoorModel.getTexturedModelData().createModel())).toClient().register();
     };
     public static void blockEntityRendererRegister() {

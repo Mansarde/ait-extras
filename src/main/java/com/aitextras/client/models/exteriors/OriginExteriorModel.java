@@ -104,7 +104,7 @@ public class OriginExteriorModel extends ExteriorModel {
 			float maxRot = 90f;
 			this.root.getChild("Door").yaw = (float) Math.toRadians(maxRot * exterior.tardis().get().door().getLeftRot());
 		}
-		matrices.scale(1.03f, 1f, 1.03f);
+		matrices.scale(1.1f, 1.15f, 1.1f);
 		matrices.translate(0, -1.5f, 0);
 
 		super.renderWithAnimations(tardis, exterior, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);

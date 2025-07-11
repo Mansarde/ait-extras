@@ -32,23 +32,15 @@ public class OriginDoorModel extends DoorModel {
         ModelPartData modelPartData = modelData.getRoot();
         ModelPartData bone = modelPartData.addChild("bone", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 24.0F, 2.0F));
 
-        ModelPartData body = bone.addChild("body", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -19.1F, 0.0F));
+        ModelPartData octagon_r1 = bone.addChild("octagon_r1", ModelPartBuilder.create().uv(34, 153).cuboid(-2.0F, -16.0F, 0.0F, 4.0F, 32.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(-9.3787F, -16.1F, -5.4706F, 0.0F, 0.7854F, 0.0F));
 
-        ModelPartData top = body.addChild("top", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 21.0F, 0.0F));
+        ModelPartData octagon_r2 = bone.addChild("octagon_r2", ModelPartBuilder.create().uv(22, 153).cuboid(-2.0F, -16.0F, 0.0F, 4.0F, 32.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(9.3787F, -16.1F, -5.4706F, 0.0F, -0.7854F, 0.0F));
 
-        ModelPartData octagon_r1 = top.addChild("octagon_r1", ModelPartBuilder.create().uv(18, 87).mirrored().cuboid(-4.9706F, -4.0F, -1.0F, 6.0F, 8.0F, 9.0F, new Dilation(0.001F)).mirrored(false), ModelTransform.of(6.0F, -38.0F, -3.0F, 0.0F, -3.1416F, 0.0F));
+        ModelPartData octagon_r3 = bone.addChild("octagon_r3", ModelPartBuilder.create().uv(3, 207).mirrored().cuboid(-4.9706F, -4.0F, -1.0F, 6.0F, 8.0F, 9.0F, new Dilation(0.001F)).mirrored(false), ModelTransform.of(6.0F, -36.1F, -3.0F, 0.0F, -3.1416F, 0.0F));
 
-        ModelPartData octagon_r2 = top.addChild("octagon_r2", ModelPartBuilder.create().uv(18, 87).cuboid(-1.0294F, -4.0F, -1.0F, 6.0F, 8.0F, 9.0F, new Dilation(0.001F)), ModelTransform.of(-6.0F, -38.0F, -3.0F, 0.0F, 3.1416F, 0.0F));
+        ModelPartData octagon_r4 = bone.addChild("octagon_r4", ModelPartBuilder.create().uv(3, 207).cuboid(-1.0294F, -4.0F, -1.0F, 6.0F, 8.0F, 9.0F, new Dilation(0.001F)), ModelTransform.of(-6.0F, -36.1F, -3.0F, 0.0F, 3.1416F, 0.0F));
 
-        ModelPartData octagon_r3 = top.addChild("octagon_r3", ModelPartBuilder.create().uv(15, 87).cuboid(-4.9706F, -4.0F, -1.0F, 9.9411F, 8.0F, 9.0F, new Dilation(0.001F)), ModelTransform.of(0.0F, -38.0F, -3.0F, 0.0F, 3.1416F, 0.0F));
-
-        ModelPartData middle = body.addChild("middle", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 21.0F, 0.0F));
-
-        ModelPartData octagon_r4 = middle.addChild("octagon_r4", ModelPartBuilder.create().uv(34, 153).cuboid(-2.0F, -16.0F, 0.0F, 4.0F, 32.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(-9.3787F, -18.0F, -5.4706F, 0.0F, 0.7854F, 0.0F));
-
-        ModelPartData octagon_r5 = middle.addChild("octagon_r5", ModelPartBuilder.create().uv(22, 153).cuboid(-2.0F, -16.0F, 0.0F, 4.0F, 32.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(9.3787F, -18.0F, -5.4706F, 0.0F, -0.7854F, 0.0F));
-
-        ModelPartData bottom = body.addChild("bottom", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 21.0F, 0.0F));
+        ModelPartData octagon_r5 = bone.addChild("octagon_r5", ModelPartBuilder.create().uv(0, 207).cuboid(-4.9706F, -4.0F, -1.0F, 9.9411F, 8.0F, 9.0F, new Dilation(0.001F)), ModelTransform.of(0.0F, -36.1F, -3.0F, 0.0F, 3.1416F, 0.0F));
 
         ModelPartData Door = bone.addChild("Door", ModelPartBuilder.create().uv(0, 153).cuboid(-4.7635F, -11.0F, -10.1F, 9.5269F, 32.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -21.1F, 0.1F, 0.0F, 0.0436F, 0.0F));
 
@@ -84,7 +76,7 @@ public class OriginDoorModel extends DoorModel {
             this.bone.getChild("Door").yaw = (float)Math.toRadians((double)(maxRot * linkableBlockEntity.tardis().get().door().getLeftRot()));
         }
 
-        matrices.scale(1.0F, 1.0F, 1.0F);
+        matrices.scale(1.1f, 1.15f, 1.1f);
         matrices.translate(0.0F, -1.5F, 0.0F);
         matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(180.0F));
         super.renderWithAnimations(tardis, linkableBlockEntity, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);
