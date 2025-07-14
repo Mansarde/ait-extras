@@ -23,6 +23,8 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.registry.tag.TagKey;
 
 import static net.minecraft.data.server.recipe.RecipeProvider.conditionsFromItem;
 import static net.minecraft.data.server.recipe.RecipeProvider.hasItem;
@@ -110,7 +112,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .input('B', Items.BLACK_CONCRETE)
                     .input('E', Items.ENDER_EYE)
                     .criterion(hasItem(Items.BLACK_CONCRETE), conditionsFromItem(Items.BLACK_CONCRETE))
-                    .criterion(hasItem(Items.ENDER_EYE), conditionsFromItem(Items.ENDER_EYE)))
+                    .criterion(hasItem(Items.ENDER_EYE), conditionsFromItem(Items.ENDER_EYE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.SUN_DIAL_BLOCK, 1)
                     .pattern("NGN")
@@ -123,16 +125,16 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.SPECTRAL_ARROW), conditionsFromItem(Items.SPECTRAL_ARROW))
                     .criterion(hasItem(Items.GOLD_NUGGET), conditionsFromItem(Items.GOLD_NUGGET)));
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasItems.RECALL_DISC, 1)
-                    .pattern("SSS")
-                    .pattern("PWP")
-                    .pattern("SSS")
-                    .input('S', AITItems.SUPERHEATED_ZEITON)
-                    .input('W', AITItems.WAYPOINT_CARTRIDGE)
-                    .input('P', AITItems.PLASMIC_MATERIAL)
-                    .criterion(hasItem(AITItems.SUPERHEATED_ZEITON), conditionsFromItem(AITItems.SUPERHEATED_ZEITON))
-                    .criterion(hasItem(AITItems.WAYPOINT_CARTRIDGE), conditionsFromItem(AITItems.WAYPOINT_CARTRIDGE))
-                    .criterion(hasItem(AITItems.PLASMIC_MATERIAL), conditionsFromItem(AITItems.PLASMIC_MATERIAL)));
+//            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasItems.RECALL_DISC, 1)
+//                    .pattern("SSS")
+//                    .pattern("PWP")
+//                    .pattern("SSS")
+//                    .input('S', AITItems.SUPERHEATED_ZEITON)
+//                    .input('W', AITItems.WAYPOINT_CARTRIDGE)
+//                    .input('P', AITItems.PLASMIC_MATERIAL)
+//                    .criterion(hasItem(AITItems.SUPERHEATED_ZEITON), conditionsFromItem(AITItems.SUPERHEATED_ZEITON))
+//                    .criterion(hasItem(AITItems.WAYPOINT_CARTRIDGE), conditionsFromItem(AITItems.WAYPOINT_CARTRIDGE))
+//                    .criterion(hasItem(AITItems.PLASMIC_MATERIAL), conditionsFromItem(AITItems.PLASMIC_MATERIAL)));
 
             ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, AITExtrasItems.JELLY_BABIES, 1);
             provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
@@ -275,13 +277,6 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .input('C',AITExtrasItems.CRYSTALLINE_SHARD)
                     .criterion(hasItem(AITExtrasItems.CRYSTALLINE_SHARD), conditionsFromItem(AITExtrasItems.CRYSTALLINE_SHARD)));
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.EXTRAS_CRYSTALLINE_BLOCK, 1)
-                    .pattern("BBB")
-                    .pattern("BBB")
-                    .pattern("BBB")
-                    .input('B',AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK)
-                    .criterion(hasItem(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK), conditionsFromItem(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK)));
-
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasItems.WHISTLE, 1)
                     .pattern("AAA")
                     .pattern(" BA")
@@ -295,6 +290,12 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .input(Items.IRON_INGOT)
                     .input(AITExtrasItems.ZIRCONIUM_ALLOY)
                     .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                    .criterion(hasItem(AITExtrasItems.ZIRCONIUM_ALLOY), conditionsFromItem(AITExtrasItems.ZIRCONIUM_ALLOY)));
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.MERCURY_DISC, 1)
+                    .input(ItemTags.MUSIC_DISCS)
+                    .input(AITExtrasItems.ZIRCONIUM_ALLOY)
                     .criterion(hasItem(AITExtrasItems.ZIRCONIUM_ALLOY), conditionsFromItem(AITExtrasItems.ZIRCONIUM_ALLOY)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HUDOLIN_SUPPORT_BASE_BLOCK, 1)
@@ -366,6 +367,16 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                             .pattern("XXX")
                             .input('X', AITExtrasBlocks.COMPACT_ZEITON_BRICKS)
                             .criterion(hasItem(AITExtrasBlocks.COMPACT_ZEITON_BRICKS), conditionsFromItem(AITExtrasBlocks.COMPACT_ZEITON_BRICKS)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.SEAL_BLOCK, 1)
+                            .pattern("NIN")
+                            .pattern("I I")
+                            .pattern("NIN")
+                            .input('I', Items.GOLD_INGOT)
+                            .input('N', Items.GOLD_NUGGET)
+                            .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+                            .criterion(hasItem(Items.GOLD_NUGGET), conditionsFromItem(Items.GOLD_NUGGET)));
 
             provider.addStonecutting(AITBlocks.COMPACT_ZEITON, AITExtrasBlocks.POLISHED_COMPACT_ZEITON,1);
 
@@ -485,7 +496,6 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     // Blocks
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_MONITOR_BLOCK, "Victorian Monitor");
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_SCREEN_MONITOR_BLOCK, "Screen (3x2)");
-                    provider.addTranslation(AITExtrasBlocks.EXTRAS_CRYSTALLINE_BLOCK, "Crystalline Block");
                     provider.addTranslation(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK, "Crystalline Shard Block");
                     provider.addTranslation(AITExtrasBlocks.CRYSTALLINE_ORE, "Crystalline Ore");
                     provider.addTranslation(AITExtrasBlocks.SUN_DIAL_BLOCK, "Armillary Sphere");
@@ -514,12 +524,13 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.COMPACT_ZEITON_BRICK_STAIRS, "Compact Zeiton Brick Stairs");
                     provider.addTranslation(AITExtrasBlocks.COMPACT_ZEITON_BRICK_SLAB, "Compact Zeiton Brick Slab");
                     provider.addTranslation(AITExtrasBlocks.ZIRCONIUM_ORE, "Zirconium Ore");
+                    provider.addTranslation(AITExtrasBlocks.SEAL_BLOCK, "Seal Of Rassilon");
 
                     // Items
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC, "Music Disc");
-                    provider.addTranslation(AITExtrasItems.RECALL_DISC.getTranslationKey() + ".desc", "Valid Trips: 1");
-                    provider.addTranslation(AITExtrasItems.RECALL_DISC, "Emergency Recall Disc");
+//                    provider.addTranslation(AITExtrasItems.RECALL_DISC.getTranslationKey() + ".desc", "Valid Trips: 1");
+//                    provider.addTranslation(AITExtrasItems.RECALL_DISC, "Emergency Recall Disc");
                     provider.addTranslation(AITExtrasItems.JELLY_BABIES, "Jelly Babies");
                     provider.addTranslation(AITExtrasItems.CUSTARD_CREAM, "Custard Cream");
                     provider.addTranslation(AITExtrasItems.RICE_PUDDING, "Rice Pudding");
@@ -555,6 +566,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("achievement.ait-extras.description.obtain_custard_cream", "funfact: Custard Creams are one of the best biscuits in the world!");
                     provider.addTranslation("achievement.ait-extras.title.obtain_rice_pudding", "UNLIMITED RICE PUDDING!!!");
                     provider.addTranslation("achievement.ait-extras.description.obtain_rice_pudding", "Powerful. Crush the lesser races. Conquer the galaxy. Unimaginable power. Unlimited rice pudding, et cetera, et cetera.");
+                    provider.addTranslation("achievement.ait-extras.title.obtain_seal_block", "The Seal of Rassilon!");
+                    provider.addTranslation("achievement.ait-extras.description.obtain_seal_block", "Craft the Seal of Rassilon");
 
 
             return provider;

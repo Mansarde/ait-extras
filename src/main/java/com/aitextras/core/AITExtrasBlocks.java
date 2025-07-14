@@ -32,12 +32,6 @@ public class AITExtrasBlocks extends BlockContainer {
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
             .instrument(Instrument.COW_BELL).strength(1.5F, 6.0F).pistonBehavior(PistonBehavior.NORMAL));
 
-   @AutomaticModel
-   @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
-   @NoEnglish
-    public static final Block EXTRAS_CRYSTALLINE_BLOCK = new ExtrasCrystallineBlock(
-            ABlockSettings.create().itemSettings(new AItemSettings()).nonOpaque().strength(0.01F, 0.01F).pistonBehavior(PistonBehavior.NORMAL));
-
    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
    @NoEnglish
     public static final Block SUN_DIAL_BLOCK = new SunDialBlock(ABlockSettings.create()
@@ -213,4 +207,11 @@ public class AITExtrasBlocks extends BlockContainer {
  public static final Block POLISHED_COMPACT_ZEITON_WALL = new WallBlock(ABlockSettings.create()
          .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
          .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
+
+
+ @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+ @NoEnglish
+ public static final Block SEAL_BLOCK = new SealBlock(ABlockSettings.create()
+         .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.METAL));
    };

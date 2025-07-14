@@ -47,25 +47,6 @@ public class CrystalZeitonBlock extends BlockWithEntity implements BlockEntityPr
         return VoxelShapes.empty();
     }
 
-    @Override
-    public void onBroken(WorldAccess world, BlockPos pos, BlockState state) {
-        if (world instanceof World clientWorld && clientWorld.isClient) {
-            VoxelShape shape = state.getOutlineShape(clientWorld, pos);
-            shape.forEachBox((minX, minY, minZ, maxX, maxY, maxZ) -> {
-                for (int i = 0; i < 10; i++) {
-                    double offsetX = clientWorld.random.nextDouble() * (maxX - minX) + minX;
-                    double offsetY = clientWorld.random.nextDouble() * (maxY - minY) + minY;
-                    double offsetZ = clientWorld.random.nextDouble() * (maxZ - minZ) + minZ;
 
-                    clientWorld.addParticle(new BlockStateParticleEffect(ParticleTypes.BLOCK, state),
-                            pos.getX() + offsetX,
-                            pos.getY() + offsetY,
-                            pos.getZ() + offsetZ,
-                            0, 0, 0);
-                }
-            });
-        }
-        super.onBroken(world, pos, state);
-    }
 }
 

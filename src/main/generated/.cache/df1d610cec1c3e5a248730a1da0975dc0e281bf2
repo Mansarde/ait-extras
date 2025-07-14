@@ -1,6 +1,7 @@
-// 1.20.1	2025-07-11T20:02:58.1558254	AIT Extras/Advancements
-1ffff6f4a6be5275fcfb61c909b4b576d40aa3a7 data\minecraft\advancements\ait-extras\root.json
-660dffd4604882d29b4fa9654991fa51b0d75634 data\minecraft\advancements\ait-extras\obtain_rice_pudding.json
-782562e16c0dfb330a38459813ee79dd504ec49f data\minecraft\advancements\ait-extras\obtain_custard_cream.json
-f119c1ea307880c759876b288a7e7df448a8da91 data\minecraft\advancements\ait-extras\obtain_extras_monitor_block.json
-0ee83ceea003c9a13bde712c6baef5b19c5b184a data\minecraft\advancements\ait-extras\obtain_jelly_babies.json
+// 1.20.1	2025-07-14T16:54:18.732113418	AIT Extras/Advancements
+660dffd4604882d29b4fa9654991fa51b0d75634 data/minecraft/advancements/ait-extras/obtain_rice_pudding.json
+f119c1ea307880c759876b288a7e7df448a8da91 data/minecraft/advancements/ait-extras/obtain_extras_monitor_block.json
+ada89e4c85f7dd8c8ea9d8ea5732979317c42cd3 data/minecraft/advancements/ait-extras/root.json
+782562e16c0dfb330a38459813ee79dd504ec49f data/minecraft/advancements/ait-extras/obtain_custard_cream.json
+7b55b7e03fcc5cbfec474be4d8491418cd5c444f data/minecraft/advancements/ait-extras/obtain_seal_block.json
+0ee83ceea003c9a13bde712c6baef5b19c5b184a data/minecraft/advancements/ait-extras/obtain_jelly_babies.json

@@ -68,4 +68,7 @@ public class AITExtrasBlockEntityTypes implements BlockEntityContainer{
 
     public static BlockEntityType<HudolinSupportTopBlockEntity> HUDOLIN_SUPPORT_TOP_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
             .create(HudolinSupportTopBlockEntity::new, AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK).build();
+
+    public static BlockEntityType<SealBlockEntity> SEAL_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
+            .create(SealBlockEntity::new, AITExtrasBlocks.SEAL_BLOCK).build();
 }

@@ -21,9 +21,9 @@ public class AITExtrasItems extends ItemContainer {
     public static final Item MERCURY_DISC = new MusicDiscItem(11, AITExtrasSounds.MERCURY_DISC,
             new AItemSettings().maxCount(1).rarity(Rarity.RARE).group(AITExtrasItemGroups.MAIN), 216);
 
-    @AutomaticModel
-    @NoEnglish
-    public static final Item RECALL_DISC = new RecallDiscItem(new AItemSettings().maxCount(1));
+//    @AutomaticModel
+//    @NoEnglish
+//    public static final Item RECALL_DISC = new RecallDiscItem(new AItemSettings().maxCount(1));
 
     @AutomaticModel
    @NoEnglish

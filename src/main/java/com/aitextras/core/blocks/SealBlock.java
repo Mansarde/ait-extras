@@ -1,39 +1,29 @@
 package com.aitextras.core.blocks;
 
-import com.aitextras.core.blockentities.HatStandAcaciaBlockEntity;
-import com.aitextras.core.blockentities.HatStandBirchBlockEntity;
+import com.aitextras.core.blockentities.SealBlockEntity;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.client.item.TooltipContext;
+import net.minecraft.client.model.*;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.particle.BlockStateParticleEffect;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
-import net.minecraft.text.Text;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RotationPropertyHelper;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
-
-public class HatStandBirchBlock extends BlockWithEntity implements BlockEntityProvider {
+public class SealBlock extends BlockWithEntity implements BlockEntityProvider {
     public static final int MAX_ROTATION_INDEX = RotationPropertyHelper.getMax();
     private static final int MAX_ROTATIONS = MAX_ROTATION_INDEX + 1;
     public static final IntProperty ROTATION = Properties.ROTATION;
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(4.0, 0.0, 4.0, 12.0, 32.0, 12.0);
+    protected static final VoxelShape SHAPE = Block.createCuboidShape(.0, 0.0, 0.0, 16.0, 16.0, 16.0);
 
-    public HatStandBirchBlock(Settings settings) {
+    public SealBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(ROTATION, 0));
     }
@@ -48,6 +38,13 @@ public class HatStandBirchBlock extends BlockWithEntity implements BlockEntityPr
         return SHAPE;
     }
 
+    public static TexturedModelData getTexturedModelData() {
+        ModelData modelData = new ModelData();
+        ModelPartData modelPartData = modelData.getRoot();
+        ModelPartData root = modelPartData.addChild("root", ModelPartBuilder.create().uv(0, 0).cuboid(-24.0F, -32.0F, 15.8F, 32.0F, 32.0F, 0.0F, new Dilation(0.0F)), ModelTransform.pivot(8.0F, 24.0F, 8.0F));
+        return TexturedModelData.of(modelData, 64, 64);
+    }
+
     @Override
     public boolean isShapeFullCube(BlockState state, BlockView world, BlockPos pos) {
         return false;
@@ -56,7 +53,7 @@ public class HatStandBirchBlock extends BlockWithEntity implements BlockEntityPr
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new HatStandBirchBlockEntity(pos, state);
+        return new SealBlockEntity(pos, state);
     }
 
 
@@ -85,11 +82,6 @@ public class HatStandBirchBlock extends BlockWithEntity implements BlockEntityPr
         builder.add(ROTATION);
     }
 
-    @Override
-    public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        super.appendTooltip(stack, world, tooltip, options);
-        tooltip.add(Text.literal("Variant: BIRCH").formatted(Formatting.GOLD));
 
-}
 }
 

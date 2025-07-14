@@ -21,10 +21,10 @@ public class AITExtrasAchievementProvider extends FabricAdvancementProvider {
     @Override
     public void generateAdvancement(Consumer<Advancement> consumer) {
         Advancement root = Advancement.Builder.create()
-                .display(AITExtrasItems.RECALL_DISC,
+                .display(AITExtrasItems.MERCURY_DISC,
                         Text.translatable("achievement.ait-extras.title.root"),
                         Text.translatable("achievement.ait-extras.description.root"),
-                        new Identifier("ait-extras", "textures/block/crystalline_shard_block.png"),
+                        new Identifier("textures/block/anvil.png"),
                         AdvancementFrame.TASK, false, false, false)
                 .criterion("root", InventoryChangedCriterion.Conditions.items(AITExtrasItems.JELLY_BABIES))
                 .build(consumer, AITExtras.MOD_ID + "/root");
@@ -60,5 +60,13 @@ public class AITExtrasAchievementProvider extends FabricAdvancementProvider {
                         null, AdvancementFrame.CHALLENGE, true, true, true)
                 .criterion("obtain_extras_monitor_block", InventoryChangedCriterion.Conditions.items(AITExtrasBlocks.EXTRAS_MONITOR_BLOCK))
                 .build(consumer, AITExtras.MOD_ID + "/obtain_extras_monitor_block");
+
+        Advancement sealBlock = Advancement.Builder.create().parent(extrasMonitorBlock)
+                .display(AITExtrasBlocks.SEAL_BLOCK,
+                        Text.translatable("achievement.ait-extras.title.obtain_seal_block"),
+                        Text.translatable("achievement.ait-extras.description.obtain_seal_block"),
+                        null, AdvancementFrame.TASK, true, true, true)
+                .criterion("obtain_seal_block", InventoryChangedCriterion.Conditions.items(AITExtrasBlocks.SEAL_BLOCK))
+                .build(consumer, AITExtras.MOD_ID + "/obtain_seal_block");
     }
 }

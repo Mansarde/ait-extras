@@ -34,7 +34,7 @@
 
 ### Will this mod be ported to forge or neoforge?
 
-- No, even though AiT had a forge version, this mod will be exclusively for fabric. Why, AiT's forge version is no longer supported and i dont feel like porting the mod everytime.
+- No, even though AiT has a forge version, this mod will be exclusively for fabric. I don't feel like porting the mod every time and have 0 idea how.
 
 
 ### How do i get access to betas?

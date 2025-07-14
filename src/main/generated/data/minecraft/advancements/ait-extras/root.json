@@ -15,14 +15,14 @@
   },
   "display": {
     "announce_to_chat": false,
-    "background": "ait-extras:textures/block/crystalline_shard_block.png",
+    "background": "minecraft:textures/block/anvil.png",
     "description": {
       "translate": "achievement.ait-extras.description.root"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "ait-extras:recall_disc"
+      "item": "ait-extras:mercury_disc"
     },
     "show_toast": false,
     "title": {
