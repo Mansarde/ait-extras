@@ -14,7 +14,7 @@ public class HudolinSupportTopModel extends SinglePartEntityModel {
     public static TexturedModelData getTexturedModelData() {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
-        ModelPartData root = modelPartData.addChild("root", ModelPartBuilder.create().uv(48, 91).cuboid(-3.0F, -71.7462F, -44.479F, 6.0F, 5.0F, 32.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -7.2538F, 9.479F, -3.0543F, 0.0F, 3.1416F));
+        ModelPartData root = modelPartData.addChild("root", ModelPartBuilder.create().uv(48, 91).cuboid(-3.0F, -71.7462F, -44.479F, 6.0F, 5.0F, 32.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -7.2538F, 9.479F, 3.1416F, 0.0F, 3.1416F));
 
         ModelPartData cube_r1 = root.addChild("cube_r1", ModelPartBuilder.create().uv(43, 77).cuboid(-4.5F, -1.3797F, -8.1673F, 9.0F, 8.0F, 8.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -72.7462F, -8.479F, 0.3491F, 0.0F, 0.0F));
 
@@ -102,7 +102,7 @@ public class HudolinSupportTopModel extends SinglePartEntityModel {
 
         ModelPartData bone7 = x.addChild("bone7", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -36.2354F, 7.1359F));
 
-        ModelPartData cube_r29 = bone7.addChild("cube_r29", ModelPartBuilder.create().uv(112, 34).cuboid(-4.5F, -0.5F, 0.0F, 7.0F, 2.0F, 0.0F, new Dilation(0.0F)), ModelTransform.of(1.483F, -1.3165F, -0.2558F, 0.1745F, 0.0F, 0.0F));
+        ModelPartData cube_r29 = bone7.addChild("cube_r29", ModelPartBuilder.create().uv(111, 34).cuboid(-5.5F, -0.5F, 0.0F, 8.0F, 2.0F, 0.0F, new Dilation(0.0F)), ModelTransform.of(1.483F, -1.3165F, -0.2558F, 0.1745F, 0.0F, 0.0F));
 
         ModelPartData x2 = root.addChild("x2", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 21.2538F, -13.479F));
 
@@ -186,7 +186,7 @@ public class HudolinSupportTopModel extends SinglePartEntityModel {
 
         ModelPartData bone28 = x2.addChild("bone28", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -36.2354F, 7.1359F));
 
-        ModelPartData cube_r56 = bone28.addChild("cube_r56", ModelPartBuilder.create().uv(112, 34).cuboid(-4.5F, -0.5F, 0.0F, 7.0F, 2.0F, 0.0F, new Dilation(0.0F)), ModelTransform.of(1.483F, -1.3165F, -0.2558F, 0.1745F, 0.0F, 0.0F));
+        ModelPartData cube_r56 = bone28.addChild("cube_r56", ModelPartBuilder.create().uv(111, 34).cuboid(-5.5F, -0.5F, 0.0F, 8.0F, 2.0F, 0.0F, new Dilation(0.0F)), ModelTransform.of(1.483F, -1.3165F, -0.2558F, 0.1745F, 0.0F, 0.0F));
         return TexturedModelData.of(modelData, 128, 128);
     }
 
