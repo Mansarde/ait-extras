@@ -28,9 +28,9 @@
 
 - This builds on top of AiT features by adding; exteriors, interiors, consoles, sonics, and more..
 
-### Why does it only work on AiT 1.3.0 and above?
+### Why does it only work on AiT 1.2.7 and above?
 
-- AiT 1.3.0 is the latest accessible version (at the time) and has features that are required for the certain things to work, these features weren't present in previous versions of the mod.
+- AiT 1.2.7 is the latest accessible version (at the time) and has features that are required for the certain things to work, these features weren't present in previous versions of the mod.
 
 ### Will this mod be ported to forge or neoforge?
 
