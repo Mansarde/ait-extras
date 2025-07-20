@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "ait-extras:block/polished_compact_zeiton",
-    "side": "ait-extras:block/polished_compact_zeiton",
-    "top": "ait-extras:block/polished_compact_zeiton"
-  }
-}

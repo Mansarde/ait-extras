@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "ait-extras:compact_zeiton_bricks"
-  },
-  "result": "ait-extras:compact_zeiton_brick_stairs"
-}

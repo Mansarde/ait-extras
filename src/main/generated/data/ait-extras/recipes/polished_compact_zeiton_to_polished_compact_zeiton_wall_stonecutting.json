@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "ait-extras:polished_compact_zeiton"
-  },
-  "result": "ait-extras:polished_compact_zeiton_wall"
-}
