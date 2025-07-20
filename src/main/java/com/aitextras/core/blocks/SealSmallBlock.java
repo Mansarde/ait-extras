@@ -13,7 +13,7 @@ import net.minecraft.world.BlockView;
 
 public class SealSmallBlock extends HorizontalFacingBlock {
 
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 32.0, 16.0);
+    protected static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
 
 
     public SealSmallBlock(Settings settings) {

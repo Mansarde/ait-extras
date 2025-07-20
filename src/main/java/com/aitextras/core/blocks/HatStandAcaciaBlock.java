@@ -87,7 +87,7 @@ public class HatStandAcaciaBlock extends BlockWithEntity implements BlockEntityP
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
         super.appendTooltip(stack, world, tooltip, options);
-        tooltip.add(Text.literal("Variant: ACACIA").formatted(Formatting.GOLD));
+        tooltip.add(Text.translatable("block.tooltip.hatstandacacia").formatted(Formatting.GOLD));
 
 }
 }

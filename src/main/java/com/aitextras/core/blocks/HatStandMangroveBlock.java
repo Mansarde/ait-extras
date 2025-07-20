@@ -88,7 +88,7 @@ public class HatStandMangroveBlock extends BlockWithEntity implements BlockEntit
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
         super.appendTooltip(stack, world, tooltip, options);
-        tooltip.add(Text.literal("Variant: MANGROVE").formatted(Formatting.GOLD));
+        tooltip.add(Text.translatable("block.tooltip.hatstandmangrove").formatted(Formatting.GOLD));
 
 }
 }

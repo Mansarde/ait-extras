@@ -580,8 +580,20 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasItems.ZIRCONIUM_INGOT, "Zirconium Ingot");
                     provider.addTranslation(AITExtrasItems.WHISTLE, "Summon Whistle");
 
-                    // Tabs
+                    // Tabs / ToolTips
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");
+            provider.addTranslation("block.tooltip.seal", "If you SHIFT when placing this, it will become a CENTERED version!!");
+            provider.addTranslation("block.tooltip.hatstandacacia", "Variant: Acacia");
+            provider.addTranslation("block.tooltip.hatstandbamboo", "Variant: Bamboo");
+            provider.addTranslation("block.tooltip.hatstandbirch", "Variant: Birch");
+            provider.addTranslation("block.tooltip.hatstandcherry", "Variant: Cherry");
+            provider.addTranslation("block.tooltip.hatstandcrimson", "Variant: Crimson");
+            provider.addTranslation("block.tooltip.hatstanddarkoak", "Variant: Dark Oak");
+            provider.addTranslation("block.tooltip.hatstandjungle", "Variant: Jungle");
+            provider.addTranslation("block.tooltip.hatstandmangrove", "Variant: Mangrove");
+            provider.addTranslation("block.tooltip.hatstandoak", "Variant: Oak");
+            provider.addTranslation("block.tooltip.hatstandspruce", "Variant: Spruce");
+            provider.addTranslation("block.tooltip.hatstandwarped", "Variant: Warped");
 
                     //SFXS
                     provider.addTranslation("animation.ait-extras.classic_mat", "Classic (Alt)");
