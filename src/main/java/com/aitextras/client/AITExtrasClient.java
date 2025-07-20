@@ -8,10 +8,13 @@ import com.aitextras.client.renderers.decor.hudolinsupport.HudolinSupportTopRend
 import com.aitextras.client.renderers.monitors.ExtrasMonitorRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasScreenMonitorRenderer;
 import com.aitextras.core.AITExtrasBlockEntityTypes;
+import com.aitextras.core.AITExtrasBlocks;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import org.joml.Vector3f;
 
@@ -22,6 +25,8 @@ public class AITExtrasClient implements ClientModInitializer {
     public void onInitializeClient() {
         registerClientAddonExteriors();
         blockEntityRendererRegister();
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.SEAL_BLOCK, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.SEAL_SMALL_BLOCK, RenderLayer.getCutout());
     }
 
     private void registerClientAddonExteriors() {
@@ -75,7 +80,6 @@ public class AITExtrasClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CRYSTAL_MASTER_BLOCK_ENTITY_TYPE, CrystalMasterRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HUDOLIN_SUPPORT_BASE_BLOCK_ENTITY_TYPE, HudolinSupportBaseRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HUDOLIN_SUPPORT_TOP_BLOCK_ENTITY_TYPE, HudolinSupportTopRenderer::new);
-        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.SEAL_BLOCK_ENTITY_TYPE, SealRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_LARGE_BLOCK_ENTITY_TYPE, CandleStandLargeRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_SMALL_BLOCK_ENTITY_TYPE, CandleStandSmallRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_SINGLE_BLOCK_ENTITY_TYPE, CandleStandSingleRenderer::new);

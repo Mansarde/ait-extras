@@ -209,11 +209,20 @@ public class AITExtrasBlocks extends BlockContainer {
          .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
 
 
- @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
  @NoEnglish
+ @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
  public static final Block SEAL_BLOCK = new SealBlock(ABlockSettings.create()
          .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
          .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.METAL));
+
+
+ @NoEnglish
+ @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+ public static final Block SEAL_SMALL_BLOCK = new SealSmallBlock(ABlockSettings.create()
+         .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.METAL));
+
+
 
 
  @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "ait-extras:block/seal_small_block" },
+    "facing=south": { "model": "ait-extras:block/seal_small_block", "y": 180 },
+    "facing=west": { "model": "ait-extras:block/seal_small_block", "y": 270 },
+    "facing=east": { "model": "ait-extras:block/seal_small_block", "y": 90 }
+}
+}

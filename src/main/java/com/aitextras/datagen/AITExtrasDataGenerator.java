@@ -369,7 +369,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                             .criterion(hasItem(AITExtrasBlocks.COMPACT_ZEITON_BRICKS), conditionsFromItem(AITExtrasBlocks.COMPACT_ZEITON_BRICKS)));
 
             provider.addShapedRecipe(
-                    ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.SEAL_BLOCK, 1)
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.SEAL_BLOCK , 1)
                             .pattern("NIN")
                             .pattern("I I")
                             .pattern("NIN")
@@ -377,6 +377,43 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                             .input('N', Items.GOLD_NUGGET)
                             .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
                             .criterion(hasItem(Items.GOLD_NUGGET), conditionsFromItem(Items.GOLD_NUGGET)));
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.DECORATIONS, AITExtrasBlocks.SEAL_SMALL_BLOCK, 1)
+                    .input(AITExtrasBlocks.SEAL_BLOCK)
+                    .criterion(hasItem(AITExtrasBlocks.SEAL_BLOCK), conditionsFromItem(AITExtrasBlocks.SEAL_BLOCK)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CANDLE_STAND_SINGLE_BLOCK , 2)
+                            .pattern(" C ")
+                            .pattern(" Z ")
+                            .pattern(" Z ")
+                            .input('C', Items.CANDLE)
+                            .input('Z', AITExtrasItems.ZIRCONIUM_INGOT)
+                            .criterion(hasItem(Items.CANDLE), conditionsFromItem(Items.CANDLE))
+                            .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK , 2)
+                            .pattern("CSC")
+                            .pattern("Z Z")
+                            .input('C', Items.CANDLE)
+                            .input('Z', AITExtrasItems.ZIRCONIUM_INGOT)
+                            .input('S', AITExtrasBlocks.CANDLE_STAND_SINGLE_BLOCK)
+                            .criterion(hasItem(Items.CANDLE), conditionsFromItem(Items.CANDLE))
+                            .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT))
+                            .criterion(hasItem(AITExtrasBlocks.CANDLE_STAND_SINGLE_BLOCK), conditionsFromItem(AITExtrasBlocks.CANDLE_STAND_SINGLE_BLOCK)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CANDLE_STAND_LARGE_BLOCK , 2)
+                            .pattern("CSC")
+                            .pattern("Z Z")
+                            .input('C', Items.CANDLE)
+                            .input('Z', AITExtrasItems.ZIRCONIUM_INGOT)
+                            .input('S', AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK)
+                            .criterion(hasItem(Items.CANDLE), conditionsFromItem(Items.CANDLE))
+                            .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT))
+                            .criterion(hasItem(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK), conditionsFromItem(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK)));
 
             provider.addStonecutting(AITBlocks.COMPACT_ZEITON, AITExtrasBlocks.POLISHED_COMPACT_ZEITON,1);
 
@@ -525,9 +562,10 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.COMPACT_ZEITON_BRICK_SLAB, "Compact Zeiton Brick Slab");
                     provider.addTranslation(AITExtrasBlocks.ZIRCONIUM_ORE, "Zirconium Ore");
                     provider.addTranslation(AITExtrasBlocks.SEAL_BLOCK, "Seal Of Rassilon");
-                    provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_LARGE_BLOCK, "Large Candle Stand");
-                    provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_SINGLE_BLOCK, "Single Candle Stand");
-                    provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK, "Small Candle Stand");
+                    provider.addTranslation(AITExtrasBlocks.SEAL_SMALL_BLOCK, "Seal Of Rassilon (Small)");
+                    provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_LARGE_BLOCK, "Candle Stand (Large)");
+                    provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_SINGLE_BLOCK, "Candle Stand (Single)");
+                    provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK, "Candle Stand (Small)");
 
                     // Items
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");

@@ -1,87 +1,78 @@
 package com.aitextras.core.blocks;
 
-import com.aitextras.core.blockentities.SealBlockEntity;
-import net.minecraft.block.*;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.client.model.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.HorizontalFacingBlock;
+import net.minecraft.block.ShapeContext;
+import net.minecraft.item.Items;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
-import net.minecraft.state.property.IntProperty;
-import net.minecraft.state.property.Properties;
-import net.minecraft.util.BlockMirror;
-import net.minecraft.util.BlockRotation;
+import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.RotationPropertyHelper;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
-import org.jetbrains.annotations.Nullable;
+import net.minecraft.world.World;
 
-public class SealBlock extends BlockWithEntity implements BlockEntityProvider {
-    public static final int MAX_ROTATION_INDEX = RotationPropertyHelper.getMax();
-    private static final int MAX_ROTATIONS = MAX_ROTATION_INDEX + 1;
-    public static final IntProperty ROTATION = Properties.ROTATION;
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(.0, 0.0, 0.0, 32.0, 16.0, 16.0);
+public class SealBlock extends HorizontalFacingBlock {
+
+    protected static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 32.0, 16.0);
+    public static final BooleanProperty CENTERED = BooleanProperty.of("centered");
 
     public SealBlock(Settings settings) {
         super(settings);
-        this.setDefaultState(this.stateManager.getDefaultState().with(ROTATION, 0));
+        this.setDefaultState(this.stateManager.getDefaultState()
+                .with(FACING, Direction.NORTH)
+                .with(CENTERED, false));
     }
 
+
     @Override
-    public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    public VoxelShape getCollisionShape(BlockState state, net.minecraft.world.BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }
 
     @Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    public VoxelShape getOutlineShape(BlockState state, net.minecraft.world.BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }
 
-    public static TexturedModelData getTexturedModelData() {
-        ModelData modelData = new ModelData();
-        ModelPartData modelPartData = modelData.getRoot();
-        ModelPartData root = modelPartData.addChild("root", ModelPartBuilder.create().uv(0, 0).cuboid(-24.0F, -32.0F, 15.8F, 32.0F, 32.0F, 0.0F, new Dilation(0.0F)), ModelTransform.pivot(8.0F, 24.0F, 8.0F));
-        return TexturedModelData.of(modelData, 64, 64);
-    }
-
     @Override
-    public boolean isShapeFullCube(BlockState state, BlockView world, BlockPos pos) {
+    public boolean isShapeFullCube(BlockState state, net.minecraft.world.BlockView world, BlockPos pos) {
         return false;
     }
 
-    @Nullable
-    @Override
-    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new SealBlockEntity(pos, state);
-    }
-
-
-    @Override
-    public VoxelShape getCullingShape(BlockState state, BlockView world, BlockPos pos) {
-        return VoxelShapes.empty();
-    }
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return this.getDefaultState().with(ROTATION, RotationPropertyHelper.fromYaw(ctx.getPlayerYaw()));
-    }
+        boolean isSneaking = ctx.getPlayer() != null && ctx.getPlayer().isSneaking();
 
-    @Override
-    public BlockState rotate(BlockState state, BlockRotation rotation) {
-        return state.with(ROTATION, rotation.rotate(state.get(ROTATION), MAX_ROTATIONS));
-    }
-
-    @Override
-    public BlockState mirror(BlockState state, BlockMirror mirror) {
-        return state.with(ROTATION, mirror.mirror(state.get(ROTATION), MAX_ROTATIONS));
+        return this.getDefaultState()
+                .with(FACING, ctx.getHorizontalPlayerFacing())
+                .with(CENTERED, isSneaking);
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(ROTATION);
+        builder.add(FACING, CENTERED);
     }
 
 
-}
+    @Override
+    public ActionResult onUse(BlockState state, World world, BlockPos pos,
+                              net.minecraft.entity.player.PlayerEntity player,
+                              Hand hand, BlockHitResult hit) {
 
+        if (!world.isClient) {
+            boolean current = state.get(CENTERED);
+            world.setBlockState(pos, state.with(CENTERED, !current));
+
+            return ActionResult.SUCCESS;
+        }
+
+        return ActionResult.PASS;
+    }
+}

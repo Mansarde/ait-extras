@@ -62,11 +62,11 @@ public class AITExtrasAchievementProvider extends FabricAdvancementProvider {
                 .build(consumer, AITExtras.MOD_ID + "/obtain_extras_monitor_block");
 
         Advancement sealBlock = Advancement.Builder.create().parent(extrasMonitorBlock)
-                .display(AITExtrasBlocks.SEAL_BLOCK,
+                .display(AITExtrasBlocks.SEAL_BLOCK ,
                         Text.translatable("achievement.ait-extras.title.obtain_seal_block"),
                         Text.translatable("achievement.ait-extras.description.obtain_seal_block"),
                         null, AdvancementFrame.TASK, true, true, true)
-                .criterion("obtain_seal_block", InventoryChangedCriterion.Conditions.items(AITExtrasBlocks.SEAL_BLOCK))
+                .criterion("obtain_seal_block", InventoryChangedCriterion.Conditions.items(AITExtrasBlocks.SEAL_BLOCK ))
                 .build(consumer, AITExtras.MOD_ID + "/obtain_seal_block");
     }
 }
