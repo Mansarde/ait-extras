@@ -525,6 +525,9 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.COMPACT_ZEITON_BRICK_SLAB, "Compact Zeiton Brick Slab");
                     provider.addTranslation(AITExtrasBlocks.ZIRCONIUM_ORE, "Zirconium Ore");
                     provider.addTranslation(AITExtrasBlocks.SEAL_BLOCK, "Seal Of Rassilon");
+                    provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_LARGE_BLOCK, "Large Candle Stand");
+                    provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_SINGLE_BLOCK, "Single Candle Stand");
+                    provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK, "Small Candle Stand");
 
                     // Items
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");

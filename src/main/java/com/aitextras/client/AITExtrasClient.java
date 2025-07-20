@@ -76,6 +76,9 @@ public class AITExtrasClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HUDOLIN_SUPPORT_BASE_BLOCK_ENTITY_TYPE, HudolinSupportBaseRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HUDOLIN_SUPPORT_TOP_BLOCK_ENTITY_TYPE, HudolinSupportTopRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.SEAL_BLOCK_ENTITY_TYPE, SealRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_LARGE_BLOCK_ENTITY_TYPE, CandleStandLargeRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_SMALL_BLOCK_ENTITY_TYPE, CandleStandSmallRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_SINGLE_BLOCK_ENTITY_TYPE, CandleStandSingleRenderer::new);
 
 
         // Register builtin resourcepacks

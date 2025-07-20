@@ -1,10 +1,13 @@
 package com.aitextras.core.blocks;
 
-import com.aitextras.core.blockentities.SealBlockEntity;
+import com.aitextras.core.blockentities.CandleStandSingleBlockEntity;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.client.model.*;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.particle.ParticleEffect;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
@@ -15,17 +18,55 @@ import net.minecraft.util.math.RotationPropertyHelper;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class SealBlock extends BlockWithEntity implements BlockEntityProvider {
+import net.minecraft.util.math.random.Random;
+
+public class CandleStandSingleBlock extends BlockWithEntity implements BlockEntityProvider {
     public static final int MAX_ROTATION_INDEX = RotationPropertyHelper.getMax();
     private static final int MAX_ROTATIONS = MAX_ROTATION_INDEX + 1;
     public static final IntProperty ROTATION = Properties.ROTATION;
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(.0, 0.0, 0.0, 32.0, 16.0, 16.0);
+    protected static final VoxelShape SHAPE = Block.createCuboidShape(4.0, 0.0, 4.0, 12.0, 26.0, 12.0);
 
-    public SealBlock(Settings settings) {
+    public CandleStandSingleBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(ROTATION, 0));
+    }
+
+    @Environment(EnvType.CLIENT)
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        int rotation = state.get(ROTATION);
+        double angle = Math.toRadians((360.0 / MAX_ROTATIONS) * rotation);
+        double sin = Math.sin(angle);
+        double cos = Math.cos(angle);
+
+        class ParticleSpec {
+            final ParticleEffect type;
+            final double offsetX, offsetY, offsetZ;
+
+            ParticleSpec(ParticleEffect type, double offsetX, double offsetY, double offsetZ) {
+                this.type = type;
+                this.offsetX = offsetX;
+                this.offsetY = offsetY;
+                this.offsetZ = offsetZ;
+            }
+        }
+
+        ParticleSpec[] specs = new ParticleSpec[]{
+                new ParticleSpec(ParticleTypes.FLAME, 0.0, 1.5, 0.0),
+        };
+
+        for (ParticleSpec spec : specs) {
+            double rotatedX = spec.offsetX * cos - spec.offsetZ * sin;
+            double rotatedZ = spec.offsetX * sin + spec.offsetZ * cos;
+
+            double worldX = pos.getX() + 0.5 + rotatedX;
+            double worldY = pos.getY() + 0.2 + spec.offsetY;
+            double worldZ = pos.getZ() + 0.5 + rotatedZ;
+
+            world.addParticle(spec.type, worldX, worldY, worldZ, 0.0, 0.0, 0.0);
+        }
     }
 
     @Override
@@ -38,13 +79,6 @@ public class SealBlock extends BlockWithEntity implements BlockEntityProvider {
         return SHAPE;
     }
 
-    public static TexturedModelData getTexturedModelData() {
-        ModelData modelData = new ModelData();
-        ModelPartData modelPartData = modelData.getRoot();
-        ModelPartData root = modelPartData.addChild("root", ModelPartBuilder.create().uv(0, 0).cuboid(-24.0F, -32.0F, 15.8F, 32.0F, 32.0F, 0.0F, new Dilation(0.0F)), ModelTransform.pivot(8.0F, 24.0F, 8.0F));
-        return TexturedModelData.of(modelData, 64, 64);
-    }
-
     @Override
     public boolean isShapeFullCube(BlockState state, BlockView world, BlockPos pos) {
         return false;
@@ -53,7 +87,7 @@ public class SealBlock extends BlockWithEntity implements BlockEntityProvider {
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new SealBlockEntity(pos, state);
+        return new CandleStandSingleBlockEntity(pos, state);
     }
 
 

@@ -20,7 +20,6 @@ public class AITExtras implements ModInitializer {
     public static AddonExterior VANILLA;
     public static AddonExterior CLOCK;
     public static AddonExterior ORIGIN;
-    public static AddonExterior BOX;
 
     public static Identifier id(String path) {
         return new Identifier(MOD_ID, path);

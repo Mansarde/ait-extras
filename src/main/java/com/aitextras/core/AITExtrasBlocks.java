@@ -214,4 +214,25 @@ public class AITExtrasBlocks extends BlockContainer {
  public static final Block SEAL_BLOCK = new SealBlock(ABlockSettings.create()
          .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
          .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.METAL));
+
+
+ @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+ @NoEnglish
+ public static final Block CANDLE_STAND_SINGLE_BLOCK = new CandleStandSingleBlock(ABlockSettings.create()
+         .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.CHAIN).luminance(state -> 9));
+
+
+ @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+ @NoEnglish
+ public static final Block CANDLE_STAND_SMALL_BLOCK = new CandleStandSmallBlock(ABlockSettings.create()
+         .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.CHAIN).luminance(state -> 9));
+
+
+ @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+ @NoEnglish
+ public static final Block CANDLE_STAND_LARGE_BLOCK = new CandleStandLargeBlock(ABlockSettings.create()
+         .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.CHAIN).luminance(state -> 9));
    };
