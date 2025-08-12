@@ -5,6 +5,7 @@ import static dev.amble.ait.core.tardis.handler.travel.TravelHandlerBase.State.L
 import java.util.List;
 
 import com.aitextras.core.AITExtrasSounds;
+import dev.amble.ait.core.world.TardisServerWorld;
 import dev.amble.lib.data.CachedDirectedGlobalPos;
 import org.jetbrains.annotations.Nullable;
 
@@ -23,11 +24,10 @@ import net.minecraft.util.math.RotationPropertyHelper;
 import net.minecraft.world.World;
 
 import dev.amble.ait.api.tardis.link.LinkableItem;
-import dev.amble.ait.core.AITSounds;
 import dev.amble.ait.core.tardis.Tardis;
 import dev.amble.ait.core.tardis.control.impl.DirectionControl;
 import dev.amble.ait.core.tardis.handler.travel.TravelUtil;
-import dev.amble.ait.core.world.TardisServerWorld;
+
 
 public class WhistleItem extends LinkableItem {
 
@@ -59,11 +59,6 @@ public class WhistleItem extends LinkableItem {
         if (tardis.isRefueling())
             player.sendMessage(Text.translatable("message.ait.remoteitem.cancel.refuel"));
 
-        //It was dematting before anyway so as a lazy fix its a feature now!!
-        //player.sendMessage(Text.translatable("message.ait.remoteitem.warning2"));
-
-        // Check if the Tardis is already present at this location before moving
-        // it there
         CachedDirectedGlobalPos currentPosition = tardis.travel().position();
 
         if (currentPosition.getPos().equals(pos))
