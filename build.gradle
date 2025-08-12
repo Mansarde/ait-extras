@@ -73,7 +73,7 @@ dependencies {
     modImplementation "com.github.amblelabs:ait:${project.ait_version}"
     modImplementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
 
-    modImplementation("maven.modrinth:amblekit:${project.amblekit_version}") {
+    modApi("com.github.amblelabs:modkit:v${project.amblekit_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
 }
