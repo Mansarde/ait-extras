@@ -288,31 +288,31 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
             provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
                     .create(RecipeCategory.MISC, AITExtrasItems.ZIRCONIUM_INGOT, 4)
                     .input(Items.IRON_INGOT)
-                    .input(AITExtrasItems.ZIRCONIUM_ALLOY)
+                    .input(AITExtrasItems.RAW_ZIRCONIUM)
                     .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
-                    .criterion(hasItem(AITExtrasItems.ZIRCONIUM_ALLOY), conditionsFromItem(AITExtrasItems.ZIRCONIUM_ALLOY)));
+                    .criterion(hasItem(AITExtrasItems.RAW_ZIRCONIUM), conditionsFromItem(AITExtrasItems.RAW_ZIRCONIUM)));
 
             provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
                     .create(RecipeCategory.MISC, AITExtrasItems.MERCURY_DISC, 1)
                     .input(ItemTags.MUSIC_DISCS)
-                    .input(AITExtrasItems.ZIRCONIUM_ALLOY)
-                    .criterion(hasItem(AITExtrasItems.ZIRCONIUM_ALLOY), conditionsFromItem(AITExtrasItems.ZIRCONIUM_ALLOY)));
+                    .input(AITExtrasItems.RAW_ZIRCONIUM)
+                    .criterion(hasItem(AITExtrasItems.RAW_ZIRCONIUM), conditionsFromItem(AITExtrasItems.RAW_ZIRCONIUM)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HUDOLIN_SUPPORT_BASE_BLOCK, 1)
                     .pattern("III")
                     .pattern(" IA")
                     .pattern("   ")
-                    .input('A',AITExtrasItems.ZIRCONIUM_ALLOY)
+                    .input('A',AITExtrasItems.RAW_ZIRCONIUM)
                     .input('I',AITExtrasItems.ZIRCONIUM_INGOT)
-                    .criterion(hasItem(AITExtrasItems.ZIRCONIUM_ALLOY), conditionsFromItem(AITExtrasItems.ZIRCONIUM_ALLOY)));
+                    .criterion(hasItem(AITExtrasItems.RAW_ZIRCONIUM), conditionsFromItem(AITExtrasItems.RAW_ZIRCONIUM)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK, 1)
                     .pattern("AI ")
                     .pattern(" II")
                     .pattern(" IA")
-                    .input('A',AITExtrasItems.ZIRCONIUM_ALLOY)
+                    .input('A',AITExtrasItems.RAW_ZIRCONIUM)
                     .input('I',AITExtrasItems.ZIRCONIUM_INGOT)
-                    .criterion(hasItem(AITExtrasItems.ZIRCONIUM_ALLOY), conditionsFromItem(AITExtrasItems.ZIRCONIUM_ALLOY)));
+                    .criterion(hasItem(AITExtrasItems.RAW_ZIRCONIUM), conditionsFromItem(AITExtrasItems.RAW_ZIRCONIUM)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.POLISHED_COMPACT_ZEITON, 4)
                     .pattern("ZZ")
@@ -576,7 +576,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasItems.CUSTARD_CREAM, "Custard Cream");
                     provider.addTranslation(AITExtrasItems.RICE_PUDDING, "Rice Pudding");
                     provider.addTranslation(AITExtrasItems.CRYSTALLINE_SHARD, "Crystalline Shard");
-                    provider.addTranslation(AITExtrasItems.ZIRCONIUM_ALLOY, "Zirconium Alloy");
+                    provider.addTranslation(AITExtrasItems.RAW_ZIRCONIUM, "Raw Zirconium");
                     provider.addTranslation(AITExtrasItems.ZIRCONIUM_INGOT, "Zirconium Ingot");
                     provider.addTranslation(AITExtrasItems.WHISTLE, "Summon Whistle");
 

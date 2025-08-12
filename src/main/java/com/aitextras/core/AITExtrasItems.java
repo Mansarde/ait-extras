@@ -43,7 +43,7 @@ public class AITExtrasItems extends ItemContainer {
 
     @AutomaticModel
     @NoEnglish
-    public static final Item ZIRCONIUM_ALLOY = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN));
+    public static final Item RAW_ZIRCONIUM = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN));
 
     @AutomaticModel
     @NoEnglish
