@@ -1,0 +1,33 @@
+{
+  "id": "ait-extras:vanilla",
+  "category": "ait-extras:vanilla",
+  "parent": "ait:exterior/capsule/default",
+  "texture": "ait-extras:textures/blockentities/exteriors/vanilla/vanilla.png",
+  "emission": "ait-extras:textures/blockentities/exteriors/vanilla/vanilla_emission.png",
+  "model": "ait-extras:vanilla",
+  "door": "ait-extras:vanilla",
+  "left_animation": "vanilla:open",
+  "has_transparent_doors": true,
+  "animations": {
+    "landed": "vanilla:idle",
+    "demat": "vanilla:flight",
+    "mat": "vanilla:flight"
+  },
+  "portal_info": {
+  "enabled": true,
+  "width": 1,
+  "height": 2,
+  "north": [0,-0.05,-0.5],
+  "north_east": [0,-0.05,-0.5],
+  "east": [0,-0.05,-0.5],
+  "south_east": [0,-0.05,-0.5],
+  "south": [0,-0.05,-0.5],
+  "south_west": [0,-0.05,-0.5],
+  "west": [0,-0.05,-0.5],
+    "north_west": [0,-0.05,-0.5]
+  }
+}
+
+// TODO
+// - fix demat / mat animations
+// - figure out sonic pos
