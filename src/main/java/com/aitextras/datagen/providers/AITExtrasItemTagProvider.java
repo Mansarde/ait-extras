@@ -1,4 +1,4 @@
-package com.aitextras.datagen;
+package com.aitextras.datagen.providers;
 
 import java.util.concurrent.CompletableFuture;
 

@@ -3,15 +3,14 @@ package com.aitextras.datagen;
 import com.aitextras.core.AITExtrasBlocks;
 import com.aitextras.core.AITExtrasItemGroups;
 import com.aitextras.core.AITExtrasItems;
+import com.aitextras.datagen.providers.*;
 import com.aitextras.world.AITExtrasConfiguredFeature;
 import com.aitextras.world.AITExtrasPlacedFeatures;
 import dev.amble.ait.core.AITBlocks;
 import dev.amble.ait.core.AITItems;
-import dev.amble.ait.datagen.datagen_providers.AITModelProvider;
 import dev.amble.lib.datagen.lang.LanguageType;
 import dev.amble.lib.datagen.lang.AmbleLanguageProvider;
 import dev.amble.lib.datagen.loot.AmbleBlockLootTable;
-import dev.amble.lib.datagen.model.AmbleModelProvider;
 import dev.amble.lib.datagen.sound.AmbleSoundProvider;
 import dev.amble.lib.datagen.tag.AmbleBlockTagProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -24,7 +23,6 @@ import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.registry.tag.TagKey;
 
 import static net.minecraft.data.server.recipe.RecipeProvider.conditionsFromItem;
 import static net.minecraft.data.server.recipe.RecipeProvider.hasItem;
@@ -508,6 +506,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                         //vanilla
                     provider.addTranslation("exterior.ait-extras.vanilla", "Vanilla");
                     provider.addTranslation("exterior.ait-extras.vanilla_red", "Vanilla (Glasgow)");
+                    provider.addTranslation("exterior.ait-extras.vanilla_beacon", "Vanilla (Beacon)");
 
                         //clock
                     provider.addTranslation("exterior.ait-extras.clock", "Clock");

@@ -1,28 +1,21 @@
-package com.aitextras.datagen;
+package com.aitextras.datagen.providers;
 
 import com.aitextras.core.AITExtrasBlocks;
-import com.aitextras.core.AITExtrasItems;
-import com.google.common.collect.ImmutableMap;
 import dev.amble.ait.AITMod;
 import dev.amble.ait.core.AITBlocks;
 import dev.amble.ait.core.AITItems;
 import dev.amble.ait.module.ModuleRegistry;
 import dev.amble.lib.datagen.model.AmbleModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
-import net.minecraft.data.family.BlockFamilies;
-import net.minecraft.data.family.BlockFamily;
 import net.minecraft.item.Item;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Pair;
 import net.minecraft.util.math.Direction;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 public class AITExtrasModelGen extends AmbleModelProvider {

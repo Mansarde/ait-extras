@@ -1,8 +1,8 @@
 {
-  "id": "ait-extras:vanilla",
+  "id": "ait-extras:vanilla_red",
   "category": "ait-extras:vanilla",
   "parent": "ait:exterior/capsule/default",
-  "texture": "ait-extras:textures/blockentities/exteriors/vanilla/vanilla.png",
+  "texture": "ait-extras:textures/blockentities/exteriors/vanilla/vanilla_red.png",
   "emission": "ait-extras:textures/blockentities/exteriors/vanilla/vanilla_emission.png",
   "model": "ait-extras:vanilla",
   "door": "ait-extras:vanilla",

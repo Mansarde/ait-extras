@@ -1,4 +1,4 @@
-package com.aitextras.datagen;
+package com.aitextras.datagen.providers;
 
 import com.aitextras.AITExtras;
 import com.aitextras.core.AITExtrasBlocks;

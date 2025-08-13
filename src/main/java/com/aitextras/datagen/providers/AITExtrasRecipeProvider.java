@@ -1,9 +1,8 @@
-package com.aitextras.datagen;
+package com.aitextras.datagen.providers;
 
 import com.aitextras.AITExtras;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.block.Block;
 import net.minecraft.data.server.recipe.*;
 import net.minecraft.recipe.Ingredient;
