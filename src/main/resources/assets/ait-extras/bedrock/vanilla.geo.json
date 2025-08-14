@@ -12,7 +12,12 @@
 			},
 			"bones": [
 				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
 					"name": "bone",
+					"parent": "root",
 					"pivot": [0, 0, 0],
 					"cubes": [
 						{"origin": [-24, 16, -8], "size": [16, 16, 16], "uv": [0, 0]},
@@ -87,6 +92,7 @@
 				},
 				{
 					"name": "glass",
+					"parent": "root",
 					"pivot": [0, 0, 0],
 					"cubes": [
 						{"origin": [-24, 16, -8], "size": [16, 16, 16], "uv": [23, 92]},
