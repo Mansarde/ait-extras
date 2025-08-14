@@ -50,4 +50,7 @@ public class AITExtrasPlacedFeatures {
     ) {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }
+
+    public static void registerPlacedFeatures() {
+    }
 }
