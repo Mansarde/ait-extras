@@ -4,7 +4,7 @@
   "is_double": false,
   "open_sound": "minecraft:block.iron_door.open",
   "close_sound": "minecraft:block.iron_door.close",
-  "left_animation": "vanilla_exterior:open",
+  "left_animation": "vanilla:open",
   "has_transparent_doors": true,
   "portal_info": {
     "enabled": true,
