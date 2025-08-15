@@ -1,17 +1,17 @@
-name: Automated donator builds
+name: Builds
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - src/**
-      - build.gradle
-      - gradle.properties
-      - settings.gradle
-      - gradle/**
-      - gradlew
-      - gradlew.bat
-      - versioning.gradle
-      - .github/workflows/publish-devbuilds.yml
+#  push:
+#    paths:
+#      - src/**
+#      - build.gradle
+#      - gradle.properties
+#      - settings.gradle
+#      - gradle/**
+#      - gradlew
+#      - gradlew.bat
+#      - versioning.gradle
+#      - .github/workflows/publish-devbuilds.yml
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,15 +30,3 @@ jobs:
       run: ./gradlew runDatagen
     - name: Build
       run: ./gradlew build
-    - name: Publish artifacts
-      uses: drtheodor/discord-webhook-upload-action@v0.2
-      with:
-        url: ${{ secrets.EXTRAS_DEV_BUILDS }}
-        username: george addington
-        avatar: 'https://i.imgur.com/PLXp29k.png'
-        
-        message_commit: '> :sparkles: [${commitMessage}](<${commitUrl}>) by [${authorName}](<${authorUrl}>)'
-        message_header: |
-          <:new1:1253371736510959636><:new2:1253371805734015006> New `Adventures in Time: Extras` dev build `#${{ github.run_number }}`:
-
-        file: 'build/libs/*'
